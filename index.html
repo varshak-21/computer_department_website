@@ -7,169 +7,252 @@
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-    <!-- Header -->
-    <header class="header">
-        <div class="container">
-            <div class="header-top">
-                <div class="logo-section">
-                    <img src="images/college-logo.png" alt="College Logo" class="logo">
-                    <div class="dept-info">
-                        <h1>Computer Engineering Department</h1>
-                        <p class="college-name">[Your College Name]</p>
-                    </div>
-                </div>
-                <div class="contact-info">
-                    <div class="contact-item">
-                        <span>📞 +91-XXXXXXXXXX</span>
-                    </div>
-                    <div class="contact-item">
-                        <span>✉️ cse@college.edu</span>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </header>
-
     <!-- Navigation -->
-    <nav class="navbar">
-        <div class="container">
-            <ul class="nav-menu">
-                <li><a href="index.html" class="active">Home</a></li>
-                <li><a href="about.html">About Us</a></li>
+    <nav class="navbar" id="navbar">
+        <div class="nav-container">
+            <div class="nav-brand">
+                <img src="images/college-logo.png" alt="CSE Logo" class="nav-logo">
+                <span class="nav-title">CSE Department</span>
+            </div>
+            
+            <!-- Mobile menu button -->
+            <button class="mobile-menu-btn" id="mobile-menu-btn">
+                <span class="hamburger-line"></span>
+                <span class="hamburger-line"></span>
+                <span class="hamburger-line"></span>
+            </button>
+            
+            <ul class="nav-menu" id="nav-menu">
+                <li><a href="index.html" class="nav-link active">Home</a></li>
+                <li><a href="about.html" class="nav-link">About</a></li>
                 <li class="dropdown">
-                    <a href="academics.html">Academics</a>
+                    <a href="academics.html" class="nav-link">Academics</a>
                     <ul class="dropdown-menu">
                         <li><a href="academics.html#se">Second Year (SE)</a></li>
                         <li><a href="academics.html#te">Third Year (TE)</a></li>
                         <li><a href="academics.html#be">Final Year (BE)</a></li>
                     </ul>
                 </li>
-                <li><a href="faculty.html">Faculty</a></li>
-                <li><a href="students.html">Students</a></li>
-                <li><a href="research.html">Research</a></li>
-                <li><a href="events.html">Events</a></li>
-                <li><a href="contact.html">Contact Us</a></li>
+                <li><a href="faculty.html" class="nav-link">Faculty</a></li>
+                <li><a href="students.html" class="nav-link">Students</a></li>
+                <li><a href="research.html" class="nav-link">Research</a></li>
+                <li><a href="events.html" class="nav-link">Events</a></li>
+                <li><a href="contact.html" class="nav-link">Contact</a></li>
             </ul>
         </div>
     </nav>
 
+    <!-- Hero Section with Video Background -->
+    <section class="hero-section">
+        <video class="hero-video" autoplay muted loop id="hero-video">
+            <source src="videos/department-showcase.mp4" type="video/mp4">
+            <source src="videos/department-showcase.webm" type="video/webm">
+            <!-- Fallback image if video doesn't load -->
+            Your browser does not support the video tag.
+        </video>
+        
+        <!-- Video overlay for better text readability -->
+        <div class="hero-overlay"></div>
+        
+        <!-- Hero content -->
+        <div class="hero-content" id="hero-content">
+            <div class="hero-text">
+                <h1 class="hero-title">Welcome to the Computer Department</h1>
+                <p class="hero-subtitle">Explore Our Achievements, Innovations, and Opportunities</p>
+                
+                <div class="hero-buttons">
+                    <a href="#about" class="hero-btn hero-btn-primary">Learn More</a>
+                    <a href="#contact" class="hero-btn hero-btn-secondary">Join Us</a>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Scroll indicator -->
+        <div class="scroll-indicator">
+            <div class="scroll-arrow"></div>
+        </div>
+    </section>
+
     <!-- Main Content -->
     <main class="main-content">
-        <!-- Hero Banner -->
-        <section class="hero-banner">
-            <div class="container">
-                <div class="hero-content">
-                    <h2>Welcome to Computer Engineering Department</h2>
-                    <p>Shaping Future Technology Leaders</p>
-                </div>
-            </div>
-        </section>
 
-        <!-- Department Highlights -->
-        <section class="dept-highlights">
+        <!-- About Section -->
+        <section class="about-section" id="about">
             <div class="container">
-                <h2>Department Highlights</h2>
-                <div class="highlights-grid">
-                    <div class="highlight-card">
-                        <h3>Year of Establishment</h3>
-                        <p class="highlight-value">[Year]</p>
+                <div class="section-header">
+                    <h2 class="section-title">Excellence in Computer Engineering</h2>
+                    <p class="section-subtitle">Empowering minds, transforming futures through cutting-edge technology education</p>
+                </div>
+                
+                <div class="stats-grid">
+                    <div class="stat-item">
+                        <div class="stat-number">1995</div>
+                        <div class="stat-label">Established</div>
                     </div>
-                    <div class="highlight-card">
-                        <h3>Student Intake</h3>
-                        <p class="highlight-value">[Number] Students</p>
+                    <div class="stat-item">
+                        <div class="stat-number">120</div>
+                        <div class="stat-label">Annual Intake</div>
                     </div>
-                    <div class="highlight-card">
-                        <h3>NAAC Accreditation</h3>
-                        <p class="highlight-value">[Grade]</p>
+                    <div class="stat-item">
+                        <div class="stat-number">A+</div>
+                        <div class="stat-label">NAAC Grade</div>
                     </div>
-                    <div class="highlight-card">
-                        <h3>Placement Record</h3>
-                        <p class="highlight-value">[Percentage]%</p>
+                    <div class="stat-item">
+                        <div class="stat-number">95%</div>
+                        <div class="stat-label">Placement Rate</div>
                     </div>
-                    <div class="highlight-card">
-                        <h3>Result Record</h3>
-                        <p class="highlight-value">[Percentage]%</p>
+                    <div class="stat-item">
+                        <div class="stat-number">98%</div>
+                        <div class="stat-label">Pass Rate</div>
                     </div>
                 </div>
             </div>
         </section>
 
-        <!-- Quick Links -->
-        <section class="quick-links">
+        <!-- Features Section -->
+        <section class="features-section">
             <div class="container">
-                <h2>Quick Links</h2>
-                <div class="links-grid">
-                    <div class="link-card">
-                        <h3>Academic Calendar</h3>
-                        <p>View important academic dates and events</p>
-                        <a href="#" class="btn">View Calendar</a>
+                <div class="section-header">
+                    <h2 class="section-title">Our Achievements</h2>
+                    <p class="section-subtitle">Pioneering innovation in computer science education and research</p>
+                </div>
+                
+                <div class="features-grid">
+                    <div class="feature-card">
+                        <div class="feature-icon">🎯</div>
+                        <h3>Industry-Ready Curriculum</h3>
+                        <p>Cutting-edge programs designed with industry expertise to prepare students for tomorrow's challenges</p>
                     </div>
-                    <div class="link-card">
-                        <h3>Student Achievements</h3>
-                        <p>Celebrating our students' success stories</p>
-                        <a href="students.html#achievements" class="btn">View Achievements</a>
+                    <div class="feature-card">
+                        <div class="feature-icon">🏆</div>
+                        <h3>Award-Winning Projects</h3>
+                        <p>Our students consistently excel in national competitions, hackathons, and research publications</p>
                     </div>
-                    <div class="link-card">
-                        <h3>Newsletter</h3>
-                        <p>Stay updated with department news</p>
-                        <a href="#" class="btn">Read Newsletter</a>
+                    <div class="feature-card">
+                        <div class="feature-icon">🔬</div>
+                        <h3>Research Excellence</h3>
+                        <p>Leading research in AI, Machine Learning, Cybersecurity, and emerging technologies</p>
+                    </div>
+                    <div class="feature-card">
+                        <div class="feature-icon">💼</div>
+                        <h3>Top Placements</h3>
+                        <p>Graduates placed in leading tech companies like Google, Microsoft, Amazon, and innovative startups</p>
                     </div>
                 </div>
             </div>
         </section>
 
         <!-- Announcements -->
-        <section class="announcements">
+        <section class="announcements-section">
             <div class="container">
-                <h2>Announcements</h2>
+                <div class="section-header">
+                    <h2 class="section-title">Announcements</h2>
+                    <p class="section-subtitle">Stay updated with the latest news, events, and opportunities</p>
+                </div>
+                
                 <div class="announcements-grid">
-                    <div class="announcement-category">
+                    <div class="announcement-card">
+                        <div class="announcement-icon">📚</div>
                         <h3>Workshops</h3>
-                        <ul class="announcement-list">
-                            <li>[Workshop Title 1] - [Date]</li>
-                            <li>[Workshop Title 2] - [Date]</li>
-                            <li><a href="events.html">View all workshops</a></li>
-                        </ul>
+                        <div class="announcement-items">
+                            <div class="announcement-item">
+                                <span class="item-title">Advanced Machine Learning Workshop</span>
+                                <span class="item-date">Dec 15, 2025</span>
+                            </div>
+                            <div class="announcement-item">
+                                <span class="item-title">Web Development Bootcamp</span>
+                                <span class="item-date">Dec 20, 2025</span>
+                            </div>
+                            <a href="events.html" class="view-all-link">View all workshops →</a>
+                        </div>
                     </div>
-                    <div class="announcement-category">
+                    
+                    <div class="announcement-card">
+                        <div class="announcement-icon">📢</div>
                         <h3>Notices</h3>
-                        <ul class="announcement-list">
-                            <li>[Notice Title 1] - [Date]</li>
-                            <li>[Notice Title 2] - [Date]</li>
-                            <li><a href="#">View all notices</a></li>
-                        </ul>
+                        <div class="announcement-items">
+                            <div class="announcement-item">
+                                <span class="item-title">Semester End Examination Schedule</span>
+                                <span class="item-date">Dec 10, 2025</span>
+                            </div>
+                            <div class="announcement-item">
+                                <span class="item-title">Project Submission Deadline</span>
+                                <span class="item-date">Dec 18, 2025</span>
+                            </div>
+                            <a href="#" class="view-all-link">View all notices →</a>
+                        </div>
                     </div>
-                    <div class="announcement-category">
+                    
+                    <div class="announcement-card">
+                        <div class="announcement-icon">🎉</div>
                         <h3>Events</h3>
-                        <ul class="announcement-list">
-                            <li>[Event Title 1] - [Date]</li>
-                            <li>[Event Title 2] - [Date]</li>
-                            <li><a href="events.html">View all events</a></li>
-                        </ul>
+                        <div class="announcement-items">
+                            <div class="announcement-item">
+                                <span class="item-title">Annual Tech Fest - TechnoVanza</span>
+                                <span class="item-date">Jan 5-7, 2026</span>
+                            </div>
+                            <div class="announcement-item">
+                                <span class="item-title">Coding Competition</span>
+                                <span class="item-date">Dec 22, 2025</span>
+                            </div>
+                            <a href="events.html" class="view-all-link">View all events →</a>
+                        </div>
                     </div>
                 </div>
             </div>
         </section>
 
         <!-- Recent Activities -->
-        <section class="recent-activities">
+        <section class="recent-activities-section">
             <div class="container">
-                <h2>Recent Events & Activities</h2>
+                <div class="section-header">
+                    <h2 class="section-title">Recent Events & Activities</h2>
+                    <p class="section-subtitle">Highlights from our vibrant department community</p>
+                </div>
+                
                 <div class="activities-grid">
                     <div class="activity-card">
-                        <img src="images/activity1.jpg" alt="Activity 1" class="activity-image">
+                        <div class="activity-image-placeholder">
+                            <div class="placeholder-icon">📸</div>
+                            <span>Event Photo</span>
+                        </div>
                         <div class="activity-content">
-                            <h3>[Activity Title 1]</h3>
-                            <p class="activity-date">[Date]</p>
-                            <p>[Brief description of the activity]</p>
+                            <div class="activity-date">November 28, 2025</div>
+                            <h3>National Level Coding Competition</h3>
+                            <p>Our students secured top positions in the inter-college programming contest, showcasing exceptional problem-solving skills and algorithmic thinking.</p>
+                            <div class="activity-meta">
+                                <span class="activity-category">Competition</span>
+                            </div>
                         </div>
                     </div>
+                    
                     <div class="activity-card">
-                        <img src="images/activity2.jpg" alt="Activity 2" class="activity-image">
+                        <div class="activity-image-placeholder">
+                            <div class="placeholder-icon">🤖</div>
+                            <span>Project Demo</span>
+                        </div>
                         <div class="activity-content">
-                            <h3>[Activity Title 2]</h3>
-                            <p class="activity-date">[Date]</p>
-                            <p>[Brief description of the activity]</p>
+                            <div class="activity-date">November 25, 2025</div>
+                            <h3>AI & Robotics Workshop</h3>
+                            <p>Successful completion of a 3-day workshop on Artificial Intelligence and Robotics with hands-on projects and industry expert sessions.</p>
+                            <div class="activity-meta">
+                                <span class="activity-category">Workshop</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="activity-card">
+                        <div class="activity-image-placeholder">
+                            <div class="placeholder-icon">🏆</div>
+                            <span>Award Ceremony</span>
+                        </div>
+                        <div class="activity-content">
+                            <div class="activity-date">November 20, 2025</div>
+                            <h3>Student Research Excellence Award</h3>
+                            <p>Recognition ceremony for outstanding research contributions by our final year students in machine learning and cybersecurity domains.</p>
+                            <div class="activity-meta">
+                                <span class="activity-category">Achievement</span>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -177,25 +260,80 @@
         </section>
 
         <!-- Achievements -->
-        <section class="achievements">
+        <section class="achievements-section">
             <div class="container">
-                <h2>Faculty & Students Achievements</h2>
-                <div class="achievements-grid">
-                    <div class="achievement-category">
-                        <h3>Faculty Achievements</h3>
-                        <ul class="achievement-list">
-                            <li>[Faculty Achievement 1]</li>
-                            <li>[Faculty Achievement 2]</li>
-                            <li><a href="faculty.html#achievements">View all</a></li>
-                        </ul>
+                <div class="section-header">
+                    <h2 class="section-title">Faculty & Student Achievements</h2>
+                    <p class="section-subtitle">Celebrating excellence in education, research, and innovation</p>
+                </div>
+                
+                <div class="achievements-container">
+                    <div class="achievement-column">
+                        <div class="achievement-header">
+                            <div class="achievement-icon">👨‍🏫</div>
+                            <h3>Faculty Achievements</h3>
+                        </div>
+                        <div class="achievement-items">
+                            <div class="achievement-item">
+                                <div class="achievement-badge">🏅</div>
+                                <div class="achievement-details">
+                                    <h4>Best Research Paper Award</h4>
+                                    <p>Dr. Priya Sharma - IEEE Conference on AI Applications</p>
+                                    <span class="achievement-date">November 2025</span>
+                                </div>
+                            </div>
+                            <div class="achievement-item">
+                                <div class="achievement-badge">📚</div>
+                                <div class="achievement-details">
+                                    <h4>Distinguished Teaching Excellence</h4>
+                                    <p>Prof. Rajesh Kumar - University Teaching Award</p>
+                                    <span class="achievement-date">October 2025</span>
+                                </div>
+                            </div>
+                            <div class="achievement-item">
+                                <div class="achievement-badge">💡</div>
+                                <div class="achievement-details">
+                                    <h4>Patent Grant</h4>
+                                    <p>Dr. Anita Mehta - IoT Security Framework</p>
+                                    <span class="achievement-date">September 2025</span>
+                                </div>
+                            </div>
+                        </div>
+                        <a href="faculty.html#achievements" class="view-all-btn">View All Faculty Achievements</a>
                     </div>
-                    <div class="achievement-category">
-                        <h3>Student Achievements</h3>
-                        <ul class="achievement-list">
-                            <li>[Student Achievement 1]</li>
-                            <li>[Student Achievement 2]</li>
-                            <li><a href="students.html#achievements">View all</a></li>
-                        </ul>
+                    
+                    <div class="achievement-column">
+                        <div class="achievement-header">
+                            <div class="achievement-icon">🎓</div>
+                            <h3>Student Achievements</h3>
+                        </div>
+                        <div class="achievement-items">
+                            <div class="achievement-item">
+                                <div class="achievement-badge">🥇</div>
+                                <div class="achievement-details">
+                                    <h4>National Coding Championship</h4>
+                                    <p>Arjun Patel (TE-A) - First Place Winner</p>
+                                    <span class="achievement-date">December 2025</span>
+                                </div>
+                            </div>
+                            <div class="achievement-item">
+                                <div class="achievement-badge">🚀</div>
+                                <div class="achievement-details">
+                                    <h4>Startup Success</h4>
+                                    <p>Meera Singh (BE-B) - EdTech Platform Launch</p>
+                                    <span class="achievement-date">November 2025</span>
+                                </div>
+                            </div>
+                            <div class="achievement-item">
+                                <div class="achievement-badge">📊</div>
+                                <div class="achievement-details">
+                                    <h4>Research Publication</h4>
+                                    <p>Kiran Joshi (BE-A) - ML Conference Paper</p>
+                                    <span class="achievement-date">October 2025</span>
+                                </div>
+                            </div>
+                        </div>
+                        <a href="students.html#achievements" class="view-all-btn">View All Student Achievements</a>
                     </div>
                 </div>
             </div>
@@ -203,44 +341,86 @@
     </main>
 
     <!-- Footer -->
-    <footer class="footer">
+    <footer class="footer" id="contact">
         <div class="container">
             <div class="footer-content">
                 <div class="footer-section">
                     <h3>Computer Engineering Department</h3>
-                    <p class="address">
-                        [College Name]<br>
-                        [Address Line 1]<br>
-                        [Address Line 2]<br>
-                        [City, State - PIN Code]
+                    <p class="footer-description">
+                        Shaping the future of technology through innovative education, 
+                        cutting-edge research, and industry partnerships.
                     </p>
+                    <div class="footer-address">
+                        <p>Veermata Jijabai Technological Institute</p>
+                        <p>H.R. Mahajani Road, Matunga</p>
+                        <p>Mumbai, Maharashtra - 400019</p>
+                    </div>
                 </div>
+                
                 <div class="footer-section">
                     <h3>Contact Information</h3>
-                    <p>Phone: +91-XXXXXXXXXX</p>
-                    <p>Email: cse@college.edu</p>
-                    <p>Fax: +91-XXXXXXXXXX</p>
+                    <div class="contact-item">
+                        <span class="contact-icon">📞</span>
+                        <span>+91-22-2419-5348</span>
+                    </div>
+                    <div class="contact-item">
+                        <span class="contact-icon">✉️</span>
+                        <span>cse@vjti.ac.in</span>
+                    </div>
+                    <div class="contact-item">
+                        <span class="contact-icon">🌐</span>
+                        <span>www.vjti.ac.in</span>
+                    </div>
                 </div>
+                
                 <div class="footer-section">
                     <h3>Follow Us</h3>
                     <div class="social-links">
-                        <a href="#" class="social-link">LinkedIn</a>
-                        <a href="#" class="social-link">Instagram</a>
-                        <a href="#" class="social-link">YouTube</a>
+                        <a href="#" class="social-link" aria-label="LinkedIn">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+                                <path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/>
+                            </svg>
+                        </a>
+                        <a href="#" class="social-link" aria-label="Instagram">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+                                <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/>
+                            </svg>
+                        </a>
+                        <a href="#" class="social-link" aria-label="YouTube">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+                                <path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/>
+                            </svg>
+                        </a>
+                        <a href="#" class="social-link" aria-label="Twitter">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+                                <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/>
+                            </svg>
+                        </a>
                     </div>
                 </div>
+                
                 <div class="footer-section">
                     <h3>Quick Links</h3>
                     <ul class="footer-links">
-                        <li><a href="about.html">About Us</a></li>
-                        <li><a href="academics.html">Academics</a></li>
-                        <li><a href="faculty.html">Faculty</a></li>
-                        <li><a href="contact.html">Contact</a></li>
+                        <li><a href="about.html">About Department</a></li>
+                        <li><a href="academics.html">Academic Programs</a></li>
+                        <li><a href="faculty.html">Faculty Profiles</a></li>
+                        <li><a href="research.html">Research Areas</a></li>
+                        <li><a href="students.html">Student Life</a></li>
+                        <li><a href="contact.html">Contact Us</a></li>
                     </ul>
                 </div>
             </div>
+            
             <div class="footer-bottom">
-                <p>&copy; 2025 Computer Engineering Department, [College Name]. All rights reserved.</p>
+                <div class="footer-bottom-content">
+                    <p>&copy; 2025 Computer Engineering Department, VJTI Mumbai. All rights reserved.</p>
+                    <div class="footer-bottom-links">
+                        <a href="#">Privacy Policy</a>
+                        <a href="#">Terms of Service</a>
+                        <a href="#">Accessibility</a>
+                    </div>
+                </div>
             </div>
         </div>
     </footer>

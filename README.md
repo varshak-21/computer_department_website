@@ -1,6 +1,6 @@
-# Computer Engineering Department Website
+# Modern CSE Department Website
 
-A professional website skeleton for a Computer Engineering Department, built with HTML, CSS, and JavaScript.
+A modern, responsive website for a Computer Science and Engineering department featuring a sleek black and white design with video background hero section, smooth animations, and mobile-first responsive design.
 
 ## 📁 Project Structure
 

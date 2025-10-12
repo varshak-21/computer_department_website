@@ -5,169 +5,203 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>About Us - Computer Engineering Department</title>
     <link rel="stylesheet" href="css/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 </head>
 <body>
-    <!-- Header -->
-    <header class="header">
-        <div class="container">
-            <div class="header-top">
-                <div class="logo-section">
-                    <img src="images/college-logo.png" alt="College Logo" class="logo">
-                    <div class="dept-info">
-                        <h1>Computer Engineering Department</h1>
-                        <p class="college-name">[Your College Name]</p>
-                    </div>
-                </div>
-                <div class="contact-info">
-                    <div class="contact-item">
-                        <span>📞 +91-XXXXXXXXXX</span>
-                    </div>
-                    <div class="contact-item">
-                        <span>✉️ cse@college.edu</span>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </header>
-
     <!-- Navigation -->
     <nav class="navbar">
-        <div class="container">
+        <div class="nav-container">
+            <div class="navbar-brand">
+                <h2>CSE Department</h2>
+            </div>
+            
             <ul class="nav-menu">
-                <li><a href="index.html">Home</a></li>
-                <li><a href="about.html" class="active">About Us</a></li>
+                <li><a href="index.html" class="nav-link">Home</a></li>
+                <li><a href="about.html" class="nav-link active">About</a></li>
                 <li class="dropdown">
-                    <a href="academics.html">Academics</a>
+                    <a href="academics.html" class="nav-link">Academics</a>
                     <ul class="dropdown-menu">
-                        <li><a href="academics.html#se">Second Year (SE)</a></li>
-                        <li><a href="academics.html#te">Third Year (TE)</a></li>
-                        <li><a href="academics.html#be">Final Year (BE)</a></li>
+                        <li><a href="academics.html#undergraduate">Undergraduate</a></li>
+                        <li><a href="academics.html#graduate">Graduate</a></li>
+                        <li><a href="academics.html#phd">PhD Programs</a></li>
                     </ul>
                 </li>
-                <li><a href="faculty.html">Faculty</a></li>
-                <li><a href="students.html">Students</a></li>
-                <li><a href="research.html">Research</a></li>
-                <li><a href="events.html">Events</a></li>
-                <li><a href="contact.html">Contact Us</a></li>
+                <li><a href="faculty.html" class="nav-link">Faculty</a></li>
+                <li><a href="research.html" class="nav-link">Research</a></li>
+                <li><a href="students.html" class="nav-link">Students</a></li>
+                <li><a href="events.html" class="nav-link">Events</a></li>
+                <li><a href="contact.html" class="nav-link">Contact</a></li>
             </ul>
+            
+            <button class="mobile-menu-btn">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
         </div>
     </nav>
 
-    <!-- Main Content -->
-    <main class="main-content">
-        <!-- Page Header -->
-        <section class="page-header">
-            <div class="container">
-                <h1>About Us</h1>
-                <p>Learn more about our department's journey, vision, and leadership</p>
-            </div>
-        </section>
-
-        <!-- Department Information -->
-        <section class="dept-info-section">
-            <div class="container">
-                <h2>Department Information</h2>
-                <div class="info-grid">
-                    <div class="info-card">
-                        <h3>Overview</h3>
-                        <p>
-                            The Computer Engineering Department at [College Name] was established in [Year] 
-                            with the vision of creating skilled professionals in the field of computer science 
-                            and engineering. Our department has consistently maintained high academic standards 
-                            and has produced graduates who have made significant contributions to the IT industry.
-                        </p>
+    <!-- Page Hero -->
+    <section class="page-hero">
+        <div class="container">
+            <div class="page-hero-content">
+                <h1>About Our Department</h1>
+                <p>Pioneering excellence in computer science education and research since our establishment</p>
+                <div class="hero-stats">
+                    <div class="stat-item">
+                        <span class="stat-number">25+</span>
+                        <span class="stat-label">Years of Excellence</span>
                     </div>
-                    <div class="info-card">
-                        <h3>Key Statistics</h3>
-                        <ul class="stats-list">
-                            <li>Established: [Year]</li>
-                            <li>Student Intake: [Number] per year</li>
-                            <li>Faculty Members: [Number]</li>
-                            <li>Research Labs: [Number]</li>
-                            <li>Alumni Network: [Number]+</li>
-                        </ul>
+                    <div class="stat-item">
+                        <span class="stat-number">2000+</span>
+                        <span class="stat-label">Alumni Network</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-number">50+</span>
+                        <span class="stat-label">Faculty Members</span>
                     </div>
                 </div>
             </div>
-        </section>
+        </div>
+    </section>
 
-        <!-- History -->
-        <section class="history-section">
-            <div class="container">
-                <h2>Our History</h2>
-                <div class="history-timeline">
-                    <div class="timeline-item">
-                        <div class="timeline-year">[Year]</div>
-                        <div class="timeline-content">
-                            <h3>Department Establishment</h3>
-                            <p>The Computer Engineering Department was established with an initial intake of [number] students.</p>
+    <!-- Department Overview -->
+    <section class="department-overview">
+        <div class="container">
+            <div class="overview-grid">
+                <div class="overview-content">
+                    <h2>Our Vision & Mission</h2>
+                    <div class="vision-mission">
+                        <div class="vision-card">
+                            <div class="card-icon">🎯</div>
+                            <h3>Vision</h3>
+                            <p>To be a globally recognized center of excellence in computer science education, research, and innovation, producing skilled professionals who lead technological advancement.</p>
+                        </div>
+                        <div class="mission-card">
+                            <div class="card-icon">🚀</div>
+                            <h3>Mission</h3>
+                            <p>To provide quality education, foster research culture, and develop industry-ready professionals through innovative teaching methodologies and cutting-edge infrastructure.</p>
                         </div>
                     </div>
-                    <div class="timeline-item">
-                        <div class="timeline-year">[Year]</div>
-                        <div class="timeline-content">
-                            <h3>First Graduation Batch</h3>
-                            <p>Our first batch of computer engineering graduates successfully completed their degrees.</p>
+                </div>
+                
+                <div class="overview-stats">
+                    <h3>Department at a Glance</h3>
+                    <div class="stats-container">
+                        <div class="stat-box">
+                            <span class="stat-value">1998</span>
+                            <span class="stat-desc">Established</span>
                         </div>
-                    </div>
-                    <div class="timeline-item">
-                        <div class="timeline-year">[Year]</div>
-                        <div class="timeline-content">
-                            <h3>NAAC Accreditation</h3>
-                            <p>The department received NAAC accreditation with [grade] rating.</p>
+                        <div class="stat-box">
+                            <span class="stat-value">240</span>
+                            <span class="stat-desc">Annual Intake</span>
                         </div>
-                    </div>
-                    <div class="timeline-item">
-                        <div class="timeline-year">[Year]</div>
-                        <div class="timeline-content">
-                            <h3>Research Excellence</h3>
-                            <p>Established state-of-the-art research laboratories and initiated major research projects.</p>
+                        <div class="stat-box">
+                            <span class="stat-value">15</span>
+                            <span class="stat-desc">Research Labs</span>
+                        </div>
+                        <div class="stat-box">
+                            <span class="stat-value">95%</span>
+                            <span class="stat-desc">Placement Rate</span>
                         </div>
                     </div>
                 </div>
             </div>
-        </section>
+        </div>
+    </section>
 
-        <!-- Mission & Vision -->
-        <section class="mission-vision">
-            <div class="container">
-                <div class="mv-grid">
-                    <div class="mission-card">
-                        <h2>Our Mission</h2>
-                        <p>
-                            To provide quality education in Computer Engineering that prepares students 
-                            to be innovative problem solvers, ethical leaders, and lifelong learners in 
-                            the rapidly evolving field of technology. We strive to foster an environment 
-                            of academic excellence, research, and industry collaboration.
-                        </p>
+    <!-- Journey Timeline -->
+    <section class="journey-timeline">
+        <div class="container">
+            <div class="section-header">
+                <h2>Our Journey</h2>
+                <p>Milestones in our pursuit of academic and research excellence</p>
+            </div>
+            
+            <div class="timeline">
+                <div class="timeline-item">
+                    <div class="timeline-marker">
+                        <span class="year">1998</span>
                     </div>
-                    <div class="vision-card">
-                        <h2>Our Vision</h2>
-                        <p>
-                            To be a leading Computer Engineering department recognized for excellence in 
-                            education, research, and innovation. We aim to develop competent professionals 
-                            who contribute significantly to technological advancement and societal development 
-                            while maintaining the highest standards of integrity and ethics.
-                        </p>
+                    <div class="timeline-card">
+                        <div class="card-icon">🏗️</div>
+                        <h3>Foundation</h3>
+                        <p>Department established with initial intake of 60 students, beginning our journey in computer science education.</p>
+                    </div>
+                </div>
+                
+                <div class="timeline-item">
+                    <div class="timeline-marker">
+                        <span class="year">2002</span>
+                    </div>
+                    <div class="timeline-card">
+                        <div class="card-icon">🎓</div>
+                        <h3>First Graduation</h3>
+                        <p>Our first batch of 58 computer engineers graduated, setting the foundation for our growing alumni network.</p>
+                    </div>
+                </div>
+                
+                <div class="timeline-item">
+                    <div class="timeline-marker">
+                        <span class="year">2008</span>
+                    </div>
+                    <div class="timeline-card">
+                        <div class="card-icon">🏆</div>
+                        <h3>NAAC Accreditation</h3>
+                        <p>Received NAAC A+ grade accreditation, recognizing our commitment to quality education and infrastructure.</p>
+                    </div>
+                </div>
+                
+                <div class="timeline-item">
+                    <div class="timeline-marker">
+                        <span class="year">2015</span>
+                    </div>
+                    <div class="timeline-card">
+                        <div class="card-icon">🔬</div>
+                        <h3>Research Excellence</h3>
+                        <p>Established 15 specialized research labs and initiated collaborations with leading tech companies.</p>
+                    </div>
+                </div>
+                
+                <div class="timeline-item">
+                    <div class="timeline-marker">
+                        <span class="year">2020</span>
+                    </div>
+                    <div class="timeline-card">
+                        <div class="card-icon">💻</div>
+                        <h3>Digital Transformation</h3>
+                        <p>Successfully transitioned to hybrid learning model and enhanced digital infrastructure for modern education.</p>
                     </div>
                 </div>
             </div>
-        </section>
+        </div>
+    </section>
 
-        <!-- Head of Department Message -->
-        <section class="hod-message">
-            <div class="container">
-                <h2>Message from Head of Department</h2>
-                <div class="hod-content">
-                    <div class="hod-photo">
-                        <img src="images/hod-photo.jpg" alt="Head of Department" class="hod-image">
-                        <div class="hod-details">
-                            <h3>Dr. [HOD Name]</h3>
-                            <p class="hod-title">Head of Department</p>
-                            <p class="hod-qualifications">[Qualifications]</p>
+    <!-- Leadership Message -->
+    <section class="leadership-section">
+        <div class="container">
+            <div class="section-header">
+                <h2>Message from Our Leadership</h2>
+                <p>Inspiring words from our department head</p>
+            </div>
+            
+            <div class="leadership-card">
+                <div class="leader-info">
+                    <div class="leader-image">
+                        <img src="images/hod-placeholder.jpg" alt="Head of Department">
+                    </div>
+                    <div class="leader-details">
+                        <h3>Dr. [HOD Name]</h3>
+                        <span class="leader-title">Head of Department</span>
+                        <span class="leader-credentials">Ph.D. Computer Science, [University]</span>
+                        <div class="leader-contact">
+                            <span>📧 hod.cse@college.edu</span>
+                            <span>📞 +91-XXXX-XXXX</span>
                         </div>
                     </div>
-                    <div class="hod-message-text">
+                </div>
+                
+                <div class="leader-message">
                         <p>
                             Welcome to the Computer Engineering Department! As the Head of this dynamic department, 
                             I am proud to lead a team of dedicated faculty members who are committed to providing 
@@ -198,72 +232,124 @@
             </div>
         </section>
 
-        <!-- Department Objectives -->
-        <section class="objectives">
-            <div class="container">
-                <h2>Department Objectives</h2>
-                <div class="objectives-grid">
-                    <div class="objective-card">
-                        <h3>Academic Excellence</h3>
-                        <p>To maintain the highest standards of academic excellence through innovative teaching methodologies and comprehensive curriculum.</p>
-                    </div>
-                    <div class="objective-card">
-                        <h3>Research & Innovation</h3>
-                        <p>To promote research culture and encourage innovative thinking among students and faculty members.</p>
-                    </div>
-                    <div class="objective-card">
-                        <h3>Industry Collaboration</h3>
-                        <p>To establish strong partnerships with industry leaders for internships, placements, and collaborative projects.</p>
-                    </div>
-                    <div class="objective-card">
-                        <h3>Holistic Development</h3>
-                        <p>To ensure overall personality development of students through technical and non-technical activities.</p>
-                    </div>
+    <!-- Core Values -->
+    <section class="core-values">
+        <div class="container">
+            <div class="section-header">
+                <h2>Our Core Values</h2>
+                <p>Principles that guide our pursuit of excellence</p>
+            </div>
+            
+            <div class="values-grid">
+                <div class="value-card">
+                    <div class="value-icon">🎯</div>
+                    <h3>Excellence</h3>
+                    <p>Maintaining the highest standards in education, research, and innovation through continuous improvement and best practices.</p>
+                </div>
+                
+                <div class="value-card">
+                    <div class="value-icon">🔬</div>
+                    <h3>Innovation</h3>
+                    <p>Fostering creative thinking and encouraging breakthrough research that addresses real-world challenges.</p>
+                </div>
+                
+                <div class="value-card">
+                    <div class="value-icon">🤝</div>
+                    <h3>Collaboration</h3>
+                    <p>Building strong partnerships with industry leaders and academic institutions for mutual growth and development.</p>
+                </div>
+                
+                <div class="value-card">
+                    <div class="value-icon">⚖️</div>
+                    <h3>Integrity</h3>
+                    <p>Upholding ethical standards and promoting transparency in all our academic and professional endeavors.</p>
+                </div>
+                
+                <div class="value-card">
+                    <div class="value-icon">🌟</div>
+                    <h3>Student Success</h3>
+                    <p>Providing comprehensive support and resources to ensure every student reaches their full potential.</p>
+                </div>
+                
+                <div class="value-card">
+                    <div class="value-icon">🌍</div>
+                    <h3>Global Impact</h3>
+                    <p>Contributing to technological advancement and societal development on a global scale.</p>
                 </div>
             </div>
-        </section>
-    </main>
+        </div>
+    </section>
 
-    <!-- Footer -->
+    <!-- Modern Footer -->
     <footer class="footer">
         <div class="container">
             <div class="footer-content">
                 <div class="footer-section">
-                    <h3>Computer Engineering Department</h3>
-                    <p class="address">
-                        [College Name]<br>
-                        [Address Line 1]<br>
-                        [Address Line 2]<br>
-                        [City, State - PIN Code]
-                    </p>
-                </div>
-                <div class="footer-section">
-                    <h3>Contact Information</h3>
-                    <p>Phone: +91-XXXXXXXXXX</p>
-                    <p>Email: cse@college.edu</p>
-                    <p>Fax: +91-XXXXXXXXXX</p>
-                </div>
-                <div class="footer-section">
-                    <h3>Follow Us</h3>
-                    <div class="social-links">
-                        <a href="#" class="social-link">LinkedIn</a>
-                        <a href="#" class="social-link">Instagram</a>
-                        <a href="#" class="social-link">YouTube</a>
+                    <h3>CSE Department</h3>
+                    <p>Pioneering excellence in computer science education and research.</p>
+                    <div class="contact-info">
+                        <p>📍 [Your College Name], [City, State]</p>
+                        <p>📞 +91-XXXX-XXXX-XX</p>
+                        <p>✉️ info@csedept.edu</p>
                     </div>
                 </div>
+                
                 <div class="footer-section">
                     <h3>Quick Links</h3>
                     <ul class="footer-links">
-                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="about.html">About</a></li>
                         <li><a href="academics.html">Academics</a></li>
                         <li><a href="faculty.html">Faculty</a></li>
-                        <li><a href="contact.html">Contact</a></li>
+                        <li><a href="research.html">Research</a></li>
                     </ul>
                 </div>
+                
+                <div class="footer-section">
+                    <h3>Programs</h3>
+                    <ul class="footer-links">
+                        <li><a href="academics.html#undergraduate">Undergraduate</a></li>
+                        <li><a href="academics.html#graduate">Graduate</a></li>
+                        <li><a href="academics.html#phd">PhD Programs</a></li>
+                        <li><a href="research.html">Research</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-section">
+                    <h3>Connect With Us</h3>
+                    <div class="social-links">
+                        <a href="#" class="social-link">
+                            <span>LinkedIn</span>
+                        </a>
+                        <a href="#" class="social-link">
+                            <span>Twitter</span>
+                        </a>
+                        <a href="#" class="social-link">
+                            <span>YouTube</span>
+                        </a>
+                        <a href="#" class="social-link">
+                            <span>GitHub</span>
+                        </a>
+                    </div>
+                </div>
             </div>
+            
             <div class="footer-bottom">
-                <p>&copy; 2025 Computer Engineering Department, [College Name]. All rights reserved.</p>
+                <div class="footer-bottom-content">
+                    <p>&copy; 2025 Computer Science Engineering Department. All rights reserved.</p>
+                    <div class="footer-bottom-links">
+                        <a href="#">Privacy Policy</a>
+                        <a href="#">Terms of Service</a>
+                        <a href="contact.html">Contact</a>
+                    </div>
+                </div>
             </div>
+        </div>
+    </footer>
+
+    <script src="js/script.js"></script>
+</body>
+</html>
         </div>
     </footer>
 
