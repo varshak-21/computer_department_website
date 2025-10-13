@@ -5,312 +5,683 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Academics - Computer Engineering Department</title>
     <link rel="stylesheet" href="css/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 </head>
 <body>
-    <!-- Header -->
-    <header class="header">
-        <div class="container">
-            <div class="header-top">
-                <div class="logo-section">
-                    <img src="images/college-logo.png" alt="College Logo" class="logo">
-                    <div class="dept-info">
-                        <h1>Computer Engineering Department</h1>
-                        <p class="college-name">[Your College Name]</p>
-                    </div>
-                </div>
-                <div class="contact-info">
-                    <div class="contact-item">
-                        <span>📞 +91-XXXXXXXXXX</span>
-                    </div>
-                    <div class="contact-item">
-                        <span>✉️ cse@college.edu</span>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </header>
-
     <!-- Navigation -->
     <nav class="navbar">
-        <div class="container">
+        <div class="nav-container">
+            <div class="navbar-brand">
+                <h2>CSE Department</h2>
+            </div>
+            
             <ul class="nav-menu">
-                <li><a href="index.html">Home</a></li>
-                <li><a href="about.html">About Us</a></li>
+                <li><a href="index.html" class="nav-link">Home</a></li>
+                <li><a href="about.html" class="nav-link">About</a></li>
                 <li class="dropdown">
-                    <a href="academics.html" class="active">Academics</a>
+                    <a href="academics.html" class="nav-link active">Academics</a>
                     <ul class="dropdown-menu">
-                        <li><a href="#se">Second Year (SE)</a></li>
-                        <li><a href="#te">Third Year (TE)</a></li>
-                        <li><a href="#be">Final Year (BE)</a></li>
+                        <li><a href="#undergraduate">Undergraduate</a></li>
+                        <li><a href="#curriculum">Curriculum</a></li>
+                        <li><a href="#specializations">Specializations</a></li>
                     </ul>
                 </li>
-                <li><a href="faculty.html">Faculty</a></li>
-                <li><a href="students.html">Students</a></li>
-                <li><a href="research.html">Research</a></li>
-                <li><a href="events.html">Events</a></li>
-                <li><a href="contact.html">Contact Us</a></li>
+                <li><a href="faculty.html" class="nav-link">Faculty</a></li>
+                <li><a href="research.html" class="nav-link">Research</a></li>
+                <li><a href="students.html" class="nav-link">Students</a></li>
+                <li><a href="events.html" class="nav-link">Events</a></li>
+                <li><a href="contact.html" class="nav-link">Contact</a></li>
             </ul>
+            
+            <button class="mobile-menu-btn">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
         </div>
     </nav>
 
-    <!-- Main Content -->
-    <main class="main-content">
-        <!-- Page Header -->
-        <section class="page-header">
-            <div class="container">
-                <h1>Academics</h1>
-                <p>Comprehensive academic programs designed to shape future engineers</p>
+    <!-- Page Hero -->
+    <section class="page-hero">
+        <div class="container">
+            <div class="page-hero-content">
+                <h1>Academic Excellence</h1>
+                <p>Comprehensive programs designed to prepare next-generation computer engineers with cutting-edge knowledge and industry-relevant skills</p>
+                <div class="hero-stats">
+                    <div class="stat-item">
+                        <span class="stat-number">4</span>
+                        <span class="stat-label">Year Program</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-number">8</span>
+                        <span class="stat-label">Semesters</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-number">95%</span>
+                        <span class="stat-label">Success Rate</span>
+                    </div>
+                </div>
             </div>
-        </section>
+        </div>
+    </section>
 
-        <!-- Academic Overview -->
-        <section class="academic-overview">
-            <div class="container">
-                <h2>Academic Program Overview</h2>
-                <div class="overview-grid">
-                    <div class="overview-card">
-                        <h3>Degree Program</h3>
-                        <p>Bachelor of Engineering (B.E.) in Computer Engineering</p>
+    <!-- Program Overview -->
+    <section class="program-overview" id="undergraduate">
+        <div class="container">
+            <div class="section-header">
+                <h2>Undergraduate Program</h2>
+                <p>Bachelor of Engineering in Computer Science & Engineering</p>
+            </div>
+            
+            <div class="program-highlights">
+                <div class="program-info">
+                    <div class="info-card">
+                        <div class="card-icon">🎓</div>
+                        <h3>Degree</h3>
+                        <p>Bachelor of Engineering (B.E.)</p>
+                        <span class="highlight">Computer Science & Engineering</span>
                     </div>
-                    <div class="overview-card">
+                    
+                    <div class="info-card">
+                        <div class="card-icon">⏱️</div>
                         <h3>Duration</h3>
-                        <p>4 Years (8 Semesters)</p>
+                        <p>4 Years Program</p>
+                        <span class="highlight">8 Semesters</span>
                     </div>
-                    <div class="overview-card">
+                    
+                    <div class="info-card">
+                        <div class="card-icon">🏫</div>
                         <h3>Affiliation</h3>
                         <p>[University Name]</p>
+                        <span class="highlight">AICTE Approved</span>
                     </div>
-                    <div class="overview-card">
-                        <h3>Intake Capacity</h3>
-                        <p>[Number] Students per year</p>
+                    
+                    <div class="info-card">
+                        <div class="card-icon">👥</div>
+                        <h3>Intake</h3>
+                        <p>240 Students</p>
+                        <span class="highlight">Per Academic Year</span>
                     </div>
                 </div>
-            </div>
-        </section>
-
-        <!-- Second Year (SE) -->
-        <section id="se" class="year-section">
-            <div class="container">
-                <h2>Second Year (S.E.) - Computer Engineering</h2>
                 
-                <div class="year-content">
-                    <div class="courses-section">
-                        <h3>Core Courses</h3>
-                        <div class="courses-grid">
-                            <div class="course-card">
-                                <h4>Semester III</h4>
-                                <ul class="course-list">
-                                    <li>Data Structures and Algorithms</li>
-                                    <li>Digital Logic Design</li>
-                                    <li>Computer Organization and Architecture</li>
-                                    <li>Mathematics III</li>
-                                    <li>Object Oriented Programming</li>
-                                    <li>Engineering Economics</li>
-                                </ul>
-                            </div>
-                            <div class="course-card">
-                                <h4>Semester IV</h4>
-                                <ul class="course-list">
-                                    <li>Analysis of Algorithms</li>
-                                    <li>Computer Graphics</li>
-                                    <li>Operating Systems</li>
-                                    <li>Mathematics IV</li>
-                                    <li>Microprocessor</li>
-                                    <li>Principles of Programming Languages</li>
-                                </ul>
-                            </div>
+                <div class="program-features">
+                    <h3>Program Features</h3>
+                    <div class="features-list">
+                        <div class="feature-item">
+                            <span class="check-icon">✓</span>
+                            <span>Industry-aligned curriculum with latest technologies</span>
                         </div>
-                    </div>
-
-                    <div class="academic-resources">
-                        <div class="resource-card">
-                            <h4>Syllabus</h4>
-                            <p>Download detailed syllabus for SE Computer Engineering</p>
-                            <a href="#" class="btn">Download Syllabus</a>
+                        <div class="feature-item">
+                            <span class="check-icon">✓</span>
+                            <span>Hands-on laboratory experience and projects</span>
                         </div>
-                        <div class="resource-card">
-                            <h4>Timetable</h4>
-                            <p>View current semester timetable and schedule</p>
-                            <a href="#" class="btn">View Timetable</a>
+                        <div class="feature-item">
+                            <span class="check-icon">✓</span>
+                            <span>Internship opportunities with leading companies</span>
+                        </div>
+                        <div class="feature-item">
+                            <span class="check-icon">✓</span>
+                            <span>Research opportunities and innovation labs</span>
+                        </div>
+                        <div class="feature-item">
+                            <span class="check-icon">✓</span>
+                            <span>Industry mentorship and guest lectures</span>
+                        </div>
+                        <div class="feature-item">
+                            <span class="check-icon">✓</span>
+                            <span>Placement assistance and career guidance</span>
                         </div>
                     </div>
                 </div>
             </div>
-        </section>
+        </div>
+    </section>
 
-        <!-- Third Year (TE) -->
-        <section id="te" class="year-section">
-            <div class="container">
-                <h2>Third Year (T.E.) - Computer Engineering</h2>
+    <!-- Curriculum Structure -->
+    <section class="curriculum-section" id="curriculum">
+        <div class="container">
+            <div class="section-header">
+                <h2>Curriculum Structure</h2>
+                <p>Comprehensive 4-year program structured to build strong foundations and advanced expertise</p>
+            </div>
+            
+            <div class="curriculum-tabs">
+                <div class="tab-buttons">
+                    <button class="tab-btn active" data-year="first">First Year</button>
+                    <button class="tab-btn" data-year="second">Second Year</button>
+                    <button class="tab-btn" data-year="third">Third Year</button>
+                    <button class="tab-btn" data-year="fourth">Final Year</button>
+                </div>
                 
-                <div class="year-content">
-                    <div class="courses-section">
-                        <h3>Core Courses</h3>
-                        <div class="courses-grid">
-                            <div class="course-card">
-                                <h4>Semester V</h4>
-                                <ul class="course-list">
-                                    <li>Database Management Systems</li>
-                                    <li>Computer Networks</li>
-                                    <li>Theory of Computation</li>
-                                    <li>Software Engineering</li>
-                                    <li>Web Programming</li>
-                                    <li>Elective I</li>
-                                </ul>
+                <div class="tab-content">
+                    <!-- First Year -->
+                    <div class="year-content active" id="first">
+                        <div class="year-header">
+                            <h3>First Year - Foundation</h3>
+                            <p>Building fundamental concepts in mathematics, physics, and basic programming</p>
+                        </div>
+                        <div class="semesters-grid">
+                            <div class="semester-card">
+                                <div class="semester-header">
+                                    <h4>Semester I</h4>
+                                    <span class="semester-badge">Foundation</span>
+                                </div>
+                                <div class="courses-list">
+                                    <div class="course-item">
+                                        <span class="course-code">MA101</span>
+                                        <span class="course-name">Engineering Mathematics I</span>
+                                        <span class="credits">4</span>
+                                    </div>
+                                    <div class="course-item">
+                                        <span class="course-code">PH101</span>
+                                        <span class="course-name">Engineering Physics</span>
+                                        <span class="credits">3</span>
+                                    </div>
+                                    <div class="course-item">
+                                        <span class="course-code">CS101</span>
+                                        <span class="course-name">Programming Fundamentals</span>
+                                        <span class="credits">4</span>
+                                    </div>
+                                    <div class="course-item">
+                                        <span class="course-code">EG101</span>
+                                        <span class="course-name">Engineering Graphics</span>
+                                        <span class="credits">2</span>
+                                    </div>
+                                    <div class="course-item">
+                                        <span class="course-code">EN101</span>
+                                        <span class="course-name">Communication Skills</span>
+                                        <span class="credits">2</span>
+                                    </div>
+                                </div>
                             </div>
-                            <div class="course-card">
-                                <h4>Semester VI</h4>
-                                <ul class="course-list">
-                                    <li>System Programming and Compiler Construction</li>
-                                    <li>Data Mining and Warehousing</li>
-                                    <li>Embedded Systems and IoT</li>
-                                    <li>Machine Learning</li>
-                                    <li>Information Systems and Engineering Economics</li>
-                                    <li>Elective II</li>
-                                </ul>
+                            
+                            <div class="semester-card">
+                                <div class="semester-header">
+                                    <h4>Semester II</h4>
+                                    <span class="semester-badge">Foundation</span>
+                                </div>
+                                <div class="courses-list">
+                                    <div class="course-item">
+                                        <span class="course-code">MA102</span>
+                                        <span class="course-name">Engineering Mathematics II</span>
+                                        <span class="credits">4</span>
+                                    </div>
+                                    <div class="course-item">
+                                        <span class="course-code">CH101</span>
+                                        <span class="course-name">Engineering Chemistry</span>
+                                        <span class="credits">3</span>
+                                    </div>
+                                    <div class="course-item">
+                                        <span class="course-code">CS102</span>
+                                        <span class="course-name">Data Structures & Algorithms</span>
+                                        <span class="credits">4</span>
+                                    </div>
+                                    <div class="course-item">
+                                        <span class="course-code">EE101</span>
+                                        <span class="course-name">Basic Electrical Engineering</span>
+                                        <span class="credits">3</span>
+                                    </div>
+                                    <div class="course-item">
+                                        <span class="course-code">ME101</span>
+                                        <span class="course-name">Engineering Mechanics</span>
+                                        <span class="credits">3</span>
+                                    </div>
+                                </div>
                             </div>
                         </div>
                     </div>
-
-                    <div class="academic-resources">
-                        <div class="resource-card">
-                            <h4>Syllabus</h4>
-                            <p>Download detailed syllabus for TE Computer Engineering</p>
-                            <a href="#" class="btn">Download Syllabus</a>
+                    
+                    <!-- Second Year -->
+                    <div class="year-content" id="second">
+                        <div class="year-header">
+                            <h3>Second Year - Core Development</h3>
+                            <p>Advanced programming concepts, system design, and computer organization</p>
                         </div>
-                        <div class="resource-card">
-                            <h4>Timetable</h4>
-                            <p>View current semester timetable and schedule</p>
-                            <a href="#" class="btn">View Timetable</a>
+                        <div class="semesters-grid">
+                            <div class="semester-card">
+                                <div class="semester-header">
+                                    <h4>Semester III</h4>
+                                    <span class="semester-badge">Core</span>
+                                </div>
+                                <div class="courses-list">
+                                    <div class="course-item">
+                                        <span class="course-code">CS201</span>
+                                        <span class="course-name">Object Oriented Programming</span>
+                                        <span class="credits">4</span>
+                                    </div>
+                                    <div class="course-item">
+                                        <span class="course-code">CS202</span>
+                                        <span class="course-name">Digital Logic Design</span>
+                                        <span class="credits">4</span>
+                                    </div>
+                                    <div class="course-item">
+                                        <span class="course-code">CS203</span>
+                                        <span class="course-name">Computer Organization</span>
+                                        <span class="credits">3</span>
+                                    </div>
+                                    <div class="course-item">
+                                        <span class="course-code">MA201</span>
+                                        <span class="course-name">Discrete Mathematics</span>
+                                        <span class="credits">3</span>
+                                    </div>
+                                    <div class="course-item">
+                                        <span class="course-code">CS204</span>
+                                        <span class="course-name">Web Technologies</span>
+                                        <span class="credits">3</span>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="semester-card">
+                                <div class="semester-header">
+                                    <h4>Semester IV</h4>
+                                    <span class="semester-badge">Core</span>
+                                </div>
+                                <div class="courses-list">
+                                    <div class="course-item">
+                                        <span class="course-code">CS205</span>
+                                        <span class="course-name">Operating Systems</span>
+                                        <span class="credits">4</span>
+                                    </div>
+                                    <div class="course-item">
+                                        <span class="course-code">CS206</span>
+                                        <span class="course-name">Database Management Systems</span>
+                                        <span class="credits">4</span>
+                                    </div>
+                                    <div class="course-item">
+                                        <span class="course-code">CS207</span>
+                                        <span class="course-name">Computer Graphics</span>
+                                        <span class="credits">3</span>
+                                    </div>
+                                    <div class="course-item">
+                                        <span class="course-code">CS208</span>
+                                        <span class="course-name">Microprocessors</span>
+                                        <span class="credits">3</span>
+                                    </div>
+                                    <div class="course-item">
+                                        <span class="course-code">MA202</span>
+                                        <span class="course-name">Probability & Statistics</span>
+                                        <span class="credits">3</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Third Year -->
+                    <div class="year-content" id="third">
+                        <div class="year-header">
+                            <h3>Third Year - Advanced Concepts</h3>
+                            <p>Specialized topics in software engineering, networks, and advanced algorithms</p>
+                        </div>
+                        <div class="semesters-grid">
+                            <div class="semester-card">
+                                <div class="semester-header">
+                                    <h4>Semester V</h4>
+                                    <span class="semester-badge">Advanced</span>
+                                </div>
+                                <div class="courses-list">
+                                    <div class="course-item">
+                                        <span class="course-code">CS301</span>
+                                        <span class="course-name">Software Engineering</span>
+                                        <span class="credits">4</span>
+                                    </div>
+                                    <div class="course-item">
+                                        <span class="course-code">CS302</span>
+                                        <span class="course-name">Computer Networks</span>
+                                        <span class="credits">4</span>
+                                    </div>
+                                    <div class="course-item">
+                                        <span class="course-code">CS303</span>
+                                        <span class="course-name">Theory of Computation</span>
+                                        <span class="credits">3</span>
+                                    </div>
+                                    <div class="course-item">
+                                        <span class="course-code">CS304</span>
+                                        <span class="course-name">Artificial Intelligence</span>
+                                        <span class="credits">4</span>
+                                    </div>
+                                    <div class="course-item">
+                                        <span class="course-code">CS305</span>
+                                        <span class="course-name">Human Computer Interaction</span>
+                                        <span class="credits">2</span>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="semester-card">
+                                <div class="semester-header">
+                                    <h4>Semester VI</h4>
+                                    <span class="semester-badge">Advanced</span>
+                                </div>
+                                <div class="courses-list">
+                                    <div class="course-item">
+                                        <span class="course-code">CS306</span>
+                                        <span class="course-name">Design & Analysis of Algorithms</span>
+                                        <span class="credits">4</span>
+                                    </div>
+                                    <div class="course-item">
+                                        <span class="course-code">CS307</span>
+                                        <span class="course-name">Compiler Design</span>
+                                        <span class="credits">4</span>
+                                    </div>
+                                    <div class="course-item">
+                                        <span class="course-code">CS308</span>
+                                        <span class="course-name">Information Security</span>
+                                        <span class="credits">3</span>
+                                    </div>
+                                    <div class="course-item">
+                                        <span class="course-code">CS309</span>
+                                        <span class="course-name">Mobile Application Development</span>
+                                        <span class="credits">3</span>
+                                    </div>
+                                    <div class="course-item">
+                                        <span class="course-code">CS310</span>
+                                        <span class="course-name">Elective I</span>
+                                        <span class="credits">3</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Fourth Year -->
+                    <div class="year-content" id="fourth">
+                        <div class="year-header">
+                            <h3>Final Year - Specialization & Project</h3>
+                            <p>Industry-focused electives, capstone project, and internship experience</p>
+                        </div>
+                        <div class="semesters-grid">
+                            <div class="semester-card">
+                                <div class="semester-header">
+                                    <h4>Semester VII</h4>
+                                    <span class="semester-badge">Specialization</span>
+                                </div>
+                                <div class="courses-list">
+                                    <div class="course-item">
+                                        <span class="course-code">CS401</span>
+                                        <span class="course-name">Machine Learning</span>
+                                        <span class="credits">4</span>
+                                    </div>
+                                    <div class="course-item">
+                                        <span class="course-code">CS402</span>
+                                        <span class="course-name">Cloud Computing</span>
+                                        <span class="credits">3</span>
+                                    </div>
+                                    <div class="course-item">
+                                        <span class="course-code">CS403</span>
+                                        <span class="course-name">Project Work I</span>
+                                        <span class="credits">4</span>
+                                    </div>
+                                    <div class="course-item">
+                                        <span class="course-code">CS404</span>
+                                        <span class="course-name">Elective II</span>
+                                        <span class="credits">3</span>
+                                    </div>
+                                    <div class="course-item">
+                                        <span class="course-code">CS405</span>
+                                        <span class="course-name">Elective III</span>
+                                        <span class="credits">3</span>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="semester-card">
+                                <div class="semester-header">
+                                    <h4>Semester VIII</h4>
+                                    <span class="semester-badge">Capstone</span>
+                                </div>
+                                <div class="courses-list">
+                                    <div class="course-item">
+                                        <span class="course-code">CS406</span>
+                                        <span class="course-name">Project Work II</span>
+                                        <span class="credits">8</span>
+                                    </div>
+                                    <div class="course-item">
+                                        <span class="course-code">CS407</span>
+                                        <span class="course-name">Industrial Training</span>
+                                        <span class="credits">4</span>
+                                    </div>
+                                    <div class="course-item">
+                                        <span class="course-code">CS408</span>
+                                        <span class="course-name">Seminar & Technical Writing</span>
+                                        <span class="credits">2</span>
+                                    </div>
+                                    <div class="course-item">
+                                        <span class="course-code">CS409</span>
+                                        <span class="course-name">Professional Ethics</span>
+                                        <span class="credits">2</span>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
-        </section>
+        </div>
+    </section>
 
-        <!-- Final Year (BE) -->
-        <section id="be" class="year-section">
-            <div class="container">
-                <h2>Final Year (B.E.) - Computer Engineering</h2>
+    <!-- Specializations -->
+    <section class="specializations-section" id="specializations">
+        <div class="container">
+            <div class="section-header">
+                <h2>Specialization Tracks</h2>
+                <p>Choose your area of expertise and shape your career path</p>
+            </div>
+            
+            <div class="specializations-grid">
+                <div class="spec-card">
+                    <div class="spec-icon">🤖</div>
+                    <h3>Artificial Intelligence & Machine Learning</h3>
+                    <p>Dive deep into AI algorithms, neural networks, deep learning, and intelligent systems</p>
+                    <div class="spec-subjects">
+                        <span class="subject-tag">Machine Learning</span>
+                        <span class="subject-tag">Deep Learning</span>
+                        <span class="subject-tag">Computer Vision</span>
+                        <span class="subject-tag">Natural Language Processing</span>
+                    </div>
+                </div>
                 
-                <div class="year-content">
-                    <div class="courses-section">
-                        <h3>Core Courses</h3>
-                        <div class="courses-grid">
-                            <div class="course-card">
-                                <h4>Semester VII</h4>
-                                <ul class="course-list">
-                                    <li>Design and Analysis of Algorithms</li>
-                                    <li>Information and Cyber Security</li>
-                                    <li>Mobile Computing</li>
-                                    <li>Artificial Intelligence</li>
-                                    <li>Project Work Phase I</li>
-                                    <li>Elective III</li>
-                                </ul>
+                <div class="spec-card">
+                    <div class="spec-icon">☁️</div>
+                    <h3>Cloud Computing & DevOps</h3>
+                    <p>Master cloud platforms, containerization, microservices, and modern deployment strategies</p>
+                    <div class="spec-subjects">
+                        <span class="subject-tag">AWS/Azure</span>
+                        <span class="subject-tag">Docker & Kubernetes</span>
+                        <span class="subject-tag">CI/CD Pipelines</span>
+                        <span class="subject-tag">Microservices</span>
+                    </div>
+                </div>
+                
+                <div class="spec-card">
+                    <div class="spec-icon">🔒</div>
+                    <h3>Cybersecurity</h3>
+                    <p>Explore ethical hacking, cryptography, network security, and digital forensics</p>
+                    <div class="spec-subjects">
+                        <span class="subject-tag">Ethical Hacking</span>
+                        <span class="subject-tag">Cryptography</span>
+                        <span class="subject-tag">Network Security</span>
+                        <span class="subject-tag">Digital Forensics</span>
+                    </div>
+                </div>
+                
+                <div class="spec-card">
+                    <div class="spec-icon">📱</div>
+                    <h3>Mobile & Web Development</h3>
+                    <p>Build responsive web applications and cross-platform mobile apps using modern frameworks</p>
+                    <div class="spec-subjects">
+                        <span class="subject-tag">React/Angular</span>
+                        <span class="subject-tag">Flutter/React Native</span>
+                        <span class="subject-tag">Progressive Web Apps</span>
+                        <span class="subject-tag">Full-Stack Development</span>
+                    </div>
+                </div>
+                
+                <div class="spec-card">
+                    <div class="spec-icon">🔗</div>
+                    <h3>Blockchain & Fintech</h3>
+                    <p>Understand distributed systems, cryptocurrency, smart contracts, and financial technology</p>
+                    <div class="spec-subjects">
+                        <span class="subject-tag">Blockchain Technology</span>
+                        <span class="subject-tag">Smart Contracts</span>
+                        <span class="subject-tag">DeFi Applications</span>
+                        <span class="subject-tag">Cryptocurrency</span>
+                    </div>
+                </div>
+                
+                <div class="spec-card">
+                    <div class="spec-icon">📊</div>
+                    <h3>Data Science & Analytics</h3>
+                    <p>Master data analysis, visualization, big data processing, and business intelligence</p>
+                    <div class="spec-subjects">
+                        <span class="subject-tag">Big Data Analytics</span>
+                        <span class="subject-tag">Data Visualization</span>
+                        <span class="subject-tag">Statistical Analysis</span>
+                        <span class="subject-tag">Business Intelligence</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Academic Resources -->
+    <section class="academic-resources">
+        <div class="container">
+            <div class="section-header">
+                <h2>Academic Resources</h2>
+                <p>Essential resources for students and academic planning</p>
+            </div>
+            
+            <div class="resources-grid">
+                <div class="resource-card">
+                    <div class="resource-icon">📚</div>
+                    <h3>Academic Calendar</h3>
+                    <p>Important dates, exam schedules, and semester timelines</p>
+                    <a href="#" class="resource-btn">View Calendar</a>
+                </div>
+                
+                <div class="resource-card">
+                    <div class="resource-icon">📄</div>
+                    <h3>Syllabus & Curriculum</h3>
+                    <p>Detailed course structure and learning outcomes</p>
+                    <a href="#" class="resource-btn">Download PDF</a>
+                </div>
+                
+                <div class="resource-card">
+                    <div class="resource-icon">⏰</div>
+                    <h3>Timetables</h3>
+                    <p>Class schedules and laboratory timetables</p>
+                    <a href="#" class="resource-btn">View Schedule</a>
+                </div>
+                
+                <div class="resource-card">
+                    <div class="resource-icon">🏆</div>
+                    <h3>Assessment Guidelines</h3>
+                    <p>Evaluation criteria and grading policies</p>
+                    <a href="#" class="resource-btn">Read Guidelines</a>
+                </div>
+                
+                <div class="resource-card">
+                    <div class="resource-icon">📖</div>
+                    <h3>E-Library</h3>
+                    <p>Digital resources, journals, and reference materials</p>
+                    <a href="#" class="resource-btn">Access Library</a>
+                </div>
+                
+                <div class="resource-card">
+                    <div class="resource-icon">💼</div>
+                    <h3>Placement Support</h3>
+                    <p>Career guidance and placement preparation resources</p>
+                    <a href="#" class="resource-btn">Get Support</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Academic Calendar & Resources -->
+    <section class="calendar-resources-section">
+        <div class="container">
+            <div class="section-header">
+                <h2>Academic Calendar & Resources</h2>
+                <p>Stay updated with important academic dates, examination schedules, and semester activities</p>
+            </div>
+            
+            <div class="calendar-resources-grid">
+                <div class="calendar-main">
+                    <div class="calendar-card">
+                        <div class="calendar-icon">📅</div>
+                        <h3>Academic Calendar 2024-25</h3>
+                        <p>Complete academic calendar with semester dates, examination schedules, holidays, and important academic milestones.</p>
+                        <div class="calendar-highlights">
+                            <div class="highlight-item">
+                                <span class="highlight-date">Aug 15</span>
+                                <span class="highlight-desc">Semester VII Begins</span>
                             </div>
-                            <div class="course-card">
-                                <h4>Semester VIII</h4>
-                                <ul class="course-list">
-                                    <li>High Performance Computing</li>
-                                    <li>Distributed Systems</li>
-                                    <li>Human Computer Interaction</li>
-                                    <li>Project Work Phase II</li>
-                                    <li>Elective IV</li>
-                                    <li>Seminar</li>
-                                </ul>
+                            <div class="highlight-item">
+                                <span class="highlight-date">Dec 20</span>
+                                <span class="highlight-desc">End Semester Exams</span>
+                            </div>
+                            <div class="highlight-item">
+                                <span class="highlight-date">Jan 10</span>
+                                <span class="highlight-desc">Semester VIII Begins</span>
                             </div>
                         </div>
-                    </div>
-
-                    <div class="academic-resources">
-                        <div class="resource-card">
-                            <h4>Syllabus</h4>
-                            <p>Download detailed syllabus for BE Computer Engineering</p>
-                            <a href="#" class="btn">Download Syllabus</a>
-                        </div>
-                        <div class="resource-card">
-                            <h4>Timetable</h4>
-                            <p>View current semester timetable and schedule</p>
-                            <a href="#" class="btn">View Timetable</a>
+                        <div class="calendar-actions">
+                            <a href="#" class="calendar-btn primary">
+                                <span class="btn-icon">📥</span>
+                                Download Academic Calendar
+                            </a>
+                            <a href="#" class="calendar-btn secondary">
+                                <span class="btn-icon">📊</span>
+                                View Examination Schedule
+                            </a>
                         </div>
                     </div>
                 </div>
-            </div>
-        </section>
-
-        <!-- Elective Courses -->
-        <section class="electives-section">
-            <div class="container">
-                <h2>Elective Courses</h2>
-                <div class="electives-grid">
-                    <div class="elective-category">
-                        <h3>Technical Electives</h3>
-                        <ul class="elective-list">
-                            <li>Cloud Computing</li>
-                            <li>Blockchain Technology</li>
-                            <li>Computer Vision</li>
-                            <li>Natural Language Processing</li>
-                            <li>DevOps and Containerization</li>
-                            <li>Big Data Analytics</li>
-                            <li>Quantum Computing</li>
-                            <li>Internet of Things (IoT)</li>
-                        </ul>
+                
+                <div class="quick-resources">
+                    <h3>Quick Access</h3>
+                    
+                    <div class="resource-item">
+                        <div class="resource-icon">⏰</div>
+                        <div class="resource-content">
+                            <h4>Current Timetables</h4>
+                            <p>View class schedules and lab timings</p>
+                            <a href="#" class="quick-link">View Timetable →</a>
+                        </div>
                     </div>
-                    <div class="elective-category">
-                        <h3>Open Electives</h3>
-                        <ul class="elective-list">
-                            <li>Digital Marketing</li>
-                            <li>Entrepreneurship Development</li>
-                            <li>Project Management</li>
-                            <li>Technical Communication</li>
-                            <li>Innovation and Design Thinking</li>
-                            <li>Environmental Studies</li>
-                        </ul>
+                    
+                    <div class="resource-item">
+                        <div class="resource-icon">📚</div>
+                        <div class="resource-content">
+                            <h4>Syllabus & Curriculum</h4>
+                            <p>Download detailed course syllabus</p>
+                            <a href="#" class="quick-link">Download PDF →</a>
+                        </div>
                     </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- Assessment Methods -->
-        <section class="assessment-section">
-            <div class="container">
-                <h2>Assessment Methods</h2>
-                <div class="assessment-grid">
-                    <div class="assessment-card">
-                        <h3>Continuous Assessment</h3>
-                        <ul>
-                            <li>Regular class tests and quizzes</li>
-                            <li>Laboratory assignments and practicals</li>
-                            <li>Project work and presentations</li>
-                            <li>Attendance and participation</li>
-                        </ul>
+                    
+                    <div class="resource-item">
+                        <div class="resource-icon">📋</div>
+                        <div class="resource-content">
+                            <h4>Assessment Guidelines</h4>
+                            <p>Evaluation criteria and grading policies</p>
+                            <a href="#" class="quick-link">View Guidelines →</a>
+                        </div>
                     </div>
-                    <div class="assessment-card">
-                        <h3>Semester Examination</h3>
-                        <ul>
-                            <li>Mid-semester examinations</li>
-                            <li>End-semester examinations</li>
-                            <li>Practical examinations</li>
-                            <li>Viva voce and oral tests</li>
-                        </ul>
+                    
+                    <div class="resource-item">
+                        <div class="resource-icon">💼</div>
+                        <div class="resource-content">
+                            <h4>Placement Support</h4>
+                            <p>Career guidance and preparation resources</p>
+                            <a href="#" class="quick-link">Get Support →</a>
+                        </div>
                     </div>
                 </div>
             </div>
-        </section>
-
-        <!-- Academic Calendar -->
-        <section class="calendar-section">
-            <div class="container">
-                <h2>Academic Calendar</h2>
-                <div class="calendar-content">
-                    <p>Stay updated with important academic dates, examination schedules, and semester activities.</p>
-                    <div class="calendar-actions">
-                        <a href="#" class="btn">Download Academic Calendar</a>
-                        <a href="#" class="btn btn-secondary">View Examination Schedule</a>
-                    </div>
-                </div>
-            </div>
-        </section>
+        </div>
+    </section>
     </main>
 
     <!-- Footer -->
