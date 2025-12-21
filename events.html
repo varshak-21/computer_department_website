@@ -3,11 +3,46 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>College Events & Activities</title>
+    <title>Events - Computer Engineering Department</title>
+    <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="events.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 </head>
 <body>
+    <!-- Navigation -->
+    <nav class="navbar" id="navbar">
+        <div class="nav-container">
+            <div class="nav-brand">
+                <img src="images/college-logo.png" alt="CSE Logo" class="nav-logo">
+                <span class="nav-title">CSE Department</span>
+            </div>
+            
+            <!-- Mobile menu button -->
+            <button class="mobile-menu-btn" id="mobile-menu-btn">
+                <span class="hamburger-line"></span>
+                <span class="hamburger-line"></span>
+                <span class="hamburger-line"></span>
+            </button>
+            
+            <ul class="nav-menu" id="nav-menu">
+                <li><a href="index.html" class="nav-link">Home</a></li>
+                <li><a href="about.html" class="nav-link">About</a></li>
+                <li class="dropdown">
+                    <a href="academics.html" class="nav-link">Academics</a>
+                    <ul class="dropdown-menu">
+                        <li><a href="academics.html#se">Second Year (SE)</a></li>
+                        <li><a href="academics.html#te">Third Year (TE)</a></li>
+                        <li><a href="academics.html#be">Final Year (BE)</a></li>
+                    </ul>
+                </li>
+                <li><a href="faculty.html" class="nav-link">Faculty</a></li>
+                <li><a href="students.html" class="nav-link">Students</a></li>
+                <li><a href="research.html" class="nav-link">Research</a></li>
+                <li><a href="events.html" class="nav-link active">Events</a></li>
+                <li><a href="contact.html" class="nav-link">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
 
     <header class="hero">
         <h1>Campus Life: Events & Activities 🚀</h1>
@@ -32,8 +67,10 @@
         <div class="event-card">
             <div class="card-image card-image-innovex"></div>
             <div class="card-content"> 
+                <div class="card-date">March 15-17, 2025</div>
                 <h3>Innovex</h3>
                 <p>Annual innovation and technology exhibition showcasing groundbreaking projects and cutting-edge research from students.</p>
+                <div class="card-action">View Details</div>
             </div>
         </div>
     </a>
@@ -42,8 +79,10 @@
         <div class="event-card">
             <div class="card-image card-image-tecnack"></div>
             <div class="card-content">
+                <div class="card-date">April 5-7, 2025</div>
                 <h3>Tecnack</h3>
                 <p>The biggest cultural extravaganza, featuring music, dance, drama, and literary competitions for all students.</p>
+                <div class="card-action">Register Now</div>
             </div>
         </div>
     </a>
@@ -52,8 +91,10 @@
         <div class="event-card">
             <div class="card-image card-image-contest"></div>
             <div class="card-content">
+                <div class="card-date">February 20, 2025</div>
                 <h3>Programming Contest</h3>
                 <p>A high-stakes coding challenge for competitive programmers to test their algorithmic skills.</p>
+                <div class="card-action">Join Contest</div>
             </div>
         </div>
     </a>
@@ -62,8 +103,10 @@
         <div class="event-card">
             <div class="card-image card-image-alumni"></div>
             <div class="card-content">
+                <div class="card-date">Monthly</div>
                 <h3>Alumni Interactions</h3>
                 <p>Connect with successful graduates for mentorship, career guidance, and industry insights.</p>
+                <div class="card-action">Learn More</div>
             </div>
         </div>
     </a>
@@ -72,8 +115,10 @@
         <div class="event-card">
             <div class="card-image card-image-acm"></div>
             <div class="card-content">
+                <div class="card-date">Weekly</div>
                 <h3>ACM DBIT Chapter</h3>
                 <p>Regular sessions, workshops, and coding challenges by the Association for Computing Machinery student chapter.</p>
+                <div class="card-action">Join Chapter</div>
             </div>
         </div>
     </a>
@@ -82,8 +127,10 @@
         <div class="event-card">
             <div class="card-image card-image-iv"></div>
             <div class="card-content">
+                <div class="card-date">Quarterly</div>
                 <h3>Industrial Visits</h3>
                 <p>Guided tours to top companies for practical exposure to real-world industrial and operational environments.</p>
+                <div class="card-action">View Schedule</div>
             </div>
         </div>
     </a>
@@ -92,8 +139,10 @@
         <div class="event-card">
             <div class="card-image card-image-dept"></div>
             <div class="card-content">
+                <div class="card-date">September 10, 2025</div>
                 <h3>Department Day</h3>
                 <p>A celebration of departmental achievements, featuring project showcases, awards, and student performances.</p>
+                <div class="card-action">Learn More</div>
             </div>
         </div>
     </a>
@@ -102,8 +151,10 @@
         <div class="event-card">
             <div class="card-image card-image-pta"></div>
             <div class="card-content">
+                <div class="card-date">First Saturday</div>
                 <h3>PTA Meeting</h3>
                 <p>Scheduled Parent-Teacher Association meetings to discuss student progress and academic performance.</p>
+                <div class="card-action">View Schedule</div>
             </div>
         </div>
     </a>
@@ -112,8 +163,10 @@
         <div class="event-card">
             <div class="card-image card-image-guest"></div>
             <div class="card-content">
+                <div class="card-date">Bi-Weekly</div>
                 <h3>Guest Sessions</h3>
                 <p>Seminars and interactive talks from external subject matter experts and industry veterans.</p>
+                <div class="card-action">View Sessions</div>
             </div>
         </div>
     </a>
@@ -122,8 +175,10 @@
         <div class="event-card">
             <div class="card-image card-image-newsletter"></div>
             <div class="card-content">
+                <div class="card-date">Quarterly</div>
                 <h3>Newsletter</h3>
                 <p>The quarterly college publication covering campus news, event summaries, and student/faculty articles.</p>
+                <div class="card-action">Read Latest</div>
             </div>
         </div>
     </a>
@@ -132,8 +187,10 @@
         <div class="event-card">
             <div class="card-image card-image-tools"></div>
             <div class="card-content">
+                <div class="card-date">Ongoing</div>
                 <h3>Outreach/Workshop/Cert. Program</h3>
                 <p>Hands-on training, certification programs, and community outreach on trending technologies and skills.</p>
+                <div class="card-action">Explore Programs</div>
             </div>
         </div>
     </a>
@@ -145,6 +202,7 @@
         <p>&copy; 2025 @DBIT. All Rights Reserved. | <a href="#">Contact Events Coordinator</a></p>
     </footer>
 
+    <script src="js/script.js"></script>
     <script src="events.js"></script>
 </body>
 </html>

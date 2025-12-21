@@ -6,238 +6,440 @@
 }
 
 body {
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    background-color: #f4f7f9;
+    font-family: 'Inter', 'Segoe UI', sans-serif;
+    background-color: #f5f5f5;
     color: #333;
     line-height: 1.6;
+    padding-top: 80px; /* Account for fixed navbar */
 }
 
 .container {
     max-width: 1200px;
     margin: 0 auto;
-    padding: 20px;
+    padding: 40px 20px;
 }
 
 /* Header/Hero Section */
 .hero {
-    background-color: #000000; /* College Primary Color */
+    background: linear-gradient(135deg, #000000 0%, #333333 100%);
     color: white;
-    padding: 60px 20px;
+    padding: 80px 20px 60px;
     text-align: center;
-    margin-bottom: 30px;
+    margin-bottom: 60px;
 }
 
 .hero h1 {
-    font-size: 2.5em;
-    margin-bottom: 10px;
+    font-size: 2.8em;
+    margin-bottom: 15px;
+    font-weight: 700;
+    letter-spacing: -0.02em;
 }
 
 .hero p {
-    font-size: 1.1em;
+    font-size: 1.2em;
     opacity: 0.9;
+    max-width: 600px;
+    margin: 0 auto;
+    line-height: 1.5;
 }
 
 /* Filter Buttons Styling */
 .filters {
-    margin-bottom: 30px;
+    margin-bottom: 50px;
     text-align: center;
 }
 
 .filters h2 {
     color: #000000;
-    margin-bottom: 20px;
+    margin-bottom: 30px;
+    font-size: 2rem;
+    font-weight: 600;
+    letter-spacing: -0.02em;
 }
 
 .filter-buttons {
     display: flex;
     justify-content: center;
-    gap: 10px;
+    gap: 15px;
     flex-wrap: wrap;
-    margin-top: 15px;
+    margin-top: 20px;
 }
 
 .filter-btn {
-    background-color: #fff;
-    color: #000000;
-    border: 2px solid #c9c9c9;
-    padding: 10px 20px;
+    background-color: #ffffff;
+    color: #333333;
+    border: 2px solid #e0e0e0;
+    padding: 12px 24px;
     border-radius: 25px;
     cursor: pointer;
-    font-weight: bold;
-    transition: all 0.3s ease;
+    font-weight: 600;
     font-size: 0.95em;
+    transition: all 0.3s ease;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
 }
 
 .filter-btn:hover {
-    background-color: #e6f0ff;
+    background-color: #f8f8f8;
+    border-color: #cccccc;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
 }
 
 .filter-btn.active {
-    background-color: #01050a;
+    background-color: #000000;
     color: white;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    border-color: #000000;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
 }
 
 /* Event Grid and Card Styling */
 .event-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 25px;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    gap: 30px;
+    margin-bottom: 60px;
 }
 
-/* New: Style for the anchor tag wrapper */
+/* Event Link Wrapper */
 .event-link {
-    text-decoration: none; /* Remove underline */
-    color: inherit; /* Inherit text color from body */
+    text-decoration: none;
+    color: inherit;
+    display: block;
+    transition: transform 0.3s ease;
 }
 
-/* Apply card styling to the wrapper when filtered */
 .event-link.hidden {
     display: none;
 }
 
+/* Event Card Design */
 .event-card {
-    background-color: white;
-    border-radius: 16px; 
-    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.08); 
-    padding: 0 0 30px 0; /* Adjusted padding: 0 on top/sides to let image stretch, 30px on bottom */
-    overflow: hidden; /* Important for rounding the image corners */
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    background-color: #ffffff;
+    border-radius: 16px;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.08);
+    overflow: hidden;
+    transition: all 0.3s ease;
+    height: 100%;
     display: flex;
     flex-direction: column;
-    align-items: flex-start; 
-    text-align: left;
-    height: 100%;
-    box-sizing: border-box;
+    position: relative;
 }
 
-/* Apply hover effects to the card when the link is hovered */
 .event-link:hover .event-card {
-    transform: translateY(-8px); /* Card lift effect */
-    box-shadow: 0 12px 25px rgba(0, 0, 0, 0.12); /* Stronger shadow on hover */
+    transform: translateY(-8px);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.12);
 }
 
-/* NOTE: Removed .event-card:hover and .event-icon styles as they are replaced by .event-link:hover .event-card and .card-image */
-
-
-/* --- New Image Container Styling --- */
+/* Card Image */
 .card-image {
     width: 100%;
-    height: 180px; /* Standard height for the image area */
+    height: 220px;
     background-size: cover;
     background-position: center;
-    border-radius: 16px 16px 0 0; /* Rounded only at the top corners */
-    margin-bottom: 20px;
-    filter: brightness(0.85); /* Slightly darkens the image for a sleek look */
+    background-repeat: no-repeat;
+    position: relative;
+    overflow: hidden;
 }
 
-/* --- Specific Image Paths (PLACEHOLDERS: REPLACE WITH YOUR OWN) --- */
-.card-image-innovex {
-    background-image: url('event_images/innovex.png'); 
-}
-.card-image-tecnack {
-    background-image: url('event_images/tecnack.png'); 
-}
-.card-image-contest {
-    background-image: url('images/coding_contest.jpg'); 
-}
-.card-image-alumni {
-    background-image: url('images/alumni_meet.jpg'); 
-}
-.card-image-acm {
-    background-image: url('event_images/acm.png'); 
-}
-.card-image-iv {
-    background-image: url('images/factory_visit.jpg'); 
-}
-.card-image-dept {
-    background-image: url('images/dept_day.jpg'); 
-}
-.card-image-pta {
-    background-image: url('images/meeting.jpg'); 
-}
-.card-image-guest {
-    background-image: url('images/speaker.jpg'); 
-}
-.card-image-newsletter {
-    background-image: url('images/newsletter.jpg'); 
-}
-.card-image-tools {
-    background-image: url('images/training.jpg'); 
+.card-image::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(to bottom, transparent 0%, rgba(0,0,0,0.1) 100%);
 }
 
+/* Card Content */
+.card-content {
+    padding: 25px;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
 
-/* Card Heading - Added horizontal padding */
+/* Card Title */
 .event-card h3 {
-    color: #333; 
-    font-size: 1.8em; 
-    margin-bottom: 10px; 
-    font-weight: 600;
-    padding: 0 30px; /* Add padding here to align with description */
+    color: #1a1a1a;
+    font-size: 1.4em;
+    margin-bottom: 12px;
+    font-weight: 700;
+    line-height: 1.3;
+    letter-spacing: -0.02em;
 }
 
-/* Card Paragraph (Description) - Added horizontal padding */
+/* Card Description */
 .event-card p {
-    font-size: 1.1em; 
-    color: #555; 
-    margin-bottom: 0; 
-    line-height: 1.5; 
-    padding: 0 30px; /* Add padding here to align with title */
+    color: #666666;
+    font-size: 1rem;
+    line-height: 1.6;
+    margin-bottom: 20px;
+    flex: 1;
 }
 
-/* Hidden state for filtering */
-/* NOTE: Filter logic now targets the .event-link class in the JS, but keeping this for safety */
-.event-card.hidden {
-    display: none;
+/* Card Date (if added later) */
+.card-date {
+    color: #999999;
+    font-size: 0.9rem;
+    font-weight: 600;
+    margin-bottom: 8px;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+/* Card Action Button */
+.card-action {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 12px 24px;
+    background-color: #000000;
+    color: white;
+    text-decoration: none;
+    border-radius: 8px;
+    font-weight: 600;
+    font-size: 0.9rem;
+    transition: all 0.3s ease;
+    align-self: flex-start;
+    margin-top: auto;
+}
+
+.card-action:hover {
+    background-color: #333333;
+    transform: translateY(-1px);
+}
+
+/* Event Image Backgrounds */
+.card-image-innovex {
+    background-image: url('event_images/innovex.png');
+}
+
+.card-image-tecnack {
+    background-image: url('event_images/tecnack.png');
+}
+
+.card-image-contest {
+    background-image: url('images/coding_contest.jpg');
+}
+
+.card-image-alumni {
+    background-image: url('images/alumni_meet.jpg');
+}
+
+.card-image-acm {
+    background-image: url('event_images/acm.png');
+}
+
+.card-image-iv {
+    background-image: url('images/factory_visit.jpg');
+}
+
+.card-image-dept {
+    background-image: url('images/dept_day.jpg');
+}
+
+.card-image-pta {
+    background-image: url('images/meeting.jpg');
+}
+
+.card-image-guest {
+    background-image: url('images/speaker.jpg');
+}
+
+.card-image-newsletter {
+    background-image: url('images/newsletter.jpg');
+}
+
+.card-image-tools {
+    background-image: url('images/training.jpg');
 }
 
 /* Footer Styling */
 .footer {
     text-align: center;
-    padding: 20px;
-    background-color: #333;
-    color: white;
-    margin-top: 50px;
+    padding: 40px 20px;
+    background: linear-gradient(135deg, #1a1a1a 0%, #000000 100%);
+    color: #ffffff;
+    margin-top: 80px;
     font-size: 0.9em;
 }
 
 .footer a {
-    color: #00a8cc;
-    text-decoration: none;
+    color: #ffffff;
+    text-decoration: underline;
+    transition: opacity 0.3s ease;
 }
 
-/* Responsive Adjustments */
+.footer a:hover {
+    opacity: 0.8;
+}
+
+/* Responsive Design */
+
+/* Large screens (desktops) - 3 cards per row */
+@media (min-width: 1200px) {
+    .event-grid {
+        grid-template-columns: repeat(3, 1fr);
+        max-width: 1200px;
+        margin: 0 auto 60px;
+    }
+}
+
+/* Medium screens (tablets) - 2 cards per row */
+@media (max-width: 1199px) and (min-width: 769px) {
+    .event-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    
+    .card-image {
+        height: 200px;
+    }
+}
+
+/* Mobile screens - 1 card per row */
 @media (max-width: 768px) {
+    body {
+        padding-top: 80px;
+    }
+
+    .container {
+        padding: 20px 15px;
+    }
+
+    .hero {
+        padding: 60px 15px 40px;
+        margin-bottom: 40px;
+    }
+
     .hero h1 {
-        font-size: 2em;
+        font-size: 2.2em;
+        line-height: 1.2;
     }
 
     .hero p {
-        font-size: 1em;
+        font-size: 1.1em;
+    }
+
+    .filters {
+        margin-bottom: 40px;
+    }
+
+    .filters h2 {
+        font-size: 1.6rem;
+        margin-bottom: 20px;
     }
 
     .filter-buttons {
         flex-direction: column;
         align-items: center;
+        gap: 10px;
     }
 
     .filter-btn {
-        width: 80%; /* Make buttons wider on small screens */
+        width: 90%;
+        max-width: 300px;
+        padding: 14px 24px;
+        font-size: 1rem;
     }
 
-    .event-card {
-        padding: 0 0 25px 0; /* Adjust bottom padding for mobile */
+    .event-grid {
+        grid-template-columns: 1fr;
+        gap: 20px;
+        margin-bottom: 40px;
     }
 
-    .event-card h3, .event-card p {
-        padding: 0 25px; /* Adjust horizontal padding for mobile */
+    .card-image {
+        height: 180px;
     }
-    
+
+    .card-content {
+        padding: 20px;
+    }
+
     .event-card h3 {
-        font-size: 1.6em;
+        font-size: 1.3em;
     }
 
     .event-card p {
-        font-size: 1em;
+        font-size: 0.95rem;
+        margin-bottom: 18px;
     }
+
+    .footer {
+        padding: 30px 15px;
+        margin-top: 60px;
+    }
+}
+
+/* Small mobile screens */
+@media (max-width: 480px) {
+    .hero h1 {
+        font-size: 1.9em;
+    }
+
+    .hero p {
+        font-size: 1rem;
+    }
+
+    .card-content {
+        padding: 18px;
+    }
+
+    .event-card h3 {
+        font-size: 1.2em;
+    }
+
+    .card-action {
+        padding: 10px 20px;
+        font-size: 0.85rem;
+    }
+}
+
+/* Enhanced hover effects for non-touch devices */
+@media (hover: hover) {
+    .event-card::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background: linear-gradient(45deg, transparent 0%, rgba(0,0,0,0.02) 100%);
+        opacity: 0;
+        transition: opacity 0.3s ease;
+    }
+
+    .event-link:hover .event-card::before {
+        opacity: 1;
+    }
+}
+
+/* Accessibility improvements */
+.event-link:focus {
+    outline: 2px solid #000000;
+    outline-offset: 2px;
+    border-radius: 16px;
+}
+
+.filter-btn:focus {
+    outline: 2px solid #000000;
+    outline-offset: 2px;
+}
+
+/* Animation for cards appearing */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.event-card {
+    animation: fadeInUp 0.6s ease-out;
 }

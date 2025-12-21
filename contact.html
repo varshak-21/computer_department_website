@@ -5,441 +5,514 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Contact Us - Computer Engineering Department</title>
     <link rel="stylesheet" href="css/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 </head>
 <body>
-    <!-- Header -->
-    <header class="header">
-        <div class="container">
-            <div class="header-top">
-                <div class="logo-section">
-                    <img src="images/college-logo.png" alt="College Logo" class="logo">
-                    <div class="dept-info">
-                        <h1>Computer Engineering Department</h1>
-                        <p class="college-name">[Your College Name]</p>
-                    </div>
-                </div>
-                <div class="contact-info">
-                    <div class="contact-item">
-                        <span>📞 +91-XXXXXXXXXX</span>
-                    </div>
-                    <div class="contact-item">
-                        <span>✉️ cse@college.edu</span>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </header>
-
     <!-- Navigation -->
-    <nav class="navbar">
-        <div class="container">
-            <ul class="nav-menu">
-                <li><a href="index.html">Home</a></li>
-                <li><a href="about.html">About Us</a></li>
+    <nav class="navbar" id="navbar">
+        <div class="nav-container">
+            <div class="nav-brand">
+                <img src="images/college-logo.png" alt="CSE Logo" class="nav-logo">
+                <span class="nav-title">CSE Department</span>
+            </div>
+            
+            <!-- Mobile menu button -->
+            <button class="mobile-menu-btn" id="mobile-menu-btn">
+                <span class="hamburger-line"></span>
+                <span class="hamburger-line"></span>
+                <span class="hamburger-line"></span>
+            </button>
+            
+            <ul class="nav-menu" id="nav-menu">
+                <li><a href="index.html" class="nav-link">Home</a></li>
+                <li><a href="about.html" class="nav-link">About</a></li>
                 <li class="dropdown">
-                    <a href="academics.html">Academics</a>
+                    <a href="academics.html" class="nav-link">Academics</a>
                     <ul class="dropdown-menu">
                         <li><a href="academics.html#se">Second Year (SE)</a></li>
                         <li><a href="academics.html#te">Third Year (TE)</a></li>
                         <li><a href="academics.html#be">Final Year (BE)</a></li>
                     </ul>
                 </li>
-                <li><a href="faculty.html">Faculty</a></li>
-                <li><a href="students.html">Students</a></li>
-                <li><a href="research.html">Research</a></li>
-                <li><a href="events.html">Events</a></li>
-                <li><a href="contact.html" class="active">Contact Us</a></li>
+                <li><a href="faculty.html" class="nav-link">Faculty</a></li>
+                <li><a href="students.html" class="nav-link">Students</a></li>
+                <li><a href="research.html" class="nav-link">Research</a></li>
+                <li><a href="events.html" class="nav-link">Events</a></li>
+                <li><a href="contact.html" class="nav-link active">Contact</a></li>
             </ul>
         </div>
     </nav>
 
-    <!-- Main Content -->
-    <main class="main-content">
-        <!-- Page Header -->
-        <section class="page-header">
-            <div class="container">
+    <!-- Page Hero -->
+    <section class="page-hero">
+        <div class="container">
+            <div class="page-hero-content">
                 <h1>Contact Us</h1>
-                <p>Get in touch with us for any inquiries or information</p>
-            </div>
-        </section>
-
-        <!-- Contact Information -->
-        <section class="contact-info-section">
-            <div class="container">
-                <div class="contact-grid">
-                    <!-- Department Contact -->
-                    <div class="contact-card">
-                        <div class="contact-icon">🏢</div>
-                        <h3>Department Office</h3>
-                        <div class="contact-details">
-                            <p><strong>Computer Engineering Department</strong></p>
-                            <p>[College Name]</p>
-                            <p>[Address Line 1]</p>
-                            <p>[Address Line 2]</p>
-                            <p>[City, State - PIN Code]</p>
-                            <p>[Country]</p>
-                        </div>
+                <p>Get in touch with us for any inquiries, admissions, or collaboration opportunities</p>
+                <div class="hero-stats">
+                    <div class="stat-item">
+                        <span class="stat-number"><i class="fas fa-phone"></i></span>
+                        <span class="stat-label">Always Available</span>
                     </div>
-
-                    <!-- Phone Contact -->
-                    <div class="contact-card">
-                        <div class="contact-icon">📞</div>
-                        <h3>Phone</h3>
-                        <div class="contact-details">
-                            <p><strong>Main Office:</strong> +91-XXXXXXXXXX</p>
-                            <p><strong>HOD Office:</strong> +91-XXXXXXXXXX</p>
-                            <p><strong>Faculty Room:</strong> +91-XXXXXXXXXX</p>
-                            <p><strong>Lab Coordinator:</strong> +91-XXXXXXXXXX</p>
-                            <p><strong>Fax:</strong> +91-XXXXXXXXXX</p>
-                        </div>
+                    <div class="stat-item">
+                        <span class="stat-number"><i class="fas fa-envelope"></i></span>
+                        <span class="stat-label">Quick Response</span>
                     </div>
-
-                    <!-- Email Contact -->
-                    <div class="contact-card">
-                        <div class="contact-icon">✉️</div>
-                        <h3>Email</h3>
-                        <div class="contact-details">
-                            <p><strong>General Inquiry:</strong> cse@college.edu</p>
-                            <p><strong>Head of Department:</strong> hod.cse@college.edu</p>
-                            <p><strong>Admissions:</strong> admissions.cse@college.edu</p>
-                            <p><strong>Placements:</strong> placements.cse@college.edu</p>
-                            <p><strong>Research:</strong> research.cse@college.edu</p>
-                        </div>
-                    </div>
-
-                    <!-- Office Hours -->
-                    <div class="contact-card">
-                        <div class="contact-icon">🕒</div>
-                        <h3>Office Hours</h3>
-                        <div class="contact-details">
-                            <p><strong>Monday - Friday:</strong></p>
-                            <p>9:00 AM - 5:00 PM</p>
-                            <p><strong>Saturday:</strong></p>
-                            <p>9:00 AM - 1:00 PM</p>
-                            <p><strong>Sunday:</strong> Closed</p>
-                            <p><em>*During college holidays, office hours may vary</em></p>
-                        </div>
+                    <div class="stat-item">
+                        <span class="stat-number"><i class="fas fa-map-marker-alt"></i></span>
+                        <span class="stat-label">Easy to Find</span>
                     </div>
                 </div>
             </div>
-        </section>
+        </div>
+    </section>
 
-        <!-- Contact Form -->
-        <section class="contact-form-section">
-            <div class="container">
-                <div class="form-container">
-                    <div class="form-header">
-                        <h2>Send Us a Message</h2>
-                        <p>Have a question or need more information? Fill out the form below and we'll get back to you as soon as possible.</p>
+    <!-- Quick Contact Section -->
+    <section class="quick-contact-section">
+        <div class="container">
+            <div class="contact-cards-grid">
+                <div class="contact-info-card">
+                    <div class="contact-icon">
+                        <i class="fas fa-map-marker-alt"></i>
                     </div>
-                    
-                    <form class="contact-form" id="contactForm">
-                        <div class="form-row">
-                            <div class="form-group">
-                                <label for="firstName">First Name *</label>
-                                <input type="text" id="firstName" name="firstName" required>
+                    <div class="contact-content">
+                        <h3>Visit Us</h3>
+                        <p>Computer Engineering Department<br>
+                        Don Bosco Institute of Technology<br>
+                        Kurla West, Mumbai - 400070<br>
+                        Maharashtra, India</p>
+                    </div>
+                </div>
+
+                <div class="contact-info-card">
+                    <div class="contact-icon">
+                        <i class="fas fa-phone"></i>
+                    </div>
+                    <div class="contact-content">
+                        <h3>Call Us</h3>
+                        <p><strong>Main Office:</strong> +91-22-25070101<br>
+                        <strong>HOD Office:</strong> +91-22-25070102<br>
+                        <strong>Academic Office:</strong> +91-22-25070103</p>
+                    </div>
+                </div>
+
+                <div class="contact-info-card">
+                    <div class="contact-icon">
+                        <i class="fas fa-envelope"></i>
+                    </div>
+                    <div class="contact-content">
+                        <h3>Email Us</h3>
+                        <p><strong>General:</strong> cse@dbit.in<br>
+                        <strong>Admissions:</strong> admissions@dbit.in<br>
+                        <strong>Research:</strong> research.cse@dbit.in</p>
+                    </div>
+                </div>
+
+                <div class="contact-info-card">
+                    <div class="contact-icon">
+                        <i class="fas fa-clock"></i>
+                    </div>
+                    <div class="contact-content">
+                        <h3>Office Hours</h3>
+                        <p><strong>Mon - Fri:</strong> 9:00 AM - 5:00 PM<br>
+                        <strong>Saturday:</strong> 9:00 AM - 1:00 PM<br>
+                        <strong>Sunday:</strong> Closed</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Form Section -->
+    <section class="contact-form-section">
+        <div class="container">
+            <div class="section-header">
+                <h2>Send Us a Message</h2>
+                <p>Have questions? We'd love to hear from you. Send us a message and we'll respond as soon as possible.</p>
+            </div>
+            
+            <div class="contact-form-container">
+                <div class="contact-form-grid">
+                    <div class="form-info">
+                        <h3>Get in Touch</h3>
+                        <p>Whether you're a prospective student, researcher, or industry partner, we're here to help. Choose the best way to reach us:</p>
+                        
+                        <div class="contact-methods">
+                            <div class="contact-method">
+                                <i class="fas fa-graduation-cap"></i>
+                                <div>
+                                    <strong>Admissions</strong>
+                                    <p>Questions about programs and applications</p>
+                                </div>
                             </div>
-                            <div class="form-group">
-                                <label for="lastName">Last Name *</label>
-                                <input type="text" id="lastName" name="lastName" required>
+                            <div class="contact-method">
+                                <i class="fas fa-briefcase"></i>
+                                <div>
+                                    <strong>Industry Partnerships</strong>
+                                    <p>Collaboration and placement opportunities</p>
+                                </div>
+                            </div>
+                            <div class="contact-method">
+                                <i class="fas fa-microscope"></i>
+                                <div>
+                                    <strong>Research Inquiries</strong>
+                                    <p>Research collaborations and projects</p>
+                                </div>
                             </div>
                         </div>
-                        
-                        <div class="form-row">
+                    </div>
+                    
+                    <div class="contact-form-wrapper">
+                        <form class="modern-contact-form" id="contactForm">
                             <div class="form-group">
-                                <label for="email">Email Address *</label>
+                                <label for="name">Full Name</label>
+                                <input type="text" id="name" name="name" required>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="email">Email Address</label>
                                 <input type="email" id="email" name="email" required>
                             </div>
+                            
                             <div class="form-group">
                                 <label for="phone">Phone Number</label>
                                 <input type="tel" id="phone" name="phone">
                             </div>
-                        </div>
-                        
-                        <div class="form-group">
-                            <label for="category">Inquiry Category *</label>
-                            <select id="category" name="category" required>
-                                <option value="">Select Category</option>
-                                <option value="admissions">Admissions</option>
-                                <option value="academics">Academics</option>
-                                <option value="research">Research</option>
-                                <option value="placements">Placements</option>
-                                <option value="events">Events</option>
-                                <option value="general">General Inquiry</option>
-                                <option value="other">Other</option>
-                            </select>
-                        </div>
-                        
-                        <div class="form-group">
-                            <label for="subject">Subject *</label>
-                            <input type="text" id="subject" name="subject" required>
-                        </div>
-                        
-                        <div class="form-group">
-                            <label for="message">Message *</label>
-                            <textarea id="message" name="message" rows="6" required placeholder="Please provide details about your inquiry..."></textarea>
-                        </div>
-                        
-                        <div class="form-group checkbox-group">
-                            <label class="checkbox-label">
-                                <input type="checkbox" id="newsletter" name="newsletter">
-                                <span class="checkmark"></span>
-                                Subscribe to our newsletter for updates on events and news
-                            </label>
-                        </div>
-                        
-                        <div class="form-actions">
-                            <button type="submit" class="btn btn-primary">Send Message</button>
-                            <button type="reset" class="btn btn-secondary">Clear Form</button>
-                        </div>
-                    </form>
+                            
+                            <div class="form-group">
+                                <label for="subject">Subject</label>
+                                <select id="subject" name="subject" required>
+                                    <option value="">Select a subject</option>
+                                    <option value="admissions">Admissions Inquiry</option>
+                                    <option value="research">Research Collaboration</option>
+                                    <option value="industry">Industry Partnership</option>
+                                    <option value="academic">Academic Information</option>
+                                    <option value="general">General Inquiry</option>
+                                </select>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="message">Message</label>
+                                <textarea id="message" name="message" rows="5" placeholder="Tell us more about your inquiry..." required></textarea>
+                            </div>
+                            
+                            <button type="submit" class="submit-btn">
+                                <i class="fas fa-paper-plane"></i>
+                                Send Message
+                            </button>
+                        </form>
+                    </div>
                 </div>
             </div>
-        </section>
+        </div>
+    </section>
 
-        <!-- Key Personnel -->
-        <section class="key-personnel">
-            <div class="container">
+    <!-- Key Personnel Section -->
+    <section class="faculty-section">
+        <div class="container">
+            <div class="section-header">
                 <h2>Key Personnel</h2>
-                <div class="personnel-grid">
-                    <div class="personnel-card">
-                        <div class="personnel-photo">
-                            <img src="images/hod-photo.jpg" alt="HOD" class="personnel-image">
+                <p>Meet the key faculty and staff members who lead our department</p>
+            </div>
+            
+            <div class="faculty-grid">
+                <div class="faculty-card">
+                    <div class="faculty-image">
+                        <img src="images/faculty/hod-placeholder.jpg" alt="Head of Department" class="faculty-img">
+                    </div>
+                    <div class="faculty-info">
+                        <h3>Dr. Rajesh Kumar</h3>
+                        <span class="faculty-designation">Head of Department</span>
+                        <div class="faculty-contact">
+                            <div class="contact-item">
+                                <i class="fas fa-envelope"></i>
+                                <span>hod.cse@dbit.in</span>
+                            </div>
+                            <div class="contact-item">
+                                <i class="fas fa-phone"></i>
+                                <span>+91-22-25070102</span>
+                            </div>
+                            <div class="contact-item">
+                                <i class="fas fa-door-open"></i>
+                                <span>Room 301, CS Block</span>
+                            </div>
                         </div>
-                        <div class="personnel-info">
-                            <h3>Dr. [HOD Name]</h3>
-                            <p class="personnel-designation">Head of Department</p>
-                            <div class="personnel-contact">
-                                <p>📞 +91-XXXXXXXXXX</p>
-                                <p>✉️ hod.cse@college.edu</p>
-                                <p>🏢 Room No. [Number]</p>
-                            </div>
-                            <div class="personnel-hours">
-                                <p><strong>Office Hours:</strong></p>
-                                <p>Monday - Friday: 10:00 AM - 4:00 PM</p>
-                            </div>
+                        <div class="office-hours">
+                            <strong>Office Hours:</strong> Mon-Fri 10:00 AM - 4:00 PM
                         </div>
                     </div>
+                </div>
 
-                    <div class="personnel-card">
-                        <div class="personnel-photo">
-                            <img src="images/faculty/coordinator.jpg" alt="Academic Coordinator" class="personnel-image">
+                <div class="faculty-card">
+                    <div class="faculty-image">
+                        <img src="images/faculty/coordinator-placeholder.jpg" alt="Academic Coordinator" class="faculty-img">
+                    </div>
+                    <div class="faculty-info">
+                        <h3>Prof. Priya Sharma</h3>
+                        <span class="faculty-designation">Academic Coordinator</span>
+                        <div class="faculty-contact">
+                            <div class="contact-item">
+                                <i class="fas fa-envelope"></i>
+                                <span>academic.cse@dbit.in</span>
+                            </div>
+                            <div class="contact-item">
+                                <i class="fas fa-phone"></i>
+                                <span>+91-22-25070103</span>
+                            </div>
+                            <div class="contact-item">
+                                <i class="fas fa-door-open"></i>
+                                <span>Room 205, CS Block</span>
+                            </div>
                         </div>
-                        <div class="personnel-info">
-                            <h3>Prof. [Coordinator Name]</h3>
-                            <p class="personnel-designation">Academic Coordinator</p>
-                            <div class="personnel-contact">
-                                <p>📞 +91-XXXXXXXXXX</p>
-                                <p>✉️ academics.cse@college.edu</p>
-                                <p>🏢 Room No. [Number]</p>
-                            </div>
-                            <div class="personnel-hours">
-                                <p><strong>Office Hours:</strong></p>
-                                <p>Monday - Friday: 9:00 AM - 5:00 PM</p>
-                            </div>
+                        <div class="office-hours">
+                            <strong>Office Hours:</strong> Mon-Fri 9:00 AM - 5:00 PM
                         </div>
                     </div>
+                </div>
 
-                    <div class="personnel-card">
-                        <div class="personnel-photo">
-                            <img src="images/faculty/placement-coordinator.jpg" alt="Placement Coordinator" class="personnel-image">
-                        </div>
-                        <div class="personnel-info">
-                            <h3>Prof. [Placement Coordinator Name]</h3>
-                            <p class="personnel-designation">Placement Coordinator</p>
-                            <div class="personnel-contact">
-                                <p>📞 +91-XXXXXXXXXX</p>
-                                <p>✉️ placements.cse@college.edu</p>
-                                <p>🏢 Room No. [Number]</p>
-                            </div>
-                            <div class="personnel-hours">
-                                <p><strong>Office Hours:</strong></p>
-                                <p>Monday - Friday: 9:00 AM - 4:00 PM</p>
-                            </div>
-                        </div>
+                <div class="faculty-card">
+                    <div class="faculty-image">
+                        <img src="images/faculty/placement-placeholder.jpg" alt="Placement Coordinator" class="faculty-img">
                     </div>
-
-                    <div class="personnel-card">
-                        <div class="personnel-photo">
-                            <img src="images/staff/office-staff.jpg" alt="Office Staff" class="personnel-image">
+                    <div class="faculty-info">
+                        <h3>Prof. Amit Patel</h3>
+                        <span class="faculty-designation">Placement Coordinator</span>
+                        <div class="faculty-contact">
+                            <div class="contact-item">
+                                <i class="fas fa-envelope"></i>
+                                <span>placements@dbit.in</span>
+                            </div>
+                            <div class="contact-item">
+                                <i class="fas fa-phone"></i>
+                                <span>+91-22-25070104</span>
+                            </div>
+                            <div class="contact-item">
+                                <i class="fas fa-door-open"></i>
+                                <span>Room 110, Placement Cell</span>
+                            </div>
                         </div>
-                        <div class="personnel-info">
-                            <h3>[Staff Name]</h3>
-                            <p class="personnel-designation">Department Office Staff</p>
-                            <div class="personnel-contact">
-                                <p>📞 +91-XXXXXXXXXX</p>
-                                <p>✉️ office.cse@college.edu</p>
-                                <p>🏢 Department Office</p>
-                            </div>
-                            <div class="personnel-hours">
-                                <p><strong>Office Hours:</strong></p>
-                                <p>Monday - Saturday: 9:00 AM - 5:00 PM</p>
-                            </div>
+                        <div class="office-hours">
+                            <strong>Office Hours:</strong> Mon-Fri 9:00 AM - 4:00 PM
                         </div>
                     </div>
                 </div>
             </div>
-        </section>
+        </div>
+    </section>
 
-        <!-- Location Map -->
-        <section class="location-map">
-            <div class="container">
-                <h2>Find Us</h2>
-                <div class="map-container">
-                    <div class="map-info">
-                        <h3>Campus Location</h3>
-                        <p>
-                            Our Computer Engineering Department is located in the main academic building 
-                            of [College Name]. The department office is on the [Floor] floor of [Building Name].
-                        </p>
-                        
+    <!-- Location and Map Section -->
+    <section class="location-section">
+        <div class="container">
+            <div class="section-header">
+                <h2>Visit Our Campus</h2>
+                <p>Find us easily with detailed location information and directions</p>
+            </div>
+            
+            <div class="location-grid">
+                <div class="location-info">
+                    <div class="location-card">
+                        <h3>Campus Address</h3>
+                        <div class="address-info">
+                            <i class="fas fa-map-marker-alt"></i>
+                            <div>
+                                <p><strong>Don Bosco Institute of Technology</strong></p>
+                                <p>Premier Automobiles Road, Near Everard Nagar,</p>
+                                <p>Kurla West, Mumbai - 400070</p>
+                                <p>Maharashtra, India</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="location-card">
+                        <h3>How to Reach</h3>
                         <div class="directions">
-                            <h4>Directions:</h4>
-                            <ul>
-                                <li>From Railway Station: [Distance] km - [Direction/Route]</li>
-                                <li>From Airport: [Distance] km - [Direction/Route]</li>
-                                <li>From City Center: [Distance] km - [Direction/Route]</li>
-                            </ul>
-                        </div>
-                        
-                        <div class="parking-info">
-                            <h4>Parking:</h4>
-                            <p>Visitor parking is available in the main campus parking area. Please obtain a visitor's pass from the security gate.</p>
+                            <div class="direction-item">
+                                <i class="fas fa-train"></i>
+                                <div>
+                                    <strong>By Train:</strong>
+                                    <p>Kurla Railway Station - 2 km</p>
+                                    <p>LBS Road Station - 1.5 km</p>
+                                </div>
+                            </div>
+                            <div class="direction-item">
+                                <i class="fas fa-bus"></i>
+                                <div>
+                                    <strong>By Bus:</strong>
+                                    <p>Multiple BEST buses available</p>
+                                    <p>Route: 302, 303, 306, 384</p>
+                                </div>
+                            </div>
+                            <div class="direction-item">
+                                <i class="fas fa-car"></i>
+                                <div>
+                                    <strong>By Car:</strong>
+                                    <p>Parking available on campus</p>
+                                    <p>Via LBS Road or Kurla Road</p>
+                                </div>
+                            </div>
                         </div>
                     </div>
-                    
-                    <div class="map-embed">
-                        <!-- Google Maps Embed -->
-                        <div class="map-placeholder">
-                            <p>📍 Interactive Map</p>
-                            <p>Google Maps integration will be added here</p>
-                            <p>Coordinates: [Latitude], [Longitude]</p>
-                            <a href="#" class="btn btn-small">Open in Google Maps</a>
-                        </div>
-                        <!-- Replace the placeholder above with actual Google Maps embed code:
-                        <iframe 
-                            src="https://www.google.com/maps/embed?pb=..." 
-                            width="100%" 
-                            height="300" 
-                            style="border:0;" 
-                            allowfullscreen="" 
-                            loading="lazy" 
-                            referrerpolicy="no-referrer-when-downgrade">
-                        </iframe>
-                        -->
+                </div>
+                
+                <div class="map-container">
+                    <div class="map-placeholder">
+                        <i class="fas fa-map"></i>
+                        <h4>Interactive Map</h4>
+                        <p>Google Maps integration coming soon</p>
+                        <a href="https://goo.gl/maps/example" target="_blank" class="btn btn-primary">
+                            <i class="fas fa-external-link-alt"></i>
+                            Open in Google Maps
+                        </a>
                     </div>
                 </div>
             </div>
-        </section>
+        </div>
+    </section>
 
-        <!-- Social Media -->
-        <section class="social-media-section">
-            <div class="container">
-                <h2>Connect With Us</h2>
-                <div class="social-grid">
-                    <div class="social-card">
-                        <div class="social-icon linkedin">🔗</div>
-                        <h3>LinkedIn</h3>
-                        <p>Connect with our department, faculty, and alumni network</p>
-                        <a href="#" class="btn btn-small">Follow Us</a>
-                    </div>
-                    
-                    <div class="social-card">
-                        <div class="social-icon instagram">📷</div>
-                        <h3>Instagram</h3>
-                        <p>See our latest activities, events, and campus life</p>
-                        <a href="#" class="btn btn-small">Follow Us</a>
-                    </div>
-                    
-                    <div class="social-card">
-                        <div class="social-icon youtube">📹</div>
-                        <h3>YouTube</h3>
-                        <p>Watch our seminars, lectures, and department videos</p>
-                        <a href="#" class="btn btn-small">Subscribe</a>
-                    </div>
-                    
-                    <div class="social-card">
-                        <div class="social-icon website">🌐</div>
-                        <h3>Department Website</h3>
-                        <p>Visit our official website for the latest updates</p>
-                        <a href="#" class="btn btn-small">Visit Website</a>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- FAQ Section -->
-        <section class="faq-section">
-            <div class="container">
+    <!-- FAQ Section -->
+    <section class="faq-section">
+        <div class="container">
+            <div class="section-header">
                 <h2>Frequently Asked Questions</h2>
-                <div class="faq-grid">
-                    <div class="faq-item">
-                        <h4>How can I get admission to the Computer Engineering program?</h4>
-                        <p>Admission information is available through our admissions office. You can contact admissions.cse@college.edu or visit the main admissions office for detailed information about eligibility, application process, and important dates.</p>
+                <p>Find answers to commonly asked questions about our department</p>
+            </div>
+            
+            <div class="faq-grid">
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <h4>How can I apply for admission to the Computer Engineering program?</h4>
+                        <i class="fas fa-chevron-down"></i>
                     </div>
-                    
-                    <div class="faq-item">
-                        <h4>What are the visiting hours for faculty members?</h4>
-                        <p>Faculty members have designated office hours which are typically posted on their office doors. You can also contact the department office to schedule an appointment or check faculty availability.</p>
+                    <div class="faq-answer">
+                        <p>Admission applications are processed through the central admissions office. Visit our admissions page or contact admissions@dbit.in for detailed information about eligibility criteria, application deadlines, and required documents.</p>
                     </div>
-                    
-                    <div class="faq-item">
-                        <h4>How can I get information about placement opportunities?</h4>
-                        <p>For placement-related queries, please contact our Placement Coordinator at placements.cse@college.edu or visit the placement office during working hours.</p>
+                </div>
+                
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <h4>What are the faculty office hours for student consultations?</h4>
+                        <i class="fas fa-chevron-down"></i>
                     </div>
-                    
-                    <div class="faq-item">
+                    <div class="faq-answer">
+                        <p>Faculty members maintain regular office hours typically from 9:00 AM to 5:00 PM on weekdays. Specific office hours for each faculty member are posted on their office doors and can be found on our faculty page.</p>
+                    </div>
+                </div>
+                
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <h4>How can industry partners collaborate with our department?</h4>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>We welcome industry collaborations for research projects, internships, guest lectures, and placement opportunities. Contact our industry liaison team at industry@dbit.in to explore partnership possibilities.</p>
+                    </div>
+                </div>
+                
+                <div class="faq-item">
+                    <div class="faq-question">
                         <h4>Can I visit the department labs and facilities?</h4>
-                        <p>Lab visits can be arranged through the department office. Please contact us in advance to schedule a visit and ensure that labs are available for tours.</p>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Lab visits can be arranged through advance booking. Please contact the department office at least 48 hours in advance to schedule a tour of our facilities including computer labs, research centers, and project spaces.</p>
                     </div>
                 </div>
             </div>
-        </section>
-    </main>
+        </div>
+    </section>
 
     <!-- Footer -->
     <footer class="footer">
         <div class="container">
             <div class="footer-content">
                 <div class="footer-section">
-                    <h3>Computer Engineering Department</h3>
-                    <p class="address">
-                        [College Name]<br>
-                        [Address Line 1]<br>
-                        [Address Line 2]<br>
-                        [City, State - PIN Code]
-                    </p>
-                </div>
-                <div class="footer-section">
-                    <h3>Contact Information</h3>
-                    <p>Phone: +91-XXXXXXXXXX</p>
-                    <p>Email: cse@college.edu</p>
-                    <p>Fax: +91-XXXXXXXXXX</p>
-                </div>
-                <div class="footer-section">
-                    <h3>Follow Us</h3>
+                    <div class="footer-brand">
+                        <img src="images/college-logo.png" alt="CSE Logo" class="footer-logo">
+                        <h3>CSE Department</h3>
+                    </div>
+                    <p>Shaping the future through innovative computer science education and cutting-edge research.</p>
                     <div class="social-links">
-                        <a href="#" class="social-link">LinkedIn</a>
-                        <a href="#" class="social-link">Instagram</a>
-                        <a href="#" class="social-link">YouTube</a>
+                        <a href="#" class="social-link"><i class="fab fa-linkedin"></i></a>
+                        <a href="#" class="social-link"><i class="fab fa-twitter"></i></a>
+                        <a href="#" class="social-link"><i class="fab fa-instagram"></i></a>
+                        <a href="#" class="social-link"><i class="fab fa-youtube"></i></a>
                     </div>
                 </div>
+                
                 <div class="footer-section">
                     <h3>Quick Links</h3>
                     <ul class="footer-links">
+                        <li><a href="index.html">Home</a></li>
                         <li><a href="about.html">About Us</a></li>
                         <li><a href="academics.html">Academics</a></li>
                         <li><a href="faculty.html">Faculty</a></li>
-                        <li><a href="contact.html">Contact</a></li>
+                        <li><a href="research.html">Research</a></li>
+                        <li><a href="events.html">Events</a></li>
                     </ul>
                 </div>
+                
+                <div class="footer-section">
+                    <h3>Contact Info</h3>
+                    <div class="footer-contact">
+                        <div class="contact-item">
+                            <i class="fas fa-map-marker-alt"></i>
+                            <span>Kurla West, Mumbai - 400070</span>
+                        </div>
+                        <div class="contact-item">
+                            <i class="fas fa-phone"></i>
+                            <span>+91-22-25070101</span>
+                        </div>
+                        <div class="contact-item">
+                            <i class="fas fa-envelope"></i>
+                            <span>cse@dbit.in</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="footer-section">
+                    <h3>Office Hours</h3>
+                    <div class="office-hours">
+                        <p><strong>Monday - Friday</strong><br>9:00 AM - 5:00 PM</p>
+                        <p><strong>Saturday</strong><br>9:00 AM - 1:00 PM</p>
+                        <p><strong>Sunday</strong><br>Closed</p>
+                    </div>
+                </div>
             </div>
+            
             <div class="footer-bottom">
-                <p>&copy; 2025 Computer Engineering Department, [College Name]. All rights reserved.</p>
+                <p>&copy; 2025 Computer Science and Engineering Department, Don Bosco Institute of Technology. All rights reserved.</p>
             </div>
         </div>
     </footer>
 
     <script src="js/script.js"></script>
+    <script>
+        // Simple FAQ accordion functionality
+        document.addEventListener('DOMContentLoaded', function() {
+            const faqItems = document.querySelectorAll('.faq-item');
+            
+            faqItems.forEach(item => {
+                const question = item.querySelector('.faq-question');
+                const answer = item.querySelector('.faq-answer');
+                
+                question.addEventListener('click', () => {
+                    const isActive = item.classList.contains('active');
+                    
+                    // Close all FAQ items
+                    faqItems.forEach(faq => {
+                        faq.classList.remove('active');
+                        faq.querySelector('.faq-answer').style.display = 'none';
+                    });
+                    
+                    // Open clicked item if it wasn't active
+                    if (!isActive) {
+                        item.classList.add('active');
+                        answer.style.display = 'block';
+                    }
+                });
+            });
+        });
+    </script>
 </body>
 </html>
