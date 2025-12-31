@@ -54,6 +54,33 @@
     font-weight: 500;
 }
 
+/* ...existing code... */
+
+.about-info {
+    padding: 4rem 0;
+    background: var(--white);
+}
+
+.information-about {
+    max-width: 100%;
+    margin: 0 auto;
+    padding: 2rem 3rem;  /* Increased horizontal padding for more space on left and right */
+    background: var(--light-grey);
+    border-radius: 12px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+.information-about p {
+    font-size: 1.1rem;
+    line-height: 1.6;
+    color: var(--dark-grey);
+    margin: 0;
+    text-align: justify;
+}
+
+/* ...existing code... */
+
 /* Features Section */
 .features-section {
     padding: 6rem 0;
@@ -286,6 +313,7 @@
     color: var(--grey);
     font-weight: 500;
     white-space: nowrap;
+  
 }
 
 .view-all-link {
@@ -298,6 +326,7 @@
     transition: var(--transition);
 }
 
+
 .view-all-link:hover {
     color: var(--dark-grey);
     transform: translateX(5px);
@@ -309,7 +338,7 @@
     padding: 6rem 0 4rem;
     color: var(--white);
     position: relative;
-    min-height: 400px;
+    min-height: 200px;
 }
 
 .page-hero::before {
