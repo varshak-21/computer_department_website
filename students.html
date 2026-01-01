@@ -81,6 +81,238 @@
             font-size: 1.8rem;
             color: #2c3e50;
         }
+
+        /* Modern Masonry Achievement Wall Styles */
+        .student-achievements {
+            background: #fafafa;
+            padding: 80px 0;
+        }
+
+        .student-achievements .section-header {
+            text-align: center;
+            margin-bottom: 60px;
+        }
+
+        .student-achievements .section-header h2 {
+            font-size: 2.5rem;
+            font-weight: 700;
+            color: #1a1a1a;
+            margin-bottom: 12px;
+            letter-spacing: -0.5px;
+        }
+
+        .student-achievements .section-header p {
+            font-size: 1.1rem;
+            color: #666;
+            font-weight: 400;
+        }
+
+        /* Masonry Grid Layout */
+        .achievement-wall {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 24px;
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        /* Achievement Card */
+        .achievement-card {
+            background: #ffffff;
+            border: 1px solid #e0e0e0;
+            border-radius: 14px;
+            padding: 28px;
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+            display: flex;
+            flex-direction: column;
+            gap: 14px;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .achievement-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 2px;
+            background: #1a1a1a;
+            transform: scaleX(0);
+            transition: transform 0.3s ease;
+        }
+
+        .achievement-card:hover {
+            transform: translateY(-6px);
+            box-shadow: 0 12px 28px rgba(0, 0, 0, 0.12);
+            border-color: #333;
+        }
+
+        .achievement-card:hover::before {
+            transform: scaleX(1);
+        }
+
+        /* Leadership Spotlight Cards - Larger */
+        .achievement-card.leadership-spotlight {
+            grid-row: span 2;
+            background: linear-gradient(135deg, #ffffff 0%, #f8f8f8 100%);
+            border: 1.5px solid #333;
+        }
+
+        .achievement-card.leadership-spotlight::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            right: 0;
+            width: 80px;
+            height: 80px;
+            background: linear-gradient(135deg, transparent 50%, rgba(0,0,0,0.02) 50%);
+            pointer-events: none;
+        }
+
+        /* Category Label */
+        .achievement-category {
+            font-size: 0.7rem;
+            font-weight: 700;
+            letter-spacing: 1.2px;
+            text-transform: uppercase;
+            color: #666;
+            display: block;
+        }
+
+        .leadership-spotlight .achievement-category {
+            color: #1a1a1a;
+            font-size: 0.75rem;
+        }
+
+        /* Student Name */
+        .student-name {
+            font-size: 1.35rem;
+            font-weight: 700;
+            color: #1a1a1a;
+            line-height: 1.3;
+            margin: 0;
+        }
+
+        .leadership-spotlight .student-name {
+            font-size: 1.6rem;
+            margin-top: 4px;
+        }
+
+        /* Achievement Description */
+        .achievement-desc {
+            font-size: 0.95rem;
+            line-height: 1.6;
+            color: #444;
+            margin: 0;
+            flex-grow: 1;
+        }
+
+        .leadership-spotlight .achievement-desc {
+            font-size: 1.05rem;
+            line-height: 1.7;
+            color: #333;
+        }
+
+        /* Year/Batch */
+        .achievement-year {
+            font-size: 0.85rem;
+            color: #888;
+            font-weight: 500;
+            margin-top: auto;
+            padding-top: 8px;
+            border-top: 1px solid #f0f0f0;
+        }
+
+        .leadership-spotlight .achievement-year {
+            font-size: 0.9rem;
+            color: #666;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 1200px) {
+            .achievement-wall {
+                grid-template-columns: repeat(3, 1fr);
+                gap: 20px;
+            }
+
+            .student-achievements .section-header h2 {
+                font-size: 2.2rem;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .achievement-wall {
+                grid-template-columns: repeat(2, 1fr);
+                gap: 16px;
+                padding: 0 16px;
+            }
+
+            .student-achievements {
+                padding: 60px 0;
+            }
+
+            .student-achievements .section-header {
+                margin-bottom: 40px;
+            }
+
+            .student-achievements .section-header h2 {
+                font-size: 1.9rem;
+            }
+
+            .student-achievements .section-header p {
+                font-size: 1rem;
+            }
+
+            .achievement-card {
+                padding: 22px;
+                gap: 12px;
+            }
+
+            .student-name {
+                font-size: 1.2rem;
+            }
+
+            .achievement-desc {
+                font-size: 0.9rem;
+            }
+
+            .leadership-spotlight .student-name {
+                font-size: 1.4rem;
+            }
+
+            .leadership-spotlight .achievement-desc {
+                font-size: 1rem;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .achievement-wall {
+                grid-template-columns: 1fr;
+                gap: 14px;
+            }
+
+            .achievement-card {
+                padding: 20px;
+            }
+
+            .achievement-card.leadership-spotlight {
+                grid-row: span 1;
+            }
+
+            .student-achievements .section-header h2 {
+                font-size: 1.7rem;
+            }
+
+            .student-name {
+                font-size: 1.15rem;
+            }
+
+            .leadership-spotlight .student-name {
+                font-size: 1.3rem;
+            }
+        }
     </style>
 
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
@@ -326,263 +558,173 @@
         <section id="achievements" class="student-achievements">
             <div class="container">
                 <div class="section-header">
-                    <h2>🏆 Student Achievements</h2>
-                    <p>Celebrating excellence and outstanding performances by our students</p>
+                    <h2>Student Achievements</h2>
+                    <p>Celebrating excellence across academics, innovation, research, and leadership</p>
                 </div>
                 
-                <!-- Achievement Statistics -->
-                <div class="achievement-stats">
-                    <div class="stat-card">
-                        <div class="stat-icon">🥇</div>
-                        <div class="stat-number">50+</div>
-                        <div class="stat-label">Awards Won</div>
-                    </div>
-                    <div class="stat-card">
-                        <div class="stat-icon">🏆</div>
-                        <div class="stat-number">25+</div>
-                        <div class="stat-label">Competitions</div>
-                    </div>
-                    <div class="stat-card">
-                        <div class="stat-icon">📚</div>
-                        <div class="stat-number">15+</div>
-                        <div class="stat-label">Publications</div>
-                    </div>
-                    <div class="stat-card">
-                        <div class="stat-icon">💼</div>
-                        <div class="stat-number">95%</div>
-                        <div class="stat-label">Placement Rate</div>
-                    </div>
-                </div>
-
-                <!-- Achievement Cards -->
-                <div class="achievements-grid">
-                    <!-- Academic Excellence Card -->
-                    <div class="achievement-card academic">
-                        <div class="card-header">
-                            <div class="card-icon">🎓</div>
-                            <h3>Academic Excellence</h3>
-                        </div>
-                        <div class="card-content">
-                            <div class="achievement-highlight">
-                                <span class="highlight-badge">University Rank 1</span>
-                                <p>Priya Sharma - BE Computer Engineering 2024</p>
-                            </div>
-                            <div class="achievement-list">
-                                <div class="achievement-item">
-                                    <span class="item-badge">🥇</span>
-                                    <div class="item-content">
-                                        <h4>Top Performers</h4>
-                                        <ul>
-                                            <li>Rahul Patel - University Rank 3, TE Computer 2024</li>
-                                            <li>Sneha Gupta - University Rank 5, SE Computer 2024</li>
-                                            <li>Arjun Singh - Departmental Topper 2024</li>
-                                        </ul>
-                                    </div>
-                                </div>
-                                <div class="achievement-item">
-                                    <span class="item-badge">🏅</span>
-                                    <div class="item-content">
-                                        <h4>Scholarships & Awards</h4>
-                                        <ul>
-                                            <li>Kavya Reddy - Merit Scholarship 2024</li>
-                                            <li>Vikash Kumar - Best Academic Performance Award</li>
-                                            <li>Ananya Joshi - Research Excellence Award</li>
-                                        </ul>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
+                <!-- Masonry Achievement Wall -->
+                <div class="achievement-wall">
+                    
+                    <!-- Academic Excellence -->
+                    <div class="achievement-card">
+                        <span class="achievement-category">ACADEMIC EXCELLENCE</span>
+                        <h3 class="student-name">Priya Sharma</h3>
+                        <p class="achievement-desc">University Rank 1 in BE Computer Engineering with outstanding academic performance across all semesters</p>
+                        <span class="achievement-year">Batch 2024</span>
                     </div>
 
-                    <!-- Technical Competitions Card -->
-                    <div class="achievement-card technical">
-                        <div class="card-header">
-                            <div class="card-icon">💻</div>
-                            <h3>Technical Competitions</h3>
-                        </div>
-                        <div class="card-content">
-                            <div class="achievement-highlight">
-                                <span class="highlight-badge">National Champion</span>
-                                <p>Team CodeCrafters - National Coding Championship 2024</p>
-                            </div>
-                            <div class="achievement-list">
-                                <div class="achievement-item">
-                                    <span class="item-badge">🏆</span>
-                                    <div class="item-content">
-                                        <h4>Coding Competitions</h4>
-                                        <ul>
-                                            <li>Amit Verma - Winner, Inter-College Programming Contest</li>
-                                            <li>DevSquad Team - 2nd Place, State Level Hackathon</li>
-                                            <li>Ritu Sharma - Top 10, Google Code Jam 2024</li>
-                                        </ul>
-                                    </div>
-                                </div>
-                                <div class="achievement-item">
-                                    <span class="item-badge">🚀</span>
-                                    <div class="item-content">
-                                        <h4>Innovation Challenges</h4>
-                                        <ul>
-                                            <li>TechnoMinds - Best Innovation Award, Smart City Hackathon</li>
-                                            <li>AlgoMasters - 1st Runner-up, Tech Innovation Challenge</li>
-                                            <li>CodeNinjas - Winner, 24-hour Coding Marathon</li>
-                                        </ul>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
+                    <!-- Technical Competition -->
+                    <div class="achievement-card">
+                        <span class="achievement-category">TECHNICAL COMPETITIONS</span>
+                        <h3 class="student-name">Amit Verma</h3>
+                        <p class="achievement-desc">Winner of Inter-College Programming Contest, demonstrating exceptional coding skills</p>
+                        <span class="achievement-year">2024</span>
                     </div>
 
-                    <!-- Research & Publications Card -->
-                    <div class="achievement-card research">
-                        <div class="card-header">
-                            <div class="card-icon">🔬</div>
-                            <h3>Research & Publications</h3>
-                        </div>
-                        <div class="card-content">
-                            <div class="achievement-highlight">
-                                <span class="highlight-badge">Best Paper Award</span>
-                                <p>Neha Agarwal - IEEE International Conference 2024</p>
-                            </div>
-                            <div class="achievement-list">
-                                <div class="achievement-item">
-                                    <span class="item-badge">📄</span>
-                                    <div class="item-content">
-                                        <h4>Conference Publications</h4>
-                                        <ul>
-                                            <li>Rajesh Kumar - Paper published in ACM Conference 2024</li>
-                                            <li>Pooja Singh - Research presentation at International Symposium</li>
-                                            <li>Manish Gupta - Patent filed for AI-based solution</li>
-                                        </ul>
-                                    </div>
-                                </div>
-                                <div class="achievement-item">
-                                    <span class="item-badge">🧪</span>
-                                    <div class="item-content">
-                                        <h4>Research Projects</h4>
-                                        <ul>
-                                            <li>Shreya Patel - Outstanding Research Project Award</li>
-                                            <li>Karthik Rao - Research internship at Microsoft Research</li>
-                                            <li>Deepika Jain - Published in IEEE Transactions Journal</li>
-                                        </ul>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
+                    <!-- Leadership Spotlight -->
+                    <div class="achievement-card leadership-spotlight">
+                        <span class="achievement-category">LEADERSHIP SPOTLIGHT</span>
+                        <h3 class="student-name">Abhishek Tiwari</h3>
+                        <p class="achievement-desc">Student Council President leading 500+ students with vision, dedication, and innovative initiatives throughout the year</p>
+                        <span class="achievement-year">Tenure: 2024</span>
                     </div>
 
-                    <!-- Career Success Card -->
-                    <div class="achievement-card career">
-                        <div class="card-header">
-                            <div class="card-icon">💼</div>
-                            <h3>Career Success</h3>
-                        </div>
-                        <div class="card-content">
-                            <div class="achievement-highlight">
-                                <span class="highlight-badge">₹45 LPA Package</span>
-                                <p>Rohit Mehta - Software Engineer at Google</p>
-                            </div>
-                            <div class="achievement-list">
-                                <div class="achievement-item">
-                                    <span class="item-badge">🏢</span>
-                                    <div class="item-content">
-                                        <h4>Top Placements</h4>
-                                        <ul>
-                                            <li>Sakshi Agarwal - SDE at Microsoft (₹35 LPA)</li>
-                                            <li>Tushar Singh - Product Manager at Amazon (₹40 LPA)</li>
-                                            <li>Nisha Kumari - Data Scientist at Netflix (₹38 LPA)</li>
-                                        </ul>
-                                    </div>
-                                </div>
-                                <div class="achievement-item">
-                                    <span class="item-badge">🌟</span>
-                                    <div class="item-content">
-                                        <h4>Entrepreneurship</h4>
-                                        <ul>
-                                            <li>Varun Sharma - Founder, TechStartup (₹2Cr funding)</li>
-                                            <li>Priyanka Das - Co-founder, EdTech Platform</li>
-                                            <li>Siddharth Jha - CEO, AI Solutions Pvt Ltd</li>
-                                        </ul>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
+                    <!-- Research & Publications -->
+                    <div class="achievement-card">
+                        <span class="achievement-category">RESEARCH & PUBLICATIONS</span>
+                        <h3 class="student-name">Neha Agarwal</h3>
+                        <p class="achievement-desc">Best Paper Award at IEEE International Conference for groundbreaking research in AI</p>
+                        <span class="achievement-year">2024</span>
                     </div>
 
-                    <!-- Leadership & Impact Card -->
-                    <div class="achievement-card leadership">
-                        <div class="card-header">
-                            <div class="card-icon">🌟</div>
-                            <h3>Leadership & Impact</h3>
-                        </div>
-                        <div class="card-content">
-                            <div class="achievement-highlight">
-                                <span class="highlight-badge">Student Council President</span>
-                                <p>Abhishek Tiwari - Leading 500+ students (2024)</p>
-                            </div>
-                            <div class="achievement-list">
-                                <div class="achievement-item">
-                                    <span class="item-badge">👥</span>
-                                    <div class="item-content">
-                                        <h4>Leadership Roles</h4>
-                                        <ul>
-                                            <li>Megha Sharma - Cultural Event Coordinator</li>
-                                            <li>Pranav Joshi - Technical Society President</li>
-                                            <li>Aditi Singh - Community Service Lead</li>
-                                        </ul>
-                                    </div>
-                                </div>
-                                <div class="achievement-item">
-                                    <span class="item-badge">🏅</span>
-                                    <div class="item-content">
-                                        <h4>Sports & Cultural</h4>
-                                        <ul>
-                                            <li>Rohan Gupta - Inter-College Cricket Champion</li>
-                                            <li>Swati Verma - Classical Dance Competition Winner</li>
-                                            <li>Gaurav Singh - Photography Contest Champion</li>
-                                        </ul>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
+                    <!-- Career Success -->
+                    <div class="achievement-card">
+                        <span class="achievement-category">CAREER SUCCESS</span>
+                        <h3 class="student-name">Rohit Mehta</h3>
+                        <p class="achievement-desc">Software Engineer at Google with ₹45 LPA package</p>
+                        <span class="achievement-year">Batch 2024</span>
                     </div>
 
-                    <!-- Global Recognition Card -->
-                    <div class="achievement-card global">
-                        <div class="card-header">
-                            <div class="card-icon">🌍</div>
-                            <h3>Global Recognition</h3>
-                        </div>
-                        <div class="card-content">
-                            <div class="achievement-highlight">
-                                <span class="highlight-badge">International Internship</span>
-                                <p>Ankit Yadav - Summer Intern at Stanford University</p>
-                            </div>
-                            <div class="achievement-list">
-                                <div class="achievement-item">
-                                    <span class="item-badge">✈️</span>
-                                    <div class="item-content">
-                                        <h4>International Programs</h4>
-                                        <ul>
-                                            <li>Tanvi Agarwal - Exchange Student at MIT</li>
-                                            <li>Harsh Gupta - Research Internship at Cambridge</li>
-                                            <li>Riya Patel - Summer Program at UC Berkeley</li>
-                                        </ul>
-                                    </div>
-                                </div>
-                                <div class="achievement-item">
-                                    <span class="item-badge">🏆</span>
-                                    <div class="item-content">
-                                        <h4>Global Competitions</h4>
-                                        <ul>
-                                            <li>CodeGlobal Team - ACM ICPC World Finals 2024</li>
-                                            <li>Vishal Kumar - Google Summer of Code 2024</li>
-                                            <li>Preeti Singh - Microsoft Imagine Cup Finalist</li>
-                                        </ul>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
+                    <!-- Academic Excellence -->
+                    <div class="achievement-card">
+                        <span class="achievement-category">ACADEMIC EXCELLENCE</span>
+                        <h3 class="student-name">Rahul Patel</h3>
+                        <p class="achievement-desc">University Rank 3 in TE Computer with exceptional performance</p>
+                        <span class="achievement-year">2024</span>
                     </div>
+
+                    <!-- Technical Competition -->
+                    <div class="achievement-card">
+                        <span class="achievement-category">TECHNICAL COMPETITIONS</span>
+                        <h3 class="student-name">Team CodeCrafters</h3>
+                        <p class="achievement-desc">National Champions at National Coding Championship 2024</p>
+                        <span class="achievement-year">2024</span>
+                    </div>
+
+                    <!-- Research & Publications -->
+                    <div class="achievement-card">
+                        <span class="achievement-category">RESEARCH & PUBLICATIONS</span>
+                        <h3 class="student-name">Rajesh Kumar</h3>
+                        <p class="achievement-desc">Paper published in prestigious ACM Conference 2024</p>
+                        <span class="achievement-year">2024</span>
+                    </div>
+
+                    <!-- Career Success -->
+                    <div class="achievement-card">
+                        <span class="achievement-category">CAREER SUCCESS</span>
+                        <h3 class="student-name">Sakshi Agarwal</h3>
+                        <p class="achievement-desc">Software Development Engineer at Microsoft, ₹35 LPA</p>
+                        <span class="achievement-year">Batch 2024</span>
+                    </div>
+
+                    <!-- Leadership & Impact -->
+                    <div class="achievement-card leadership-spotlight">
+                        <span class="achievement-category">LEADERSHIP & IMPACT</span>
+                        <h3 class="student-name">Pranav Joshi</h3>
+                        <p class="achievement-desc">Technical Society President orchestrating numerous workshops, hackathons, and tech events fostering innovation culture</p>
+                        <span class="achievement-year">Tenure: 2024</span>
+                    </div>
+
+                    <!-- Technical Competition -->
+                    <div class="achievement-card">
+                        <span class="achievement-category">TECHNICAL COMPETITIONS</span>
+                        <h3 class="student-name">Ritu Sharma</h3>
+                        <p class="achievement-desc">Top 10 finalist in Google Code Jam 2024</p>
+                        <span class="achievement-year">2024</span>
+                    </div>
+
+                    <!-- Research & Publications -->
+                    <div class="achievement-card">
+                        <span class="achievement-category">RESEARCH & PUBLICATIONS</span>
+                        <h3 class="student-name">Manish Gupta</h3>
+                        <p class="achievement-desc">Patent filed for innovative AI-based solution</p>
+                        <span class="achievement-year">2024</span>
+                    </div>
+
+                    <!-- Academic Excellence -->
+                    <div class="achievement-card">
+                        <span class="achievement-category">ACADEMIC EXCELLENCE</span>
+                        <h3 class="student-name">Sneha Gupta</h3>
+                        <p class="achievement-desc">University Rank 5 in SE Computer</p>
+                        <span class="achievement-year">2024</span>
+                    </div>
+
+                    <!-- Career Success -->
+                    <div class="achievement-card">
+                        <span class="achievement-category">CAREER SUCCESS</span>
+                        <h3 class="student-name">Tushar Singh</h3>
+                        <p class="achievement-desc">Product Manager at Amazon, ₹40 LPA package</p>
+                        <span class="achievement-year">Batch 2024</span>
+                    </div>
+
+                    <!-- Technical Competition -->
+                    <div class="achievement-card">
+                        <span class="achievement-category">TECHNICAL COMPETITIONS</span>
+                        <h3 class="student-name">Team DevSquad</h3>
+                        <p class="achievement-desc">2nd Place at State Level Hackathon</p>
+                        <span class="achievement-year">2024</span>
+                    </div>
+
+                    <!-- Research & Publications -->
+                    <div class="achievement-card">
+                        <span class="achievement-category">RESEARCH & PUBLICATIONS</span>
+                        <h3 class="student-name">Deepika Jain</h3>
+                        <p class="achievement-desc">Published in IEEE Transactions Journal</p>
+                        <span class="achievement-year">2024</span>
+                    </div>
+
+                    <!-- Career Success -->
+                    <div class="achievement-card">
+                        <span class="achievement-category">CAREER SUCCESS</span>
+                        <h3 class="student-name">Varun Sharma</h3>
+                        <p class="achievement-desc">Founder of TechStartup with ₹2Cr funding</p>
+                        <span class="achievement-year">2024</span>
+                    </div>
+
+                    <!-- Leadership & Impact -->
+                    <div class="achievement-card">
+                        <span class="achievement-category">LEADERSHIP & IMPACT</span>
+                        <h3 class="student-name">Megha Sharma</h3>
+                        <p class="achievement-desc">Cultural Event Coordinator organizing major campus events</p>
+                        <span class="achievement-year">2024</span>
+                    </div>
+
+                    <!-- Technical Competition -->
+                    <div class="achievement-card">
+                        <span class="achievement-category">TECHNICAL COMPETITIONS</span>
+                        <h3 class="student-name">Team TechnoMinds</h3>
+                        <p class="achievement-desc">Best Innovation Award at Smart City Hackathon</p>
+                        <span class="achievement-year">2024</span>
+                    </div>
+
+                    <!-- Research & Publications -->
+                    <div class="achievement-card">
+                        <span class="achievement-category">RESEARCH & PUBLICATIONS</span>
+                        <h3 class="student-name">Karthik Rao</h3>
+                        <p class="achievement-desc">Research Internship at Microsoft Research</p>
+                        <span class="achievement-year">2024</span>
+                    </div>
+
                 </div>
             </div>
         </section>
