@@ -13,6 +13,18 @@
     justify-content: center;
     overflow: hidden;
     background: var(--black);
+
+    /* Background image */
+    background-image: 
+        linear-gradient(
+            rgba(255, 255, 255, 0.75),
+            rgba(255, 255, 255, 0.75)
+        ),
+        url("https://agnelsalve.github.io/assets/images/college.jpg"); /* replace with your image path */
+
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
 }
 
 .hero-video {
@@ -44,7 +56,7 @@
     position: relative;
     z-index: 3;
     text-align: center;
-    color: var(--white);
+    color: var(--black);
     max-width: 900px;
     margin: 0 auto;
     padding: 0 2rem;
@@ -55,18 +67,24 @@
     font-size: clamp(2.5rem, 5vw, 4rem);
     font-weight: 700;
     line-height: 1.2;
+        color: var(--black);
+
     margin-bottom: 1.5rem;
 }
 
 .hero-subtitle {
     font-size: clamp(1.1rem, 2vw, 1.3rem);
     opacity: 0.9;
+        color: var(--black);
+
     margin-bottom: 2.5rem;
 }
 
 .hero-buttons {
     display: flex;
     gap: 1.5rem;
+        color: var(--black);
+
     justify-content: center;
     flex-wrap: wrap;
 }
@@ -77,35 +95,50 @@
     padding: 1rem 2rem;
     text-decoration: none;
     font-weight: 600;
+        color: var(--black);
+
     border-radius: var(--radius);
     transition: var(--transition);
     border: 2px solid transparent;
 }
 
+.hero-btn {
+    display: inline-block;
+    padding: 14px 32px;
+    font-weight: 600;
+    text-decoration: none;
+    border-radius: 6px;
+    border: 2px solid transparent;
+    transition: all 0.3s ease;
+}
+
+/* Primary button */
 .hero-btn-primary {
-    background: var(--white);
-    color: var(--black);
-    border-color: var(--white);
+    background: var(--black);
+    color: var(--white);
+    border-color: var(--black);
 }
 
 .hero-btn-primary:hover {
     background: transparent;
-    color: var(--white);
-    border-color: var(--white);
-    transform: translateY(-2px);
+    color: var(--black);
+    border-color: var(--black);
+    transform: translateY(-3px);
 }
 
+/* Secondary button */
 .hero-btn-secondary {
     background: transparent;
-    color: var(--white);
-    border-color: var(--white);
+    color: var(--black);
+    border-color: var(--black);
 }
 
 .hero-btn-secondary:hover {
-    background: var(--white);
-    color: var(--black);
-    transform: translateY(-2px);
+    background: var(--black);
+    color: var(--white);
+    transform: translateY(-3px);
 }
+
 
 .scroll-indicator {
     position: absolute;

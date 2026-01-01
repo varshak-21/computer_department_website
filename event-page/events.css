@@ -220,6 +220,10 @@ body {
     background-image: url('images/tecnack.png');
 }
 
+.card-image-euphoria{
+    background-image: url('images/1.jpg');
+  
+}
 .card-image-alumni {
     background-image: url('https://www.aluminati.net/wp-content/uploads/2019/07/10-creative-ideas-for-your-next-alumni-event.jpg');
 }

@@ -4,7 +4,12 @@
 
 .main-content {
     background: #f7f9fc;
-    padding: 60px 0;
+    padding: 20px 0;
+}
+
+.container{
+        padding: 20px 0;
+
 }
 
 .faculty-research h2 {
@@ -28,7 +33,7 @@
 
 .publication-item {
     background: #ffffff;
-    border-left: 5px solid #1e90ff;
+    border-left: 5px solid #060708;
     padding: 22px 26px;
     border-radius: 10px;
     box-shadow: 0 6px 18px rgba(0, 0, 0, 0.06);
@@ -67,7 +72,7 @@
 }
 
 .publisher.ieee {
-    background: #0066cc;
+    background: #055c0b;
 }
 
 /* ===============================

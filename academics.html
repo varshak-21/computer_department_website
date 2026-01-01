@@ -11,35 +11,37 @@
 </head>
 <body>
     <!-- Navigation -->
-    <nav class="navbar">
+    <nav class="navbar" id="navbar">
         <div class="nav-container">
-            <div class="navbar-brand">
-                <h2>CSE Department</h2>
+            <div class="nav-brand">
+                <img src="images/college-logo.png" alt="CSE Logo" class="nav-logo">
+                <span class="nav-title">Comps DBIT</span>
             </div>
             
-            <ul class="nav-menu">
+            <!-- Mobile menu button -->
+            <button class="mobile-menu-btn" id="mobile-menu-btn">
+                <span class="hamburger-line"></span>
+                <span class="hamburger-line"></span>
+                <span class="hamburger-line"></span>
+            </button>
+            
+            <ul class="nav-menu" id="nav-menu">
                 <li><a href="index.html" class="nav-link">Home</a></li>
                 <li><a href="about.html" class="nav-link">About</a></li>
                 <li class="dropdown">
                     <a href="academics.html" class="nav-link active">Academics</a>
                     <ul class="dropdown-menu">
-                        <li><a href="#undergraduate">Undergraduate</a></li>
-                        <li><a href="#curriculum">Curriculum</a></li>
-                        <li><a href="#specializations">Specializations</a></li>
+                        <li><a href="academics.html#se">Second Year (SE)</a></li>
+                        <li><a href="academics.html#te">Third Year (TE)</a></li>
+                        <li><a href="academics.html#be">Final Year (BE)</a></li>
                     </ul>
                 </li>
                 <li><a href="faculty.html" class="nav-link">Faculty</a></li>
-                <li><a href="research.html" class="nav-link">Research</a></li>
                 <li><a href="students.html" class="nav-link">Students</a></li>
+                <li><a href="research.html" class="nav-link">Research</a></li>
                 <li><a href="events.html" class="nav-link">Events</a></li>
                 <li><a href="contact.html" class="nav-link">Contact</a></li>
             </ul>
-            
-            <button class="mobile-menu-btn">
-                <span></span>
-                <span></span>
-                <span></span>
-            </button>
         </div>
     </nav>
 

@@ -6,40 +6,89 @@
     <title>Research & Publications | CSE Department</title>
 
     <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/faculty.css">
     <link rel="stylesheet" href="css/research.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="css/about.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 </head>
 <body>
 
-<!-- ================= NAVBAR ================= -->
-<nav class="navbar" id="navbar">
-    <div class="nav-container">
-        <div class="nav-brand">
-            <img src="images/college-logo.png" alt="CSE Logo" class="nav-logo">
-            <span class="nav-title">CSE Department</span>
+    <!-- Navigation -->
+    <nav class="navbar" id="navbar">
+        <div class="nav-container">
+            <div class="nav-brand">
+                <img src="images/college-logo.png" alt="CSE Logo" class="nav-logo">
+                <span class="nav-title">Comps DBIT</span>
+            </div>
+            
+            <!-- Mobile menu button -->
+            <button class="mobile-menu-btn" id="mobile-menu-btn">
+                <span class="hamburger-line"></span>
+                <span class="hamburger-line"></span>
+                <span class="hamburger-line"></span>
+            </button>
+            
+            <ul class="nav-menu" id="nav-menu">
+                <li><a href="index.html" class="nav-link">Home</a></li>
+                <li><a href="about.html" class="nav-link">About</a></li>
+                <li class="dropdown">
+                    <a href="academics.html" class="nav-link">Academics</a>
+                    <ul class="dropdown-menu">
+                        <li><a href="academics.html#se">Second Year (SE)</a></li>
+                        <li><a href="academics.html#te">Third Year (TE)</a></li>
+                        <li><a href="academics.html#be">Final Year (BE)</a></li>
+                    </ul>
+                </li>
+                <li><a href="faculty.html" class="nav-link">Faculty</a></li>
+                <li><a href="students.html" class="nav-link">Students</a></li>
+                <li><a href="research.html" class="nav-link active">Research</a></li>
+                <li><a href="events.html" class="nav-link">Events</a></li>
+                <li><a href="contact.html" class="nav-link">Contact</a></li>
+            </ul>
         </div>
+    </nav>
 
-        <button class="mobile-menu-btn" id="mobile-menu-btn">
-            <span class="hamburger-line"></span>
-            <span class="hamburger-line"></span>
-            <span class="hamburger-line"></span>
-        </button>
+<!-- Faculty Research Hero -->
+<section class="page-hero research-hero">
+    <div class="container">
+        <div class="page-hero-content">
+            <h1>Faculty Research</h1>
+            <p>
+                Advancing knowledge through innovative research, interdisciplinary collaboration,
+                and industry-driven solutions.
+            </p>
 
-        <ul class="nav-menu" id="nav-menu">
-            <li><a href="index.html" class="nav-link">Home</a></li>
-            <li><a href="about.html" class="nav-link">About</a></li>
-            <li><a href="academics.html" class="nav-link">Academics</a></li>
-            <li><a href="faculty.html" class="nav-link">Faculty</a></li>
-            <li><a href="research.html" class="nav-link active">Research</a></li>
-            <li><a href="events.html" class="nav-link">Events</a></li>
-            <li><a href="contact.html" class="nav-link">Contact</a></li>
-        </ul>
+            <div class="hero-stats">
+                <div class="stat-item">
+                    <span class="stat-number">50+</span>
+                    <span class="stat-label">Active Projects</span>
+                </div>
+                <div class="stat-item">
+                    <span class="stat-number">100+</span>
+                    <span class="stat-label">Publications</span>
+                </div>
+                <div class="stat-item">
+                    <span class="stat-number">20+</span>
+                    <span class="stat-label">Industry Partners</span>
+                </div>
+            </div>
+        </div>
     </div>
-</nav>
+</section>
 
 <main class="main-content">
 
+
 <section class="faculty-research">
+    <!-- Research Areas -->
+    <section class="research-areas">
+    <div class="container">
+        <h2>Faculty Research Areas</h2>
+        <div class="research-grid" id="research-areas"></div>
+    </div>
+    </section>
+
     <div class="container">
         <h2>Faculty Research Publications</h2>
 
@@ -58,21 +107,6 @@
                     <i class="fa-solid fa-arrow-up-right-from-square"></i> View Publication
                 </a>
             </div>
-
-            <div class="publication-item" data-year="2023">
-                <h4>Plant Leaf Disease Detection And Classification Based On Machine Learning Model</h4>
-                <p>
-                    <strong>Faculty:</strong> Dr. Amiya Kumar Tripathy<br>
-                    <strong>Conference:</strong> IEEE IBSSC<br>
-                    <strong>Year:</strong> 2023<br>
-                    <strong>ISBN:</strong> 978-1-6654-9291-1
-                </p>
-                <span class="publisher ieee">IEEE</span>
-                <a href="https://ieeexplore.ieee.org/document/10037470" target="_blank" class="pub-link">
-                    <i class="fa-solid fa-arrow-up-right-from-square"></i> View Publication
-                </a>
-            </div>
-
             <div class="publication-item" data-year="2023">
                 <h4>Shared Rainwater Harvesting System Using Google Map API And Edge Detection</h4>
                 <p>
@@ -83,6 +117,20 @@
                 </p>
                 <span class="publisher ieee">IEEE</span>
                 <a href="https://ieeexplore.ieee.org/document/10104862" target="_blank" class="pub-link">
+                    <i class="fa-solid fa-arrow-up-right-from-square"></i> View Publication
+                </a>
+            </div>
+            
+            <div class="publication-item" data-year="2023">
+                <h4>Plant Leaf Disease Detection And Classification Based On Machine Learning Model</h4>
+                <p>
+                    <strong>Faculty:</strong> Dr. Amiya Kumar Tripathy<br>
+                    <strong>Conference:</strong> IEEE IBSSC<br>
+                    <strong>Year:</strong> 2023<br>
+                    <strong>ISBN:</strong> 978-1-6654-9291-1
+                </p>
+                <span class="publisher ieee">IEEE</span>
+                <a href="https://ieeexplore.ieee.org/document/10037470" target="_blank" class="pub-link">
                     <i class="fa-solid fa-arrow-up-right-from-square"></i> View Publication
                 </a>
             </div>
@@ -303,4 +351,6 @@ document.addEventListener("DOMContentLoaded", () => {
         </div>
     </div>
 </footer>
+    <script src="js/faculty.js"></script>
+
 </html>

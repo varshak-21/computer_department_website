@@ -606,11 +606,16 @@ body {
         flex-direction: column;
         align-items: center;
         gap: 1rem;
+            color: var(--black);
+
     }
+    
     
     .hero-btn {
         width: 100%;
         max-width: 280px;
+            color: var(--black);
+
         justify-content: center;
     }
     
