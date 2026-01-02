@@ -79,7 +79,79 @@
     text-align: justify;
 }
 
-/* ...existing code... */
+/* Single Card Vision & Mission */
+
+.vision-mission-single {
+    padding: 5rem 0;
+    background: var(--white);
+}
+
+.vm-title {
+    text-align: center;
+    font-size: 2.2rem;
+    font-weight: 700;
+    margin-bottom: 2.5rem;
+    color: var(--black);
+}
+
+.vm-card {
+    max-width: 900px;
+    margin: 0 auto;
+    background: var(--black);
+    color: var(--white);
+    border-radius: 16px;
+    padding: 3rem;
+}
+
+/* Toggle */
+.vm-toggle {
+    display: flex;
+    border: 1px solid var(--white);
+    border-radius: 8px;
+    overflow: hidden;
+    width: fit-content;
+    margin: 0 auto 2rem;
+}
+
+.vm-btn {
+    background: transparent;
+    color: var(--white);
+    border: none;
+    padding: 0.6rem 2rem;
+    cursor: pointer;
+    font-size: 1rem;
+    font-weight: 500;
+    transition: background 0.3s ease, color 0.3s ease;
+}
+
+.vm-btn.active {
+    background: var(--white);
+    color: var(--black);
+}
+
+/* Content */
+.vm-content {
+    position: relative;
+    min-height: 160px;
+}
+
+.vm-content p {
+    font-size: 1.1rem;
+    line-height: 1.7;
+    opacity: 0;
+    transform: translateY(10px);
+    transition: opacity 0.4s ease, transform 0.4s ease;
+    position: absolute;
+    left: 0;
+    right: 0;
+}
+
+.vm-content p.active {
+    opacity: 1;
+    transform: translateY(0);
+    position: relative;
+}
+
 
 /* Features Section */
 .features-section {
@@ -411,7 +483,7 @@
 
 /* Department Overview */
 .department-overview {
-    padding: 5rem 0;
+    padding: 5rem 0 7rem; /* top | left-right | bottom */
     background: var(--white);
 }
 
