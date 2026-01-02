@@ -3,9 +3,293 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Students - Computer Engineering Department</title>
+    <title>Students - Comps</title>
     <link rel="stylesheet" href="css/style.css">
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="css/about.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <style>
+        /* Marquee Slider Styles */
+        .marquee-container {
+            overflow: hidden;
+            position: relative;
+            width: 100%;
+            background: linear-gradient(to right, #f8f9fa, #ffffff, #f8f9fa);
+            padding: 40px 0;
+            margin-top: 20px;
+            border-radius: 10px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+        }
+
+        .marquee-content {
+            display: flex;
+            animation: marquee 40s linear infinite;
+            width: fit-content;
+            gap: 20px;
+        }
+
+        .marquee-content:hover {
+            animation-play-state: paused;
+        }
+
+        @keyframes marquee {
+            0% {
+                transform: translateX(0);
+            }
+            100% {
+                transform: translateX(-50%);
+            }
+        }
+
+        .marquee-content .recruiter {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            width: 140px;
+            height: 140px;
+            background: white;
+            border-radius: 28px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            border: 3px solid #f0f0f0;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .marquee-content .recruiter:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+        }
+
+        .recruiter-logo {
+            width: 90px;
+            height: 90px;
+            object-fit: contain;
+            transition: transform 0.3s ease;
+        }
+
+        .recruiter:hover .recruiter-logo {
+            transform: scale(1.1);
+        }
+        
+        .recruiter-name {
+            display: none;
+        }
+
+        .top-recruiters h3 {
+            text-align: center;
+            margin-bottom: 10px;
+            font-size: 1.8rem;
+            color: #2c3e50;
+        }
+
+        /* Modern Student Achievements Styles */
+        .student-achievements {
+            background: #f5f5f5;
+            padding: 80px 0;
+        }
+
+        .student-achievements .section-header {
+            text-align: center;
+            margin-bottom: 50px;
+            padding: 0 20px;
+            max-width: 1400px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .student-achievements .section-header h2 {
+            font-size: 2.5rem;
+            font-weight: 700;
+            color: #1a1a1a;
+            margin-bottom: 12px;
+            letter-spacing: -0.5px;
+        }
+
+        .student-achievements .section-header p {
+            font-size: 1.1rem;
+            color: #666;
+            font-weight: 400;
+        }
+
+        /* Achievement Category Section */
+        .achievement-category-section {
+            max-width: 1400px;
+            margin: 0 auto 60px;
+            padding: 0 20px;
+        }
+
+        .achievement-category-section h3 {
+            font-size: 0.75rem;
+            font-weight: 700;
+            letter-spacing: 1.5px;
+            text-transform: uppercase;
+            color: #666;
+            margin-bottom: 25px;
+            padding-bottom: 10px;
+            border-bottom: 2px solid #e0e0e0;
+        }
+
+        .achievement-cards-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 24px;
+        }
+
+        /* Team achievement cards - wider */
+        .achievement-cards-grid.team-grid {
+            grid-template-columns: repeat(2, 1fr);
+        }
+
+        /* Achievement Card */
+        .achievement-card {
+            background: #ffffff;
+            border: 1px solid #e5e5e5;
+            border-radius: 12px;
+            padding: 32px;
+            transition: all 0.3s ease;
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+        }
+
+        .achievement-card:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
+            border-color: #ccc;
+        }
+
+        /* Profile Section */
+        .achievement-profile {
+            display: flex;
+            align-items: flex-start;
+            gap: 18px;
+            margin-bottom: 12px;
+        }
+
+        .achievement-profile-info {
+            flex: 1;
+            min-width: 0;
+        }
+
+        .achievement-profile img {
+            width: 120px;
+            height: 120px;
+            min-width: 120px;
+            min-height: 120px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 4px solid #e8e8e8;
+            flex-shrink: 0;
+        }
+
+        .achievement-profile-info h4 {
+            font-size: 1.25rem;
+            font-weight: 700;
+            color: #1a1a1a;
+            margin: 0 0 6px 0;
+            line-height: 1.3;
+        }
+
+        .achievement-profile-info p {
+            font-size: 0.95rem;
+            color: #666;
+            margin: 0;
+            line-height: 1.5;
+        }
+
+        .achievement-batch {
+            font-size: 0.85rem;
+            color: #888;
+            font-weight: 500;
+            margin-top: 8px;
+        }
+
+        /* Team Card - for group photos */
+        .achievement-card.team-card .achievement-profile img {
+            width: 100%;
+            height: 220px;
+            min-width: auto;
+            min-height: auto;
+            border-radius: 10px;
+            object-fit: cover;
+            border: none;
+        }
+
+        .achievement-card.team-card .achievement-profile {
+            flex-direction: column;
+            align-items: stretch;
+            gap: 12px;
+        }
+
+        .achievement-card.team-card .achievement-profile-info h4 {
+            font-size: 1.2rem;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 1200px) {
+            .achievement-cards-grid {
+                grid-template-columns: repeat(2, 1fr);
+                gap: 20px;
+            }
+
+            .achievement-cards-grid.team-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .student-achievements .section-header h2 {
+                font-size: 2.2rem;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .achievement-cards-grid,
+            .achievement-cards-grid.team-grid {
+                grid-template-columns: 1fr;
+                gap: 16px;
+            }
+
+            .student-achievements {
+                padding: 60px 0;
+            }
+
+            .student-achievements .section-header h2 {
+                font-size: 1.9rem;
+            }
+
+            .achievement-card {
+                padding: 24px;
+            }
+
+            .achievement-category-section {
+                margin-bottom: 50px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .student-achievements .section-header h2 {
+                font-size: 1.7rem;
+            }
+
+            .achievement-card {
+                padding: 20px;
+            }
+
+            .achievement-profile img {
+                width: 100px;
+                height: 100px;
+                min-width: 100px;
+                min-height: 100px;
+            }
+
+            .achievement-profile-info h4 {
+                font-size: 1rem;
+            }
+
+            .achievement-profile-info p {
+                font-size: 0.85rem;
+            }
+        }
+    </style>
 
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 </head>
@@ -15,7 +299,7 @@
         <div class="nav-container">
             <div class="nav-brand">
                 <img src="images/college-logo.png" alt="CSE Logo" class="nav-logo">
-                <span class="nav-title">CSE Department</span>
+                <span class="nav-title">Comps DBIT</span>
             </div>
             
             <!-- Mobile menu button -->
@@ -76,76 +360,15 @@
         <section class="student-resources">
             <div class="container">
                 <h2>Student Resources</h2>
-                <div class="resources-grid">
-                    <div class="resource-card">
+                <div class="resources-grid" style="max-width: 800px; margin: 0 auto;">
+                    <div class="resource-card" style="text-align: center;">
                         <div class="resource-icon">📚</div>
-                        <h3>Academic Resources</h3>
-                        <p>Access study materials, lecture notes, and online learning platforms</p>
-                        <ul class="resource-links">
-                            <li><a href="#">Lecture Notes</a></li>
-                            <li><a href="#">E-books & References</a></li>
-                            <li><a href="#">Online Courses</a></li>
-                            <li><a href="#">Previous Year Papers</a></li>
-                        </ul>
-                    </div>
-
-                    <div class="resource-card">
-                        <div class="resource-icon">💻</div>
-                        <h3>Technical Resources</h3>
-                        <p>Programming tools, software, and development environments</p>
-                        <ul class="resource-links">
-                            <li><a href="#">Programming IDEs</a></li>
-                            <li><a href="#">Software Downloads</a></li>
-                            <li><a href="#">Online Compilers</a></li>
-                            <li><a href="#">Development Tools</a></li>
-                        </ul>
-                    </div>
-
-                    <div class="resource-card">
-                        <div class="resource-icon">🏆</div>
-                        <h3>Competition Resources</h3>
-                        <p>Prepare for coding competitions and technical challenges</p>
-                        <ul class="resource-links">
-                            <li><a href="#">Coding Platforms</a></li>
-                            <li><a href="#">Competition Calendar</a></li>
-                            <li><a href="#">Practice Problems</a></li>
-                            <li><a href="#">Team Formation</a></li>
-                        </ul>
-                    </div>
-
-                    <div class="resource-card">
-                        <div class="resource-icon">💼</div>
-                        <h3>Career Resources</h3>
-                        <p>Placement preparation and career guidance materials</p>
-                        <ul class="resource-links">
-                            <li><a href="#">Resume Templates</a></li>
-                            <li><a href="#">Interview Preparation</a></li>
-                            <li><a href="#">Placement Portal</a></li>
-                            <li><a href="#">Career Guidance</a></li>
-                        </ul>
-                    </div>
-
-                    <div class="resource-card">
-                        <div class="resource-icon">🔬</div>
-                        <h3>Research Opportunities</h3>
-                        <p>Undergraduate research programs and project guidelines</p>
-                        <ul class="resource-links">
-                            <li><a href="#">Research Projects</a></li>
-                            <li><a href="#">Faculty Mentorship</a></li>
-                            <li><a href="#">Conference Submissions</a></li>
-                            <li><a href="#">Research Funding</a></li>
-                        </ul>
-                    </div>
-
-                    <div class="resource-card">
-                        <div class="resource-icon">🤝</div>
-                        <h3>Student Support</h3>
-                        <p>Academic and personal support services for students</p>
-                        <ul class="resource-links">
-                            <li><a href="#">Counseling Services</a></li>
-                            <li><a href="#">Academic Support</a></li>
-                            <li><a href="#">Mentorship Program</a></li>
-                            <li><a href="#">Student Handbook</a></li>
+                        <h3>Access Question Papers by Year</h3>
+                        <p>Download previous year examination papers for exam preparation</p>
+                        <ul class="resource-links" style="display: flex; justify-content: center; gap: 30px; flex-wrap: wrap;">
+                            <li><a href="#" style="font-size: 1.1rem; font-weight: 600;">Second Year (SE)</a></li>
+                            <li><a href="#" style="font-size: 1.1rem; font-weight: 600;">Third Year (TE)</a></li>
+                            <li><a href="#" style="font-size: 1.1rem; font-weight: 600;">Final Year (BE)</a></li>
                         </ul>
                     </div>
                 </div>
@@ -161,8 +384,8 @@
                 <div class="project-categories">
                     <div class="category-tabs">
                         <button class="tab-btn active" onclick="showProjects('final-year')">Final Year Projects</button>
-                        <button class="tab-btn" onclick="showProjects('mini-projects')">Mini Projects</button>
-                        <button class="tab-btn" onclick="showProjects('research-projects')">Research Projects</button>
+                        <button class="tab-btn" onclick="showProjects('mini-projects')">Mini Projects - SE</button>
+                        <button class="tab-btn" onclick="showProjects('research-projects')">Mini Projects - TE</button>
                     </div>
                 </div>
 
@@ -171,75 +394,100 @@
                     <h3>Final Year Projects (2024-25)</h3>
                     <div class="projects-grid">
                         <div class="project-card">
-                            <h4>[Project Title 1]</h4>
-                            <p class="project-team">Team: [Student Names]</p>
-                            <p class="project-guide">Guide: [Faculty Name]</p>
-                            <p class="project-description">[Brief description of the project and its objectives]</p>
-                            <div class="project-tech">
-                                <strong>Technologies:</strong> [Tech Stack]
-                            </div>
+                            <img src="images/projects/project1.png" alt="Project 1" style="width: 100%; height: 200px; object-fit: cover; border-radius: 8px; margin-bottom: 15px;">
+                            <h4>ArgMed-Agents</h4>
+                            <p class="project-team">Team: Anushka Joseph, Figo Fernandez and Jess John.</p>
+                            <p class="project-guide">Guide: Dr. Amiya Kumar Tripathy</p>
+                            <p class="project-description">Explainable Clinical Decision Reasoning with LLM via Argumentation Schemes </p>
                         </div>
 
                         <div class="project-card">
-                            <h4>[Project Title 2]</h4>
-                            <p class="project-team">Team: [Student Names]</p>
-                            <p class="project-guide">Guide: [Faculty Name]</p>
-                            <p class="project-description">[Brief description of the project and its objectives]</p>
-                            <div class="project-tech">
-                                <strong>Technologies:</strong> [Tech Stack]
-                            </div>
+                            <img src="images/projects/project2.png" alt="Project 2" style="width: 100%; height: 200px; object-fit: cover; border-radius: 8px; margin-bottom: 15px;">
+                            <h4>Brain Stroke Detection</h4>
+                            <p class="project-team">Team:  Shanaya Carvalho, Ansel Dsouza and Hani Kotian </p>
+                            <p class="project-guide">Guide:  Dr. Shaikh Phiroj</p>
+                            <p class="project-description"> Brain stroke detection using Deep Learning and Convolutional LSTM project.</p>
                         </div>
 
                         <div class="project-card">
-                            <h4>[Project Title 3]</h4>
-                            <p class="project-team">Team: [Student Names]</p>
-                            <p class="project-guide">Guide: [Faculty Name]</p>
-                            <p class="project-description">[Brief description of the project and its objectives]</p>
-                            <div class="project-tech">
-                                <strong>Technologies:</strong> [Tech Stack]
-                            </div>
+                            <img src="images/projects/project3.png" alt="Project 3" style="width: 100%; height: 200px; object-fit: cover; border-radius: 8px; margin-bottom: 15px;">
+                            <h4>Virtual Interview Mastery</h4>
+                            <p class="project-team">Team: Niraj Pingale, Saniya Rawat and Malivia Rodrigues </p>
+                            <p class="project-guide">Guide: Prof. Imran Ali Mirza</p>
+                            <p class="project-description"> An AI-Driven Simulation Experience </p>
                         </div>
                     </div>
                 </div>
 
-                <!-- Mini Projects -->
+                <!-- Mini Projects SE-->
                 <div id="mini-projects" class="project-section">
-                    <h3>Mini Projects</h3>
+                    <h3>Mini Projects - SE</h3>
                     <div class="projects-grid">
                         <div class="project-card">
-                            <h4>[Mini Project Title 1]</h4>
-                            <p class="project-team">Team: [Student Names]</p>
-                            <p class="project-guide">Guide: [Faculty Name]</p>
-                            <p class="project-description">[Brief description of the mini project]</p>
-                            <div class="project-tech">
-                                <strong>Technologies:</strong> [Tech Stack]
-                            </div>
+                            <img src="images/projects/mini-project1.png" alt="Mini Project 1" style="width: 100%; height: 200px; object-fit: cover; border-radius: 8px; margin-bottom: 15px;">
+                            <h4>Art Work Place </h4>
+                            <p class="project-team">Team:  Joshua Almeida, Verushka Fernandes and Serah Francis.</p>
+                            <p class="project-guide">Guide: Ms.Priya Kaul </p>
+                            <p class="project-description">First Place in InnoQuest ’24 (SE A), held on 4th October 2024.</p>
                         </div>
 
                         <div class="project-card">
-                            <h4>[Mini Project Title 2]</h4>
-                            <p class="project-team">Team: [Student Names]</p>
-                            <p class="project-guide">Guide: [Faculty Name]</p>
-                            <p class="project-description">[Brief description of the mini project]</p>
-                            <div class="project-tech">
-                                <strong>Technologies:</strong> [Tech Stack]
-                            </div>
+                            <img src="images/projects/mini-project2.png" alt="Mini Project 2" style="width: 100%; height: 200px; object-fit: cover; border-radius: 8px; margin-bottom: 15px;">
+                            <h4>Bookify</h4>
+                            <p class="project-team">Team:  Cion Koli, Aarya Pate and Vaishnavi Sawant.</p>
+                            <p class="project-guide">Guide: Ms. Varsha Kulkarni</p>
+                            <p class="project-description">Second Place in InnoQuest ’24 (SE A)</p>
+                        </div>
+                        <div class="project-card">
+                            <img src="images/projects/mini-project3.png" alt="Mini Project 2" style="width: 100%; height: 200px; object-fit: cover; border-radius: 8px; margin-bottom: 15px;">
+                            <h4>Automated Plant Watering System</h4>
+                            <p class="project-team">Team: Austin Joy, Rajdeep Kadam and Joseph Stalin</p>
+                            <p class="project-guide">Guide: Ms. Mayura Gavhane</p>
+                            <p class="project-description">Third Place in InnoQuest ’24 (SE A)</p>
+                        </div>
+
+                        <div class="project-card">
+                            <img src="images/projects/mini-project4.png" alt="Mini Project 3" style="width: 100%; height: 200px; object-fit: cover; border-radius: 8px; margin-bottom: 15px;">
+                            <h4>Stock Market Simulator</h4>
+                            <p class="project-team">Team: Aditya Menon, Swayam 
+Mhaskar and Mohd. Hashir. </p>
+                            <p class="project-guide">Guide: Ms. Sana Shaikh</p>
+                            <p class="project-description">First Place in InnoQuest ’24 (SE B), held on 4th October 2024.</p>
+                        </div>
+
+                        <div class="project-card">
+                            <img src="images/projects/mini-project5.png" alt="Mini Project 4" style="width: 100%; height: 200px; object-fit: cover; border-radius: 8px; margin-bottom: 15px;">
+                            <h4> Quiz and Test management</h4>
+                            <p class="project-team">Team: Ronal Pinto, 
+Prasad Shinde and Randall</p>
+                            <p class="project-guide">Guide: Ms. Hiteshri Shirtavde</p>
+                            <p class="project-description">Second Place in InnoQuest ’24 (SE B)</p>
+                        </div>
+
+                        <div class="project-card">
+                            <img src="images/projects/mini-project6.png" alt="Mini Project 5" style="width: 100%; height: 200px; object-fit: cover; border-radius: 8px; margin-bottom: 15px;">
+                            <h4>D.B.I.T resource management </h4>
+                            <p class="project-team">Team: Archit Rane, 
+Zayan and Saurabh Yadav</p>
+                            <p class="project-guide">Guide: Ms. Kalpita Wagaskar</p>
+                            <p class="project-description">Third Place in InnoQuest ’24 (SE B)</p>
                         </div>
                     </div>
                 </div>
 
-                <!-- Research Projects -->
+                <!-- Mini Projects TE -->
                 <div id="research-projects" class="project-section">
-                    <h3>Research Projects</h3>
-                    <div class="projects-grid">
-                        <div class="project-card">
-                            <h4>[Research Project Title 1]</h4>
-                            <p class="project-team">Team: [Student Names]</p>
-                            <p class="project-guide">Guide: [Faculty Name]</p>
-                            <p class="project-description">[Brief description of the research project]</p>
-                            <div class="project-tech">
-                                <strong>Research Area:</strong> [Area]
-                            </div>
+                    <h3>Mini Projects - TE</h3>
+                    <div class="projects-grid" style="display: flex; justify-content: center;">
+                        <div class="project-card" style="max-width: 400px; width: 100%;">
+                            <img src="images/projects/te-project1.png" alt="TE Project 1" style="width: 100%; height: 120px; object-fit: cover; border-radius: 8px; margin-bottom: 15px;">
+                            <h4>Unified NL interface for Automating system commands and 
+advanced dev ops tasks.<br> Sound Gen AI. </h4>
+                            <p class="project-team">Team: Ramya Kulkarni, Shaun Menezes and Dwayne 
+George Nixon <br>  Andre Fernandes, Jowin Paulose and 
+Suyash Kadam </p>
+                            <p class="project-guide">Guide:  Dr. Shaikh Phiroj <br> Mr. Imran Ali Mirza</p>
+                            <p class="project-description">The first place was shared between two projects at InnoQuest ’24. </p>
                         </div>
                     </div>
                 </div>
@@ -248,262 +496,239 @@
 
         <!-- Student Achievements -->
         <section id="achievements" class="student-achievements">
-            <div class="container">
-                <div class="section-header">
-                    <h2>🏆 Student Achievements</h2>
-                    <p>Celebrating excellence and outstanding performances by our students</p>
+            <div class="section-header">
+                <h2>Student Achievements</h2>
+                <p>Celebrating excellence across academics, innovation, research, and leadership</p>
+            </div>
+
+            <!-- Academic Excellence -->
+            <div class="achievement-category-section">
+                <h3>Academic Excellence</h3>
+                <div class="achievement-cards-grid">
+                    <div class="achievement-card">
+                        <div class="achievement-profile">
+                            <img src="images/achievement/Shreya-Chakraborty.png" alt="Shreya Chakraborty">
+                            <div class="achievement-profile-info">
+                                <h4>Shreya Chakraborty</h4>
+                                <p>Academics-10 pointer TE Computer Engineering</p>
+                                <p>Date 4/02/2025</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="achievement-card">
+                        <div class="achievement-profile">
+                            <img src="images/achievement/Tushita-Prashant-Patil.png" alt="Tushita Prashant Patil">
+                            <div class="achievement-profile-info">
+                                <h4>Tushita Prashant Patil</h4>
+                                <p>Semester 3 End of semester exams 10 pointer<br>Outstanding academic performance</p>
+                                <p>Date 7/03/2025</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="achievement-card">
+                        <div class="achievement-profile">
+                            <img src="images/achievement/Shraddha-Gajanan-Desai.png" alt="Shraddha Gajanan Desai">
+                            <div class="achievement-profile-info">
+                                <h4>Shraddha Gajanan Desai</h4>
+                                <p>Semester 3 End of semester exams10 pointer</p>
+                                <p>Date 7/03/2025</p>
+                            </div>
+                        </div>
+                    </div>
                 </div>
-                
-                <!-- Achievement Statistics -->
-                <div class="achievement-stats">
-                    <div class="stat-card">
-                        <div class="stat-icon">🥇</div>
-                        <div class="stat-number">50+</div>
-                        <div class="stat-label">Awards Won</div>
+            </div>
+
+            <!-- Technical Competitions -->
+            <div class="achievement-category-section">
+                <h3>Technical Competitions</h3>
+                <div class="achievement-cards-grid">
+                    <div class="achievement-card team-card">
+                        <div class="achievement-profile">
+                            <img src="images/achievement/colders.png" alt="Team COLDERS">
+                            <div class="achievement-profile-info">
+                                <h4>Team COLDERS</h4>
+                                <p>DBIT First 24-Hour Hackathon</p>
+                                <p>Achievement: COLDERS Secures 2nd Place at Codeverse</p>
+                                <p>Date: 2nd March 2025</p>
+                            </div>
+                        </div>
                     </div>
-                    <div class="stat-card">
-                        <div class="stat-icon">🏆</div>
-                        <div class="stat-number">25+</div>
-                        <div class="stat-label">Competitions</div>
+                    <div class="achievement-card team-card">
+                        <div class="achievement-profile">
+                            <img src="images/achievement/taniska.png" alt="Team CodeCare">
+                            <div class="achievement-profile-info">
+                                <h4>Team CodeCare</h4>
+                                <p> TYNET 2.0: International Women's Hackathon</p>
+                                <p>Achievement: Selected as one of the top 10 finalist teams internationally</p>
+                                   <p>Date: 11th December 2024</p>
+                            </div>
+                        </div>
                     </div>
-                    <div class="stat-card">
-                        <div class="stat-icon">📚</div>
-                        <div class="stat-number">15+</div>
-                        <div class="stat-label">Publications</div>
-                    </div>
-                    <div class="stat-card">
-                        <div class="stat-icon">💼</div>
-                        <div class="stat-number">95%</div>
-                        <div class="stat-label">Placement Rate</div>
+
+                    <div class="achievement-card team-card">
+                        <div class="achievement-profile">
+                            <img src="images/achievement/jayesh.png" alt="Team COLDERS Shines">
+                            <div class="achievement-profile-info">
+                                <h4> Team COLDERS Shines </h4>
+                                <p>My Idea Hackathon 2025</p>
+                                <p>Achievement: Top 10 and Special Prize Winner </p>
+                                    <p>Date: 18th March 2025</p>
+                            </div>
+                        </div>
                     </div>
                 </div>
+            </div>
 
-                <!-- Achievement Cards -->
-                <div class="achievements-grid">
-                    <!-- Academic Excellence Card -->
-                    <div class="achievement-card academic">
-                        <div class="card-header">
-                            <div class="card-icon">🎓</div>
-                            <h3>Academic Excellence</h3>
-                        </div>
-                        <div class="card-content">
-                            <div class="achievement-highlight">
-                                <span class="highlight-badge">University Rank 1</span>
-                                <p>Priya Sharma - BE Computer Engineering 2024</p>
-                            </div>
-                            <div class="achievement-list">
-                                <div class="achievement-item">
-                                    <span class="item-badge">🥇</span>
-                                    <div class="item-content">
-                                        <h4>Top Performers</h4>
-                                        <ul>
-                                            <li>Rahul Patel - University Rank 3, TE Computer 2024</li>
-                                            <li>Sneha Gupta - University Rank 5, SE Computer 2024</li>
-                                            <li>Arjun Singh - Departmental Topper 2024</li>
-                                        </ul>
-                                    </div>
-                                </div>
-                                <div class="achievement-item">
-                                    <span class="item-badge">🏅</span>
-                                    <div class="item-content">
-                                        <h4>Scholarships & Awards</h4>
-                                        <ul>
-                                            <li>Kavya Reddy - Merit Scholarship 2024</li>
-                                            <li>Vikash Kumar - Best Academic Performance Award</li>
-                                            <li>Ananya Joshi - Research Excellence Award</li>
-                                        </ul>
-                                    </div>
-                                </div>
+            <!-- Career Success -->
+            <div class="achievement-category-section">
+                <h3>Career Success</h3>
+                <div class="achievement-cards-grid">
+                    <div class="achievement-card">
+                        <div class="achievement-profile">
+                            <img src="images/achievement/Saniya-Rawat.png" alt="Saniya Rawat">
+                            <div class="achievement-profile-info">
+                                <h4>Saniya Rawat</h4>
+                                <p>Software Engineer at SAP, ₹16 LPA package</p>
                             </div>
                         </div>
                     </div>
 
-                    <!-- Technical Competitions Card -->
-                    <div class="achievement-card technical">
-                        <div class="card-header">
-                            <div class="card-icon">💻</div>
-                            <h3>Technical Competitions</h3>
-                        </div>
-                        <div class="card-content">
-                            <div class="achievement-highlight">
-                                <span class="highlight-badge">National Champion</span>
-                                <p>Team CodeCrafters - National Coding Championship 2024</p>
-                            </div>
-                            <div class="achievement-list">
-                                <div class="achievement-item">
-                                    <span class="item-badge">🏆</span>
-                                    <div class="item-content">
-                                        <h4>Coding Competitions</h4>
-                                        <ul>
-                                            <li>Amit Verma - Winner, Inter-College Programming Contest</li>
-                                            <li>DevSquad Team - 2nd Place, State Level Hackathon</li>
-                                            <li>Ritu Sharma - Top 10, Google Code Jam 2024</li>
-                                        </ul>
-                                    </div>
-                                </div>
-                                <div class="achievement-item">
-                                    <span class="item-badge">🚀</span>
-                                    <div class="item-content">
-                                        <h4>Innovation Challenges</h4>
-                                        <ul>
-                                            <li>TechnoMinds - Best Innovation Award, Smart City Hackathon</li>
-                                            <li>AlgoMasters - 1st Runner-up, Tech Innovation Challenge</li>
-                                            <li>CodeNinjas - Winner, 24-hour Coding Marathon</li>
-                                        </ul>
-                                    </div>
-                                </div>
+                    <div class="achievement-card">
+                        <div class="achievement-profile">
+                            <img src="images/achievement/Shruti-Shelar.png" alt="Shruti Shelar">
+                            <div class="achievement-profile-info">
+                                <h4>Shruti Shelar</h4>
+                                <p>Software Engineer at SAP, ₹16 LPA package</p>
                             </div>
                         </div>
                     </div>
 
-                    <!-- Research & Publications Card -->
-                    <div class="achievement-card research">
-                        <div class="card-header">
-                            <div class="card-icon">🔬</div>
-                            <h3>Research & Publications</h3>
-                        </div>
-                        <div class="card-content">
-                            <div class="achievement-highlight">
-                                <span class="highlight-badge">Best Paper Award</span>
-                                <p>Neha Agarwal - IEEE International Conference 2024</p>
+                    <div class="achievement-card">
+                        <div class="achievement-profile">
+                            <img src="images/achievement/Shaun-Menezes.png" alt="Shaun Menezes">
+                            <div class="achievement-profile-info">
+                                <h4>Shaun Menezes</h4>
+                                <p>software Engineer at Homefirst, ₹8 LPA package</p>
                             </div>
-                            <div class="achievement-list">
-                                <div class="achievement-item">
-                                    <span class="item-badge">📄</span>
-                                    <div class="item-content">
-                                        <h4>Conference Publications</h4>
-                                        <ul>
-                                            <li>Rajesh Kumar - Paper published in ACM Conference 2024</li>
-                                            <li>Pooja Singh - Research presentation at International Symposium</li>
-                                            <li>Manish Gupta - Patent filed for AI-based solution</li>
-                                        </ul>
-                                    </div>
-                                </div>
-                                <div class="achievement-item">
-                                    <span class="item-badge">🧪</span>
-                                    <div class="item-content">
-                                        <h4>Research Projects</h4>
-                                        <ul>
-                                            <li>Shreya Patel - Outstanding Research Project Award</li>
-                                            <li>Karthik Rao - Research internship at Microsoft Research</li>
-                                            <li>Deepika Jain - Published in IEEE Transactions Journal</li>
-                                        </ul>
-                                    </div>
-                                </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Achievements -->
+            <div class="achievement-category-section">
+                <h3>Achievements</h3>
+                <div class="achievement-cards-grid">
+                    <div class="achievement-card">
+                        <div class="achievement-profile">
+                            <img src="images/achievement/Jayesh-Wani.png" alt="Jayesh Wani">
+                            <div class="achievement-profile-info">
+                                <h4>Jayesh Wani</h4>
+                                <p>Event: Googles Build and Blog Marathon, Mumbai</p>
+                                <p>Achievement: Winner</p>
+                                <p>Date: 6th December 2024</p>
                             </div>
                         </div>
                     </div>
 
-                    <!-- Career Success Card -->
-                    <div class="achievement-card career">
-                        <div class="card-header">
-                            <div class="card-icon">💼</div>
-                            <h3>Career Success</h3>
-                        </div>
-                        <div class="card-content">
-                            <div class="achievement-highlight">
-                                <span class="highlight-badge">₹45 LPA Package</span>
-                                <p>Rohit Mehta - Software Engineer at Google</p>
-                            </div>
-                            <div class="achievement-list">
-                                <div class="achievement-item">
-                                    <span class="item-badge">🏢</span>
-                                    <div class="item-content">
-                                        <h4>Top Placements</h4>
-                                        <ul>
-                                            <li>Sakshi Agarwal - SDE at Microsoft (₹35 LPA)</li>
-                                            <li>Tushar Singh - Product Manager at Amazon (₹40 LPA)</li>
-                                            <li>Nisha Kumari - Data Scientist at Netflix (₹38 LPA)</li>
-                                        </ul>
-                                    </div>
-                                </div>
-                                <div class="achievement-item">
-                                    <span class="item-badge">🌟</span>
-                                    <div class="item-content">
-                                        <h4>Entrepreneurship</h4>
-                                        <ul>
-                                            <li>Varun Sharma - Founder, TechStartup (₹2Cr funding)</li>
-                                            <li>Priyanka Das - Co-founder, EdTech Platform</li>
-                                            <li>Siddharth Jha - CEO, AI Solutions Pvt Ltd</li>
-                                        </ul>
-                                    </div>
-                                </div>
+                    <div class="achievement-card">
+                        <div class="achievement-profile">
+                            <img src="images/achievement/Nicole-Saldanha.png" alt="Nicole Saldanha">
+                            <div class="achievement-profile-info">
+                                <h4>Nicole Saldanha</h4>
+                                <p>Intercollegiate chess tournament at XIE: 1st place. All mumbai intercollegiate mumbai university chess tournament: Rank 14</p>
+                                <p>Date 11/01/2025</p>
                             </div>
                         </div>
                     </div>
 
-                    <!-- Leadership & Impact Card -->
-                    <div class="achievement-card leadership">
-                        <div class="card-header">
-                            <div class="card-icon">🌟</div>
-                            <h3>Leadership & Impact</h3>
-                        </div>
-                        <div class="card-content">
-                            <div class="achievement-highlight">
-                                <span class="highlight-badge">Student Council President</span>
-                                <p>Abhishek Tiwari - Leading 500+ students (2024)</p>
+                    <div class="achievement-card">
+                        <div class="achievement-profile">
+                            <img src="images/achievement/Sanjay-Chhedilal-Yadav.png" alt="Sanjay Chhedilal Yadav">
+                            <div class="achievement-profile-info">
+                                <h4>Sanjay Chhedilal Yadav</h4>
+                                <p>Debugging Marathon at 1st Position</p>
+                                <p>Date 13/03/2025</p>
                             </div>
-                            <div class="achievement-list">
-                                <div class="achievement-item">
-                                    <span class="item-badge">👥</span>
-                                    <div class="item-content">
-                                        <h4>Leadership Roles</h4>
-                                        <ul>
-                                            <li>Megha Sharma - Cultural Event Coordinator</li>
-                                            <li>Pranav Joshi - Technical Society President</li>
-                                            <li>Aditi Singh - Community Service Lead</li>
-                                        </ul>
-                                    </div>
-                                </div>
-                                <div class="achievement-item">
-                                    <span class="item-badge">🏅</span>
-                                    <div class="item-content">
-                                        <h4>Sports & Cultural</h4>
-                                        <ul>
-                                            <li>Rohan Gupta - Inter-College Cricket Champion</li>
-                                            <li>Swati Verma - Classical Dance Competition Winner</li>
-                                            <li>Gaurav Singh - Photography Contest Champion</li>
-                                        </ul>
-                                    </div>
-                                </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Achievements -->
+            <div class="achievement-category-section">
+                <h3>Achievements</h3>
+                <div class="achievement-cards-grid">
+                    <div class="achievement-card">
+                        <div class="achievement-profile">
+                            <img src="images/achievement/Yash-Shankar-Khatpe.png" alt="Yash Shankar Khatpe">
+                            <div class="achievement-profile-info">
+                                <h4>Yash Shankar Khatpe </h4>
+                                <p>Google Developer Group on Campus Solution Challenge-Selected among the Top 105 teams</p>
                             </div>
                         </div>
                     </div>
 
-                    <!-- Global Recognition Card -->
-                    <div class="achievement-card global">
-                        <div class="card-header">
-                            <div class="card-icon">🌍</div>
-                            <h3>Global Recognition</h3>
-                        </div>
-                        <div class="card-content">
-                            <div class="achievement-highlight">
-                                <span class="highlight-badge">International Internship</span>
-                                <p>Ankit Yadav - Summer Intern at Stanford University</p>
+                    <div class="achievement-card">
+                        <div class="achievement-profile">
+                            <img src="images/achievement/Shubham-Keluskar.png" alt="Shubham Keluskar">
+                            <div class="achievement-profile-info">
+                                <h4>Shubham Keluskar</h4>
+                                <p>Achievement: Department Triads Winner : 2024-2025<br>Date: 5th October 2024</p>
                             </div>
-                            <div class="achievement-list">
-                                <div class="achievement-item">
-                                    <span class="item-badge">✈️</span>
-                                    <div class="item-content">
-                                        <h4>International Programs</h4>
-                                        <ul>
-                                            <li>Tanvi Agarwal - Exchange Student at MIT</li>
-                                            <li>Harsh Gupta - Research Internship at Cambridge</li>
-                                            <li>Riya Patel - Summer Program at UC Berkeley</li>
-                                        </ul>
-                                    </div>
-                                </div>
-                                <div class="achievement-item">
-                                    <span class="item-badge">🏆</span>
-                                    <div class="item-content">
-                                        <h4>Global Competitions</h4>
-                                        <ul>
-                                            <li>CodeGlobal Team - ACM ICPC World Finals 2024</li>
-                                            <li>Vishal Kumar - Google Summer of Code 2024</li>
-                                            <li>Preeti Singh - Microsoft Imagine Cup Finalist</li>
-                                        </ul>
-                                    </div>
-                                </div>
+                        </div>
+                    </div>
+
+                    <div class="achievement-card">
+                        <div class="achievement-profile">
+                            <img src="images/achievement/certificate.png" alt="Aarol D'Souza">
+                            <div class="achievement-profile-info">
+                                <h4>Aarol D'Souza</h4>
+                                <p>Competitive Programming-2nd Place<br>Date of achievement- 28/09/2024</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Sports -->
+            <div class="achievement-category-section">
+                <h3>Sports</h3>
+                <div class="achievement-cards-grid">
+                    <div class="achievement-card">
+                        <div class="achievement-profile">
+                            <img src="images/achievement/Shweta-Nadar.png" alt="Shweta Nadar">
+                            <div class="achievement-profile-info">
+                                <h4>Shweta Nadar</h4>
+                                <p>1st Place, Basketball – Euphoria (2025)<br>
+                                2nd Place, Box Cricket – Euphoria (2025)<br>
+                                3rd Place, Rink Football – Euphoria (2025)<br>
+                                1st Place, Box Cricket – Hysteria (2024)<br>
+                                1st Place, Basketball – Hysteria (2024)<br>
+                                2nd Place, Rink Football – Hysteria (2024)</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="achievement-card">
+                        <div class="achievement-profile">
+                            <img src="images/achievement/Abdullah-Anis-Ahmad-Ansari.png" alt="Abdullah Anis Ahmad Ansari">
+                            <div class="achievement-profile-info">
+                                <h4>Abdullah Anis Ahmad Ansari</h4>
+                                <p>Carrom Doubles- 2nd place <br>Date 4/02/2025</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="achievement-card team-card">
+                        <div class="achievement-profile">
+                            <img src="images/achievement/Euphoria-Success.png" alt="Euphoria Success">
+                            <div class="achievement-profile-info">
+                                <h4>Euphoria Success</h4>
+                                <p>Team Achievement at Euphoria Sports Event</p>
+                                <p>The Computer Engineering department emerged as the Overall Champions of Euphoria 2025, showcasing exceptional talent across sports, cultural, literary, and technical events through teamwork, discipline, and leadership.</p>
                             </div>
                         </div>
                     </div>
@@ -514,45 +739,47 @@
         <!-- Student Organizations -->
         <section class="student-organizations">
             <div class="container">
-                <h2>Student Organizations & Clubs</h2>
+                <h2>Student Chapter</h2>
                 <div class="organizations-grid">
                     <div class="org-card">
-                        <h3>Computer Society</h3>
-                        <p>The official technical society of the Computer Engineering Department</p>
+                        <h3>GDGC</h3>
+                        <p>The official Google-backed technical community fostering coding culture and modern technology skills on campus</p>
                         <ul>
-                            <li>Technical workshops and seminars</li>
-                            <li>Coding competitions and hackathons</li>
-                            <li>Industry interaction sessions</li>
+                            <li>Google-backed university club at DBIT promoting Cloud Computing, Web & App Development, DSA, and Google technologies.</li>
+                            <li>Works on peer-to-peer learning with the motto “By the students, For the students.”</li>
+                            <li>Focuses on building coding culture and making students industry-ready with latest tech trends.</li>                           
+                            <li><a href="https://gdgc.dbit.in/" target="_blank">GDGC Website</a></li>                        </ul>
+                    </div>
+
+                    <div class="org-card">
+                        <h3>ACM</h3>
+                        <p>The official computing society empowering innovation and excellence in computer science.</p>
+                        <ul>
+                            <li>Reputed ACM student chapter under the Department of Computer Engineering.</li>
+                            <li>Promotes leadership, professional growth, and networking in computing.</li>
+                            <li>Hosts Teknack, a game development event where students build and publish games.</li>
+                            <li><a href="https://dbit.acm.org/" target="_blank">ACM Website</a></li> 
                         </ul>
                     </div>
 
                     <div class="org-card">
-                        <h3>Programming Club</h3>
-                        <p>For students passionate about competitive programming and algorithms</p>
+                        <h3>IEEE Club</h3>
+                        <p>Advancing technology for the benefit of humanity.</p>
                         <ul>
-                            <li>Weekly coding practice sessions</li>
-                            <li>Contest participation and training</li>
-                            <li>Peer learning and mentorship</li>
+                            <li>Professional technical society promoting innovation in electronics and computer science.</li>
+                            <li>Focuses on standards, research, and industry-oriented learning.</li>
+                            <li>Helps students become corporate-ready through technical activities.</li>
+                            <li><a href="https://ieee.dbit.in/" target="_blank">IEEE Website</a></li> 
                         </ul>
                     </div>
 
                     <div class="org-card">
-                        <h3>Innovation & Entrepreneurship Cell</h3>
-                        <p>Fostering innovation and startup culture among students</p>
+                        <h3>Mathematics Club</h3>
+                        <p>Where logic meets creativity and math becomes fun.</p>
                         <ul>
-                            <li>Startup idea competitions</li>
-                            <li>Entrepreneur mentorship programs</li>
-                            <li>Innovation challenges and projects</li>
-                        </ul>
-                    </div>
-
-                    <div class="org-card">
-                        <h3>Research Forum</h3>
-                        <p>Platform for students interested in research and higher studies</p>
-                        <ul>
-                            <li>Research methodology workshops</li>
-                            <li>Paper writing and presentation skills</li>
-                            <li>Conference participation support</li>
+                            <li>Platform to build logical thinking and intuitive problem-solving skills.</li>
+                            <li>Promotes fun, applied learning through workshops, seminars, and competitions</li>
+                            <li>Makes mathematics engaging, practical, and enjoyable for students.</li>
                         </ul>
                     </div>
                 </div>
@@ -565,32 +792,76 @@
                 <h2>Placement Statistics</h2>
                 <div class="stats-grid">
                     <div class="stat-card">
-                        <h3>[Percentage]%</h3>
-                        <p>Overall Placement Rate</p>
+                        <h3>250+</h3>
+                        <p> Placements</p>
                     </div>
                     <div class="stat-card">
-                        <h3>₹[Amount] LPA</h3>
+                        <h3>₹5 LPA</h3>
                         <p>Average Package</p>
                     </div>
                     <div class="stat-card">
-                        <h3>₹[Amount] LPA</h3>
+                        <h3>₹25 LPA</h3>
                         <p>Highest Package</p>
                     </div>
                     <div class="stat-card">
-                        <h3>[Number]+</h3>
+                        <h3>200+</h3>
                         <p>Recruiting Companies</p>
                     </div>
                 </div>
                 
                 <div class="top-recruiters">
-                    <h3>Top Recruiters</h3>
-                    <div class="recruiters-list">
-                        <span class="recruiter">[Company 1]</span>
-                        <span class="recruiter">[Company 2]</span>
-                        <span class="recruiter">[Company 3]</span>
-                        <span class="recruiter">[Company 4]</span>
-                        <span class="recruiter">[Company 5]</span>
-                        <span class="recruiter">[Company 6]</span>
+                    <h3>Top Companies Hiring From DBIT</h3>
+                    <div class="marquee-container">
+                        <div class="marquee-content">
+                            <div class="recruiter">
+                                <img src="images/companies/icici.jpg" alt="ICICI" class="recruiter-logo">
+                                <span class="recruiter-name">ICICI</span>
+                            </div>
+                            <div class="recruiter">
+                                <img src="images/companies/jio.png" alt="Jio" class="recruiter-logo">
+                                <span class="recruiter-name">Jio</span>
+                            </div>
+                            <div class="recruiter">
+                                <img src="images/companies/seclore.png" alt="Seclore" class="recruiter-logo">
+                                <span class="recruiter-name">Seclore</span>
+                            </div>
+                            <div class="recruiter">
+                                <img src="images/companies/tcs.jpg" alt="TCS" class="recruiter-logo">
+                                <span class="recruiter-name">TCS</span>
+                            </div>
+                            <div class="recruiter">
+                                <img src="images/companies/infosys.png" alt="Infosys" class="recruiter-logo">
+                                <span class="recruiter-name">Infosys</span>
+                            </div>
+                            <div class="recruiter">
+                                <img src="images/companies/sap.png" alt="SAP" class="recruiter-logo">
+                                <span class="recruiter-name">SAP</span>
+                            </div>
+                            <div class="recruiter">
+                                <img src="images/companies/hsbc.png" alt="HSBC" class="recruiter-logo">
+                                <span class="recruiter-name">HSBC</span>
+                            </div>
+                            <div class="recruiter">
+                                <img src="images/companies/jacobs.png" alt="Jacobs" class="recruiter-logo">
+                                <span class="recruiter-name">Jacobs</span>
+                            </div>
+                            <div class="recruiter">
+                                <img src="images/companies/L&T.png" alt="L&T" class="recruiter-logo">
+                                <span class="recruiter-name">L&T</span>
+                            </div>
+                            <div class="recruiter">
+                                <img src="images/companies/godrej.png" alt="Godrej" class="recruiter-logo">
+                                <span class="recruiter-name">Godrej</span>
+                            </div>
+                            <div class="recruiter">
+                                <img src="images/companies/fedral.png" alt="Fedral" class="recruiter-logo">
+                                <span class="recruiter-name">Fedral</span>
+                            </div>
+                            <div class="recruiter">
+                                <img src="images/companies/capgemini.png" alt="Capgemini" class="recruiter-logo">
+                                <span class="recruiter-name">Capgemini</span>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>

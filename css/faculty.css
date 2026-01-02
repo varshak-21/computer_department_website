@@ -71,15 +71,14 @@
 
 .faculty-achievements,
 .research-areas {
-  padding: 4rem 0;
-  background: var(--light-grey);
+  padding: 1rem 0;
 }
 
 .achievements-grid,
 .research-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-  gap: 1.5rem;
+  gap: 1rem;
 }
 
 /* Shared Card */

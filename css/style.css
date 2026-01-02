@@ -30,12 +30,12 @@ body {
     overflow-x: hidden;
     padding-top: 80px; /* Account for fixed navbar */
 }
-
 .container {
     max-width: 1200px;
     margin: 0 auto;
     padding: 0 20px;
 }
+
 
 /* Navigation */
 .navbar {
@@ -176,151 +176,174 @@ body {
     transition: var(--transition);
 }
 
-/* Hero Section */
-.hero-section {
-    position: relative;
-    height: 100vh;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    overflow: hidden;
-    background: var(--black);
+
+/* Features Section */
+.features-section {
+    padding: 6rem 0;
+    background: var(--white);
 }
 
-.hero-video {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    z-index: 1;
+.features-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 2rem;
 }
 
-.hero-overlay {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: linear-gradient(
-        135deg,
-        rgba(0, 0, 0, 0.6) 0%,
-        rgba(0, 0, 0, 0.3) 50%,
-        rgba(0, 0, 0, 0.6) 100%
-    );
-    z-index: 2;
-}
-
-.hero-content {
-    position: relative;
-    z-index: 3;
+.feature-card {
+    padding: 2.5rem 2rem;
+    background: var(--white);
+    border: 1px solid #eee;
+    border-radius: var(--radius);
     text-align: center;
-    color: var(--white);
-    max-width: 800px;
-    margin: 0 auto;
-    padding: 0 2rem;
-    animation: fadeInUp 1s ease-out;
+    transition: var(--transition);
+    position: relative;
+    overflow: hidden;
 }
 
-.hero-title {
-    font-size: clamp(2.5rem, 5vw, 4rem);
-    font-weight: 700;
-    line-height: 1.2;
+.feature-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 4px;
+    background: var(--black);
+    transform: scaleX(0);
+    transition: var(--transition);
+}
+
+.feature-card:hover::before {
+    transform: scaleX(1);
+}
+
+.feature-card:hover {
+    transform: translateY(-10px);
+    box-shadow: var(--shadow);
+    border-color: var(--black);
+}
+
+.feature-icon {
+    font-size: 3rem;
     margin-bottom: 1.5rem;
 }
 
-.hero-subtitle {
-    font-size: clamp(1.1rem, 2vw, 1.3rem);
-    opacity: 0.9;
-    margin-bottom: 2.5rem;
-}
-
-.hero-buttons {
-    display: flex;
-    gap: 1.5rem;
-    justify-content: center;
-    flex-wrap: wrap;
-}
-
-.hero-btn {
-    display: inline-flex;
-    align-items: center;
-    padding: 1rem 2rem;
-    text-decoration: none;
+.feature-card h3 {
+    font-size: 1.25rem;
     font-weight: 600;
-    border-radius: var(--radius);
-    transition: var(--transition);
-    border: 2px solid transparent;
-}
-
-.hero-btn-primary {
-    background: var(--white);
-    color: var(--black);
-    border-color: var(--white);
-}
-
-.hero-btn-primary:hover {
-    background: transparent;
-    color: var(--white);
-    border-color: var(--white);
-    transform: translateY(-2px);
-}
-
-.hero-btn-secondary {
-    background: transparent;
-    color: var(--white);
-    border-color: var(--white);
-}
-
-.hero-btn-secondary:hover {
-    background: var(--white);
-    color: var(--black);
-    transform: translateY(-2px);
-}
-
-.scroll-indicator {
-    position: absolute;
-    bottom: 2rem;
-    left: 50%;
-    transform: translateX(-50%);
-    z-index: 3;
-    animation: bounce 2s infinite;
-}
-
-.scroll-arrow {
-    width: 24px;
-    height: 24px;
-    border-right: 2px solid var(--white);
-    border-bottom: 2px solid var(--white);
-    transform: rotate(45deg);
-    opacity: 0.7;
-}
-
-/* Main Sections */
-.main-content {
-    background: var(--white);
-}
-
-.section-header {
-    text-align: center;
-    margin-bottom: 4rem;
-}
-
-.section-title {
-    font-size: clamp(2rem, 4vw, 3rem);
-    font-weight: 700;
     color: var(--black);
     margin-bottom: 1rem;
 }
 
-.section-subtitle {
-    font-size: 1.2rem;
+.feature-card p {
     color: var(--grey);
-    max-width: 600px;
-    margin: 0 auto;
 }
 
+/* Announcements Section */
+.announcements-section {
+    padding: 6rem 0;
+    background: var(--white);
+}
+
+.announcements-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    gap: 2rem;
+    margin-top: 2rem;
+}
+
+.announcement-card {
+    background: var(--white);
+    border: 1px solid #eee;
+    border-radius: var(--radius);
+    padding: 2rem;
+    transition: var(--transition);
+    position: relative;
+    overflow: hidden;
+}
+
+.announcement-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 3px;
+    background: var(--black);
+    transform: scaleX(0);
+    transition: var(--transition);
+}
+
+.announcement-card:hover::before {
+    transform: scaleX(1);
+}
+
+.announcement-card:hover {
+    transform: translateY(-5px);
+    box-shadow: var(--shadow);
+    border-color: var(--black);
+}
+
+.announcement-icon {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+    display: block;
+}
+
+.announcement-card h3 {
+    font-size: 1.3rem;
+    font-weight: 600;
+    color: var(--black);
+    margin-bottom: 1.5rem;
+}
+
+.announcement-items {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.announcement-item {
+    padding: 1rem 0;
+    border-bottom: 1px solid #f0f0f0;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+}
+
+.announcement-item:last-of-type {
+    border-bottom: none;
+}
+
+.item-title {
+    font-weight: 500;
+    color: var(--dark-grey);
+    flex: 1;
+    min-width: 200px;
+}
+
+.item-date {
+    font-size: 0.9rem;
+    color: var(--grey);
+    font-weight: 500;
+    white-space: nowrap;
+}
+
+.view-all-link {
+    display: inline-flex;
+    align-items: center;
+    color: var(--black);
+    text-decoration: none;
+    font-weight: 500;
+    margin-top: 1rem;
+    transition: var(--transition);
+}
+
+.view-all-link:hover {
+    color: var(--dark-grey);
+    transform: translateX(5px);
+}
 
 /* Recent Activities Section */
 .recent-activities-section {
@@ -583,11 +606,16 @@ body {
         flex-direction: column;
         align-items: center;
         gap: 1rem;
+            color: var(--black);
+
     }
+    
     
     .hero-btn {
         width: 100%;
         max-width: 280px;
+            color: var(--black);
+
         justify-content: center;
     }
     
@@ -1051,6 +1079,54 @@ body {
     line-height: 1.5;
 }
 
+.calendar-buttons {
+    display: flex;
+    gap: 0.75rem;
+    margin-top: 1rem;
+}
+
+.calendar-buttons .resource-btn {
+    flex: 1;
+    text-align: center;
+    padding: 0.75rem 1rem;
+    font-size: 0.9rem;
+}
+
+.syllabus-links {
+    display: flex;
+    gap: 0.5rem;
+    margin-top: 1rem;
+    justify-content: center;
+}
+
+.syllabus-link {
+    display: inline-block;
+    background: var(--white);
+    color: var(--black);
+    padding: 0.6rem 1.2rem;
+    border-radius: 6px;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 0.9rem;
+    transition: all 0.3s ease;
+    min-width: 50px;
+    text-align: center;
+}
+
+.syllabus-link:hover {
+    background: var(--light-grey);
+    transform: translateY(-2px);
+}
+
+.syllabus-link[href="#"] {
+    opacity: 0.5;
+    cursor: not-allowed;
+}
+
+.syllabus-link[href="#"]:hover {
+    transform: none;
+}
+
 .resource-btn {
     display: inline-block;
     background: var(--white);
@@ -1111,6 +1187,64 @@ body {
     text-align: center;
     margin-bottom: 2rem;
     line-height: 1.6;
+}
+
+/* Calendar Toggle Buttons */
+.calendar-toggle-buttons {
+    display: flex;
+    gap: 0.75rem;
+    justify-content: center;
+    margin-bottom: 2rem;
+    padding: 0.5rem;
+    background: var(--light-grey);
+    border-radius: 10px;
+}
+
+.toggle-btn {
+    flex: 1;
+    padding: 0.75rem 1.5rem;
+    background: transparent;
+    border: none;
+    border-radius: 8px;
+    font-weight: 600;
+    font-size: 0.95rem;
+    color: var(--dark-grey);
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.toggle-btn:hover {
+    background: rgba(0, 0, 0, 0.05);
+}
+
+.toggle-btn.active {
+    background: var(--black);
+    color: var(--white);
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+}
+
+/* Calendar Content */
+.calendar-content {
+    display: none;
+    opacity: 0;
+    transition: opacity 0.4s ease;
+}
+
+.calendar-content.active {
+    display: block;
+    opacity: 1;
+    animation: fadeIn 0.4s ease;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
 }
 
 .calendar-highlights {
@@ -2472,6 +2606,22 @@ body {
         padding: 2rem;
     }
     
+    /* Calendar Toggle Mobile Responsive */
+    .calendar-toggle-buttons {
+        flex-direction: column;
+        gap: 0.5rem;
+    }
+    
+    .toggle-btn {
+        padding: 0.85rem 1rem;
+        font-size: 0.9rem;
+    }
+    
+    .calendar-card {
+        padding: 1.5rem;
+    }
+}
+    
     .faculty-grid {
         grid-template-columns: 1fr;
     }
@@ -2509,7 +2659,7 @@ body {
         grid-template-columns: 1fr;
         gap: 1rem;
     }
-}
+
 
 /* Ensure text visibility on all pages */
 .page-hero h1,

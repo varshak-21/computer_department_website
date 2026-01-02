@@ -1,0 +1,377 @@
+
+.container {
+    max-width: 1500px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+/* Hero Section */
+.hero-section {
+    position: relative;
+    height: 90vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    background: var(--black);
+
+    /* Background image */
+    background-image: 
+        linear-gradient(
+            rgba(255, 255, 255, 0.75),
+            rgba(255, 255, 255, 0.75)
+        ),
+        url("https://agnelsalve.github.io/assets/images/college.jpg"); /* replace with your image path */
+
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.hero-video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: 1;
+}
+
+.hero-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(
+        135deg,
+        rgba(0, 0, 0, 0.6) 0%,
+        rgba(0, 0, 0, 0.3) 50%,
+        rgba(0, 0, 0, 0.6) 100%
+    );
+    z-index: 2;
+}
+
+.hero-content {
+    position: relative;
+    z-index: 3;
+    text-align: center;
+    color: var(--black);
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 0 2rem;
+    animation: fadeInUp 1s ease-out;
+}
+
+.hero-title {
+    font-size: clamp(2.5rem, 5vw, 4rem);
+    font-weight: 700;
+    line-height: 1.2;
+        color: var(--black);
+
+    margin-bottom: 1.5rem;
+}
+
+.hero-subtitle {
+    font-size: clamp(1.1rem, 2vw, 1.3rem);
+    opacity: 0.9;
+        color: var(--black);
+
+    margin-bottom: 2.5rem;
+}
+
+.hero-buttons {
+    display: flex;
+    gap: 1.5rem;
+        color: var(--black);
+
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.hero-btn {
+    display: inline-flex;
+    align-items: center;
+    padding: 1rem 2rem;
+    text-decoration: none;
+    font-weight: 600;
+        color: var(--black);
+
+    border-radius: var(--radius);
+    transition: var(--transition);
+    border: 2px solid transparent;
+}
+
+.hero-btn {
+    display: inline-block;
+    padding: 14px 32px;
+    font-weight: 600;
+    text-decoration: none;
+    border-radius: 6px;
+    border: 2px solid transparent;
+    transition: all 0.3s ease;
+}
+
+/* Primary button */
+.hero-btn-primary {
+    background: var(--black);
+    color: var(--white);
+    border-color: var(--black);
+}
+
+.hero-btn-primary:hover {
+    background: transparent;
+    color: var(--black);
+    border-color: var(--black);
+    transform: translateY(-3px);
+}
+
+/* Secondary button */
+.hero-btn-secondary {
+    background: transparent;
+    color: var(--black);
+    border-color: var(--black);
+}
+
+.hero-btn-secondary:hover {
+    background: var(--black);
+    color: var(--white);
+    transform: translateY(-3px);
+}
+
+
+.scroll-indicator {
+    position: absolute;
+    bottom: 2rem;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 3;
+    animation: bounce 2s infinite;
+}
+
+.scroll-arrow {
+    width: 24px;
+    height: 24px;
+    border-right: 2px solid var(--white);
+    border-bottom: 2px solid var(--white);
+    transform: rotate(45deg);
+    opacity: 0.7;
+}
+
+/* About Section */
+.about-section {
+    padding: 4rem 0;
+    background: var(--light-grey);
+}
+
+.social-links {
+    display: flex;
+    flex-direction: column;
+
+
+    gap: 8px;
+}
+
+.social-link {
+    color: #ffffff;
+    text-decoration: none;
+    font-weight: 500;
+}
+
+.social-link:hover {
+    text-decoration: underline;
+}
+
+/* Main Sections */
+.main-content {
+    background: var(--white);
+}
+
+.section-header {
+    text-align: center;
+    margin-bottom: 4rem;
+}
+
+.section-title {
+    font-size: clamp(2rem, 4vw, 3rem);
+    font-weight: 700;
+    color: var(--black);
+    margin-bottom: 1rem;
+}
+
+.section-subtitle {
+    font-size: 1.2rem;
+    color: var(--grey);
+    max-width: 600px;
+    letter-spacing: 4\3px;
+    margin: 0 auto;
+}
+
+.stats-grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 2rem;
+    margin-top: 3rem;
+    
+}
+
+.stat-item{
+    text-align: center;
+    padding: 2.5rem 1.5rem;
+    background: rgba(0, 0, 0, 0.8);
+    border-radius: var(--radius);
+    /* Subtle border instead of heavy shadow for a "Classic" look */
+    box-shadow: 2px solid #ffffff; 
+    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.stat-item:hover {
+    background: rgba(0, 0, 0, 1);
+    transform: translateY(-10px);
+    border-color: black;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+}
+
+.stat-number, .stat-val {
+    font-size: 3rem;
+    font-weight: 800;
+    color: var(--white); /* Assuming your items are black with white text */
+    margin-bottom: 0.5rem;
+    display: block;
+    letter-spacing: -1px;
+}
+
+.stat-label {
+    color: rgb(234, 234, 234);
+    font-weight: 700;
+    text-transform: uppercase;
+    font-size: 0.85rem;
+    letter-spacing: 1.3px;
+}
+
+/* intro section styling */
+.glance-container{
+    display: flex;
+    gap: 30px;
+    width: 100%;
+    padding-bottom: 6rem ;
+    background-color: var(--light-grey);
+}
+.news-section, 
+.review-section {
+    width: 25%;
+}
+.hod-section {
+    width: 50%;
+}
+
+/* news section */
+.news-section{
+    padding: 30px;
+    background-color: rgb(0, 0, 0);
+    color: #ffffff;
+}
+
+/* hod section */
+.hod-section{
+    margin: 10px auto;
+    display: flex;
+    gap: 30px;
+    width: 100%;
+    box-shadow: var(--shadow);
+    padding: 30px;
+    background-color: var(--white);
+    border-radius: var(--radius);
+}
+.img-container{
+    width: 30%;
+    height: 100%;
+}
+.hod-info{
+    color: var(--dark-grey);
+    text-align: center;
+    padding: 5px;
+    border-radius: var(--radius);
+}
+.img-container img{
+    width: 100%;
+    border-radius: var(--radius);
+}
+.text-container{
+    width: 60%;
+}
+.text-container h2{
+    font-size: 2rem;
+    color: black;
+    font-weight: 700;
+}
+.intro{
+    font-size: 1rem;
+    font-weight: 500;
+    line-height: 1.7;
+    color: var(--black);
+    margin-bottom: 1rem;
+}
+.extra-intro{
+    color: var(--dark-grey);
+}
+
+.quote-icon{
+    font-size: 2.5rem;
+    color: rgb(153, 153, 153);
+}
+
+/* review section */
+.review-section{
+    padding: 30px;
+    background-color: rgb(0, 0, 0);
+    color: #ffffff;
+}
+
+@media (max-width: 992px) {
+    .glance-container {
+        flex-wrap: wrap; /* Allows items to wrap to a new line */
+        justify-content: center;
+        padding-inline: 20px;
+        gap: 20px;
+    }
+
+    .hod-section {
+        order: -1;      /* Forces HOD section to the top */
+        width: 100%;    /* Takes full width on top */
+        margin-bottom: 10px;
+    }
+
+    .news-section, 
+    .review-section {
+        width: calc(50% - 15px); /* Side-by-side (subtracting half the gap) */
+    }
+}
+
+/* --- Small Devices (Phones - e.g., max-width: 600px) --- */
+@media (max-width: 600px) {
+    .glance-container {
+        flex-direction: column; /* Stack everything vertically */
+        gap: 20px;
+        padding-inline: 15px; /* Slightly tighter padding for phones */
+        padding-bottom: 3rem; /* Reduced bottom padding */
+    }
+
+    .news-section, 
+    .review-section, 
+    .hod-section {
+        width: 100%; /* All sections take full width */
+    }
+
+    /* Target the HOD section internal layout */
+    .hod-section {
+        flex-direction: column; /* Image top, info middle, intro bottom */
+        align-items: start;
+    }
+
+    .img-container, 
+    .text-container {
+        width: 100%; /* Containers inside HOD expand to fill width */
+    }
+}
