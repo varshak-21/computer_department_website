@@ -360,76 +360,15 @@
         <section class="student-resources">
             <div class="container">
                 <h2>Student Resources</h2>
-                <div class="resources-grid">
-                    <div class="resource-card">
+                <div class="resources-grid" style="max-width: 800px; margin: 0 auto;">
+                    <div class="resource-card" style="text-align: center;">
                         <div class="resource-icon">📚</div>
-                        <h3>Academic Resources</h3>
-                        <p>Access study materials, lecture notes, and online learning platforms</p>
-                        <ul class="resource-links">
-                            <li><a href="#">Lecture Notes</a></li>
-                            <li><a href="#">E-books & References</a></li>
-                            <li><a href="#">Online Courses</a></li>
-                            <li><a href="#">Previous Year Papers</a></li>
-                        </ul>
-                    </div>
-
-                    <div class="resource-card">
-                        <div class="resource-icon">💻</div>
-                        <h3>Technical Resources</h3>
-                        <p>Programming tools, software, and development environments</p>
-                        <ul class="resource-links">
-                            <li><a href="#">Programming IDEs</a></li>
-                            <li><a href="#">Software Downloads</a></li>
-                            <li><a href="#">Online Compilers</a></li>
-                            <li><a href="#">Development Tools</a></li>
-                        </ul>
-                    </div>
-
-                    <div class="resource-card">
-                        <div class="resource-icon">🏆</div>
-                        <h3>Competition Resources</h3>
-                        <p>Prepare for coding competitions and technical challenges</p>
-                        <ul class="resource-links">
-                            <li><a href="#">Coding Platforms</a></li>
-                            <li><a href="#">Competition Calendar</a></li>
-                            <li><a href="#">Practice Problems</a></li>
-                            <li><a href="#">Team Formation</a></li>
-                        </ul>
-                    </div>
-
-                    <div class="resource-card">
-                        <div class="resource-icon">💼</div>
-                        <h3>Career Resources</h3>
-                        <p>Placement preparation and career guidance materials</p>
-                        <ul class="resource-links">
-                            <li><a href="#">Resume Templates</a></li>
-                            <li><a href="#">Interview Preparation</a></li>
-                            <li><a href="#">Placement Portal</a></li>
-                            <li><a href="#">Career Guidance</a></li>
-                        </ul>
-                    </div>
-
-                    <div class="resource-card">
-                        <div class="resource-icon">🔬</div>
-                        <h3>Research Opportunities</h3>
-                        <p>Undergraduate research programs and project guidelines</p>
-                        <ul class="resource-links">
-                            <li><a href="#">Research Projects</a></li>
-                            <li><a href="#">Faculty Mentorship</a></li>
-                            <li><a href="#">Conference Submissions</a></li>
-                            <li><a href="#">Research Funding</a></li>
-                        </ul>
-                    </div>
-
-                    <div class="resource-card">
-                        <div class="resource-icon">🤝</div>
-                        <h3>Student Support</h3>
-                        <p>Academic and personal support services for students</p>
-                        <ul class="resource-links">
-                            <li><a href="#">Counseling Services</a></li>
-                            <li><a href="#">Academic Support</a></li>
-                            <li><a href="#">Mentorship Program</a></li>
-                            <li><a href="#">Student Handbook</a></li>
+                        <h3>Access Question Papers by Year</h3>
+                        <p>Download previous year examination papers for exam preparation</p>
+                        <ul class="resource-links" style="display: flex; justify-content: center; gap: 30px; flex-wrap: wrap;">
+                            <li><a href="#" style="font-size: 1.1rem; font-weight: 600;">Second Year (SE)</a></li>
+                            <li><a href="#" style="font-size: 1.1rem; font-weight: 600;">Third Year (TE)</a></li>
+                            <li><a href="#" style="font-size: 1.1rem; font-weight: 600;">Final Year (BE)</a></li>
                         </ul>
                     </div>
                 </div>
@@ -445,8 +384,8 @@
                 <div class="project-categories">
                     <div class="category-tabs">
                         <button class="tab-btn active" onclick="showProjects('final-year')">Final Year Projects</button>
-                        <button class="tab-btn" onclick="showProjects('mini-projects')">Mini Projects</button>
-                        <button class="tab-btn" onclick="showProjects('research-projects')">Research Projects</button>
+                        <button class="tab-btn" onclick="showProjects('mini-projects')">Mini Projects - SE</button>
+                        <button class="tab-btn" onclick="showProjects('research-projects')">Mini Projects - TE</button>
                     </div>
                 </div>
 
@@ -455,75 +394,100 @@
                     <h3>Final Year Projects (2024-25)</h3>
                     <div class="projects-grid">
                         <div class="project-card">
-                            <h4>[Project Title 1]</h4>
-                            <p class="project-team">Team: [Student Names]</p>
-                            <p class="project-guide">Guide: [Faculty Name]</p>
-                            <p class="project-description">[Brief description of the project and its objectives]</p>
-                            <div class="project-tech">
-                                <strong>Technologies:</strong> [Tech Stack]
-                            </div>
+                            <img src="images/projects/project1.png" alt="Project 1" style="width: 100%; height: 200px; object-fit: cover; border-radius: 8px; margin-bottom: 15px;">
+                            <h4>ArgMed-Agents</h4>
+                            <p class="project-team">Team: Anushka Joseph, Figo Fernandez and Jess John.</p>
+                            <p class="project-guide">Guide: Dr. Amiya Kumar Tripathy</p>
+                            <p class="project-description">Explainable Clinical Decision Reasoning with LLM via Argumentation Schemes </p>
                         </div>
 
                         <div class="project-card">
-                            <h4>[Project Title 2]</h4>
-                            <p class="project-team">Team: [Student Names]</p>
-                            <p class="project-guide">Guide: [Faculty Name]</p>
-                            <p class="project-description">[Brief description of the project and its objectives]</p>
-                            <div class="project-tech">
-                                <strong>Technologies:</strong> [Tech Stack]
-                            </div>
+                            <img src="images/projects/project2.png" alt="Project 2" style="width: 100%; height: 200px; object-fit: cover; border-radius: 8px; margin-bottom: 15px;">
+                            <h4>Brain Stroke Detection</h4>
+                            <p class="project-team">Team:  Shanaya Carvalho, Ansel Dsouza and Hani Kotian </p>
+                            <p class="project-guide">Guide:  Dr. Shaikh Phiroj</p>
+                            <p class="project-description"> Brain stroke detection using Deep Learning and Convolutional LSTM project.</p>
                         </div>
 
                         <div class="project-card">
-                            <h4>[Project Title 3]</h4>
-                            <p class="project-team">Team: [Student Names]</p>
-                            <p class="project-guide">Guide: [Faculty Name]</p>
-                            <p class="project-description">[Brief description of the project and its objectives]</p>
-                            <div class="project-tech">
-                                <strong>Technologies:</strong> [Tech Stack]
-                            </div>
+                            <img src="images/projects/project3.png" alt="Project 3" style="width: 100%; height: 200px; object-fit: cover; border-radius: 8px; margin-bottom: 15px;">
+                            <h4>Virtual Interview Mastery</h4>
+                            <p class="project-team">Team: Niraj Pingale, Saniya Rawat and Malivia Rodrigues </p>
+                            <p class="project-guide">Guide: Prof. Imran Ali Mirza</p>
+                            <p class="project-description"> An AI-Driven Simulation Experience </p>
                         </div>
                     </div>
                 </div>
 
-                <!-- Mini Projects -->
+                <!-- Mini Projects SE-->
                 <div id="mini-projects" class="project-section">
-                    <h3>Mini Projects</h3>
+                    <h3>Mini Projects - SE</h3>
                     <div class="projects-grid">
                         <div class="project-card">
-                            <h4>[Mini Project Title 1]</h4>
-                            <p class="project-team">Team: [Student Names]</p>
-                            <p class="project-guide">Guide: [Faculty Name]</p>
-                            <p class="project-description">[Brief description of the mini project]</p>
-                            <div class="project-tech">
-                                <strong>Technologies:</strong> [Tech Stack]
-                            </div>
+                            <img src="images/projects/mini-project1.png" alt="Mini Project 1" style="width: 100%; height: 200px; object-fit: cover; border-radius: 8px; margin-bottom: 15px;">
+                            <h4>Art Work Place </h4>
+                            <p class="project-team">Team:  Joshua Almeida, Verushka Fernandes and Serah Francis.</p>
+                            <p class="project-guide">Guide: Ms.Priya Kaul </p>
+                            <p class="project-description">First Place in InnoQuest ’24 (SE A), held on 4th October 2024.</p>
                         </div>
 
                         <div class="project-card">
-                            <h4>[Mini Project Title 2]</h4>
-                            <p class="project-team">Team: [Student Names]</p>
-                            <p class="project-guide">Guide: [Faculty Name]</p>
-                            <p class="project-description">[Brief description of the mini project]</p>
-                            <div class="project-tech">
-                                <strong>Technologies:</strong> [Tech Stack]
-                            </div>
+                            <img src="images/projects/mini-project2.png" alt="Mini Project 2" style="width: 100%; height: 200px; object-fit: cover; border-radius: 8px; margin-bottom: 15px;">
+                            <h4>Bookify</h4>
+                            <p class="project-team">Team:  Cion Koli, Aarya Pate and Vaishnavi Sawant.</p>
+                            <p class="project-guide">Guide: Ms. Varsha Kulkarni</p>
+                            <p class="project-description">Second Place in InnoQuest ’24 (SE A)</p>
+                        </div>
+                        <div class="project-card">
+                            <img src="images/projects/mini-project3.png" alt="Mini Project 2" style="width: 100%; height: 200px; object-fit: cover; border-radius: 8px; margin-bottom: 15px;">
+                            <h4>Automated Plant Watering System</h4>
+                            <p class="project-team">Team: Austin Joy, Rajdeep Kadam and Joseph Stalin</p>
+                            <p class="project-guide">Guide: Ms. Mayura Gavhane</p>
+                            <p class="project-description">Third Place in InnoQuest ’24 (SE A)</p>
+                        </div>
+
+                        <div class="project-card">
+                            <img src="images/projects/mini-project4.png" alt="Mini Project 3" style="width: 100%; height: 200px; object-fit: cover; border-radius: 8px; margin-bottom: 15px;">
+                            <h4>Stock Market Simulator</h4>
+                            <p class="project-team">Team: Aditya Menon, Swayam 
+Mhaskar and Mohd. Hashir. </p>
+                            <p class="project-guide">Guide: Ms. Sana Shaikh</p>
+                            <p class="project-description">First Place in InnoQuest ’24 (SE B), held on 4th October 2024.</p>
+                        </div>
+
+                        <div class="project-card">
+                            <img src="images/projects/mini-project5.png" alt="Mini Project 4" style="width: 100%; height: 200px; object-fit: cover; border-radius: 8px; margin-bottom: 15px;">
+                            <h4> Quiz and Test management</h4>
+                            <p class="project-team">Team: Ronal Pinto, 
+Prasad Shinde and Randall</p>
+                            <p class="project-guide">Guide: Ms. Hiteshri Shirtavde</p>
+                            <p class="project-description">Second Place in InnoQuest ’24 (SE B)</p>
+                        </div>
+
+                        <div class="project-card">
+                            <img src="images/projects/mini-project6.png" alt="Mini Project 5" style="width: 100%; height: 200px; object-fit: cover; border-radius: 8px; margin-bottom: 15px;">
+                            <h4>D.B.I.T resource management </h4>
+                            <p class="project-team">Team: Archit Rane, 
+Zayan and Saurabh Yadav</p>
+                            <p class="project-guide">Guide: Ms. Kalpita Wagaskar</p>
+                            <p class="project-description">Third Place in InnoQuest ’24 (SE B)</p>
                         </div>
                     </div>
                 </div>
 
-                <!-- Research Projects -->
+                <!-- Mini Projects TE -->
                 <div id="research-projects" class="project-section">
-                    <h3>Research Projects</h3>
-                    <div class="projects-grid">
-                        <div class="project-card">
-                            <h4>[Research Project Title 1]</h4>
-                            <p class="project-team">Team: [Student Names]</p>
-                            <p class="project-guide">Guide: [Faculty Name]</p>
-                            <p class="project-description">[Brief description of the research project]</p>
-                            <div class="project-tech">
-                                <strong>Research Area:</strong> [Area]
-                            </div>
+                    <h3>Mini Projects - TE</h3>
+                    <div class="projects-grid" style="display: flex; justify-content: center;">
+                        <div class="project-card" style="max-width: 400px; width: 100%;">
+                            <img src="images/projects/te-project1.png" alt="TE Project 1" style="width: 100%; height: 120px; object-fit: cover; border-radius: 8px; margin-bottom: 15px;">
+                            <h4>Unified NL interface for Automating system commands and 
+advanced dev ops tasks.<br> Sound Gen AI. </h4>
+                            <p class="project-team">Team: Ramya Kulkarni, Shaun Menezes and Dwayne 
+George Nixon <br>  Andre Fernandes, Jowin Paulose and 
+Suyash Kadam </p>
+                            <p class="project-guide">Guide:  Dr. Shaikh Phiroj <br> Mr. Imran Ali Mirza</p>
+                            <p class="project-description">The first place was shared between two projects at InnoQuest ’24. </p>
                         </div>
                     </div>
                 </div>
