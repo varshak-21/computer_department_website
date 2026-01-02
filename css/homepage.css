@@ -257,21 +257,119 @@
     width: 100%;
     padding-bottom: 6rem ;
     background-color: var(--light-grey);
+    padding-left: 2rem;
+    padding-right: 2rem;
 }
 .news-section, 
 .review-section {
-    width: 25%;
+    width: 40%;
 }
 .hod-section {
-    width: 50%;
+    width: 60%;
 }
 
 /* news section */
-.news-section{
+.news-section,.resource-section{
     padding: 30px;
-    background-color: rgb(0, 0, 0);
-    color: #ffffff;
+    background: var(--white);
+    border-radius: var(--radius);
+    box-shadow: var(--shadow);;
 }
+.news-container {
+    color: var(--white);
+    height: 400px; /* Match the height of your HOD section */
+    display: flex;
+    flex-direction: column;
+}
+
+.news-tag-icon i {
+    color: #000000;
+    font-size: 1.2rem;
+}
+
+.news-header {
+    margin-bottom: 1.5rem;
+    padding-bottom: 1rem;
+    border-bottom: 2px solid #333;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    color: #000000;
+}
+
+.news-heading {
+    font-size: 1.2rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.news-ticker-window {
+    flex-grow: 1; /* Takes up remaining space after header/footer */
+    overflow: hidden; 
+    position: relative;
+}
+
+.news-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    /* Smooth continuous upward scroll */
+    animation: scrollVertical 20s linear infinite;
+}
+
+/* Pause on hover */
+.news-list:hover {
+    animation-play-state: paused;
+}
+
+@keyframes scrollVertical {
+    0% { transform: translateY(0); }
+    100% { transform: translateY(-50%); } /* Scrolls half the height  */
+}
+
+.news-item {
+    padding: 1.2rem 0;
+    border-bottom: 1px solid var(--medium-grey);
+}
+
+.news-category {
+    display: inline-block;
+    font-size: 0.8rem;
+    background: gray;
+    padding: 2px 8px;
+    border-radius: 4px;
+    margin-bottom: 5px;
+    color: #ffffff;
+    font-weight: bold;
+}
+
+.news-link {
+    display: inline-block;
+    color: var(--dark-grey);
+    text-decoration: none;
+    font-size: 0.95rem;
+    line-height: 1.6;
+    transition: 
+        color 0.4s ease,
+        text-shadow 0.4s ease,
+        transform 0.4s ease;
+}
+
+.news-link:hover {
+    color: var(--black);
+    text-shadow: 0 0 8px rgba(0, 0, 0, 0.4);
+    transform: translateY(-1px);
+}
+
+.news-footer{
+    font-size: 1.2rem;
+}
+.news-arrow i {
+    color: #000000;
+    font-size: 1rem;
+    padding-left: 4px;
+}
+
 
 /* hod section */
 .hod-section{
@@ -322,12 +420,79 @@
     color: rgb(153, 153, 153);
 }
 
-/* review section */
-.review-section{
-    padding: 30px;
-    background-color: rgb(0, 0, 0);
-    color: #ffffff;
+.resource-hub {
+    color: var(--black);
+    height: 400px;
+    display: flex;
+    flex-direction: column;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    
 }
+
+.resource-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* 2 columns */
+    gap: 10px;
+    flex-grow: 1;
+}
+
+.news-tag-icon {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+}
+
+.news-tag-icon i {
+    color: #000000;
+    font-size: 1rem;
+}
+
+.resource-link-card {
+    background: #111;
+    border: 1px solid #222;
+    padding: 15px;
+    text-decoration: none;
+    color: #ccc;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    border-radius: 4px;
+    transition: all 0.3s ease;
+}
+
+.resource-link-card i {
+    font-size: 1.2rem;
+    margin-bottom: 8px;
+    color: var(--white);
+}
+
+.resource-link-card span {
+    font-size: 0.8rem;
+    font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+/* Hover Effect: Border Glow and Lift */
+.resource-link-card:hover {
+    background: #222;
+    border-color: var(--white);
+    color: var(--white);
+    transform: translateY(-3px);
+}
+
+/* Make the last link span both columns for a balanced look */
+.resource-link-card.full-width {
+    grid-column: span 2;
+    flex-direction: row;
+    gap: 15px;
+}
+
 
 @media (max-width: 992px) {
     .glance-container {
