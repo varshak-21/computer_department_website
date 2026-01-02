@@ -62,8 +62,8 @@
                 <p class="hero-subtitle">Inspired by the Don Bosco Way of Learning</p>
                 
                 <div class="hero-buttons">
-                    <a href="#academics" class="hero-btn hero-btn-primary">Explore Programs</a>
-                    <a href="#students" class="hero-btn hero-btn-secondary">See Student Life</a>
+                    <a href="academics.html" class="hero-btn hero-btn-primary">How We Teach</a>
+                    <a href="students.html#student-projects" class="hero-btn hero-btn-secondary">See Student Life</a>
                 </div>
             </div>
         </div>
@@ -218,7 +218,7 @@
          <section class="what-we-do">
             <div class="container">
                 <div class="section-header">
-                    <h2 class="section-title">Department at a Glance</h2>
+                    <h2 class="section-title">Our Department at a Glance</h2>
                     <p class="section-subtitle">Who we are. What we do.</p>
                 </div>
 
@@ -270,62 +270,41 @@
             </div>
         </section>
 
-        <!-- Announcements -->
-        <section class="announcements-section">
+        <!-- testimonials section -->
+         <section class="testimonials-section">
             <div class="container">
-                <div class="section-header">
-                    <h2 class="section-title">Announcements</h2>
-                    <p class="section-subtitle">Stay updated with the latest news, events, and opportunities</p>
+                <div class="section-header" style="margin-bottom: 1.5rem;">
+                    <h2 class="section-title" style="margin-bottom: 0rem;">Student & Alumni Perspectives</h2>
+                    <p class="section-subtitle">Real stories from those who have walked the DBIT Comps path.</p>
                 </div>
-                
-                <div class="announcements-grid">
-                    <div class="announcement-card">
-                        <div class="announcement-icon">📚</div>
-                        <h3>Workshops</h3>
-                        <div class="announcement-items">
-                            <div class="announcement-item">
-                                <span class="item-title">Advanced Machine Learning Workshop</span>
-                                <span class="item-date">Dec 15, 2025</span>
+                <p class="deck-hint">Click the card to swap <i class="fas fa-sync-alt"></i></p>
+                <div class="testimonial-deck-wrapper">
+                    <div class="testimonial-deck" id="testimonial-deck" onclick="swapCard()">
+                        <div class="deck-card active-card" id="main-card">
+
+                            <div class="quote-icon"><i class="fas fa-quote-left"></i></div>
+
+                            <p class="testimonial-text" id="test-text">The department provided excellent guidance and integrated learning through workshops and labs, helping me develop essential skills for the industry.</p>
+                            <div class="testimonial-profile">
+
+                                <img src="images/student-testimonials/kevin.png" alt="Profile" id="test-img" class="profile-img">
+
+                                <div class="profile-details">
+
+                                    <h4 id="test-name">Kevin Johnson</h4>
+
+                                    <p id="test-role">Associate Test Analyst, Link Group (2022)</p>
+
+                                </div>
+
                             </div>
-                            <div class="announcement-item">
-                                <span class="item-title">Web Development Bootcamp</span>
-                                <span class="item-date">Dec 20, 2025</span>
-                            </div>
-                            <a href="events.html" class="view-all-link">View all workshops →</a>
+
                         </div>
+
+                        <div class="deck-card ghost-card-1"></div>
+                        <div class="deck-card ghost-card-2"></div>
                     </div>
                     
-                    <div class="announcement-card">
-                        <div class="announcement-icon">📢</div>
-                        <h3>Notices</h3>
-                        <div class="announcement-items">
-                            <div class="announcement-item">
-                                <span class="item-title">Semester End Examination Schedule</span>
-                                <span class="item-date">Dec 10, 2025</span>
-                            </div>
-                            <div class="announcement-item">
-                                <span class="item-title">Project Submission Deadline</span>
-                                <span class="item-date">Dec 18, 2025</span>
-                            </div>
-                            <a href="#" class="view-all-link">View all notices →</a>
-                        </div>
-                    </div>
-                    
-                    <div class="announcement-card">
-                        <div class="announcement-icon">🎉</div>
-                        <h3>Events</h3>
-                        <div class="announcement-items">
-                            <div class="announcement-item">
-                                <span class="item-title">Annual Tech Fest - TechnoVanza</span>
-                                <span class="item-date">Jan 5-7, 2026</span>
-                            </div>
-                            <div class="announcement-item">
-                                <span class="item-title">Coding Competition</span>
-                                <span class="item-date">Dec 22, 2025</span>
-                            </div>
-                            <a href="events.html" class="view-all-link">View all events →</a>
-                        </div>
-                    </div>
                 </div>
             </div>
         </section>
@@ -564,7 +543,6 @@
         </div>
     </div>
 </footer>
-
 
     <script src="js/script.js"></script>
 </body>
