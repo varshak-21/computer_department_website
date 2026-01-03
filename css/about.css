@@ -861,7 +861,7 @@
     margin-bottom: 2rem;
 }
 
-/* For Journey Vertical timeline smaller screens
+/* For Journey Vertical timeline smaller screens */
 @media (max-width: 768px) {
     .timeline::before {
         left: 12px;
@@ -886,6 +886,132 @@
         border-left: 4px solid var(--black);
         border-right: none;
     }
+
+    /* Vision Mission Cards */
+    .vm-card {
+        padding: 1.5rem;
+    }
+
+    .vm-card h2 {
+        font-size: 1.5rem;
+    }
+
+    /* Stats Grid */
+    .stats-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 1rem;
+    }
+
+    /* Infrastructure */
+    .infra-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .infra-card {
+        padding: 1.5rem;
+    }
+
+    .infra-info {
+        padding: 1rem;
+    }
+
+    .infra-info p {
+        font-size: 1rem;
+    }
+
+    /* Page Hero */
+    .page-hero h1 {
+        font-size: 2rem;
+    }
+
+    .page-hero p {
+        font-size: 1rem;
+    }
 }
-*/
+
+/* Small Mobile Devices */
+@media (max-width: 480px) {
+    .page-hero {
+        padding: 2rem 0;
+    }
+
+    .page-hero h1 {
+        font-size: 1.75rem;
+    }
+
+    .page-hero p {
+        font-size: 0.9rem;
+    }
+
+    .vm-card {
+        padding: 1.25rem;
+    }
+
+    .vm-card h2 {
+        font-size: 1.3rem;
+    }
+
+    .vm-card .icon {
+        font-size: 2rem;
+    }
+
+    .stats-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .stat-card {
+        padding: 1.25rem;
+    }
+
+    .stat-number {
+        font-size: 2rem;
+    }
+
+    .stat-label {
+        font-size: 0.85rem;
+    }
+
+    .infra-card {
+        padding: 1.25rem;
+    }
+
+    .infra-icon {
+        font-size: 2rem;
+    }
+
+    .timeline-item {
+        padding-left: 2.5rem;
+    }
+
+    .timeline-card {
+        padding: 1rem;
+    }
+
+    .timeline-year {
+        font-size: 1.1rem;
+    }
+}
+
+/* Extra Small Devices */
+@media (max-width: 360px) {
+    .page-hero h1 {
+        font-size: 1.5rem;
+    }
+
+    .vm-card h2 {
+        font-size: 1.2rem;
+    }
+
+    .vm-card {
+        padding: 1rem;
+    }
+
+    .stat-card {
+        padding: 1rem;
+    }
+
+    .infra-card {
+        padding: 1rem;
+    }
+}
 

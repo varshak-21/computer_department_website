@@ -17,14 +17,7 @@ const navbarHTML = `
             <ul class="nav-menu" id="nav-menu">
                 <li><a href="index.html" class="nav-link">Home</a></li>
                 <li><a href="about.html" class="nav-link">About</a></li>
-                <li class="dropdown">
-                    <a href="academics.html" class="nav-link">Academics</a>
-                    <ul class="dropdown-menu">
-                        <li><a href="academics.html#se">Second Year (SE)</a></li>
-                        <li><a href="academics.html#te">Third Year (TE)</a></li>
-                        <li><a href="academics.html#be">Final Year (BE)</a></li>
-                    </ul>
-                </li>
+                <li><a href="academics.html" class="nav-link">Academics</a></li>
                 <li><a href="faculty.html" class="nav-link">Faculty</a></li>
                 <li><a href="students.html" class="nav-link">Students</a></li>
                 <li><a href="research.html" class="nav-link">Research</a></li>

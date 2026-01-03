@@ -338,3 +338,162 @@
     padding: 12px;
   }
 }
+
+/* ========== COMPREHENSIVE MOBILE RESPONSIVENESS ========== */
+
+/* Tablet Devices */
+@media (max-width: 1024px) {
+  .container {
+    padding: 0 30px;
+  }
+
+  .faculty-section h2 {
+    font-size: 2rem;
+  }
+
+  .sub-container {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* Mobile Devices */
+@media (max-width: 768px) {
+  .container {
+    padding: 0 20px;
+  }
+
+  .faculty-section {
+    padding: 3rem 0;
+  }
+
+  .faculty-section h2 {
+    font-size: 1.75rem;
+    margin-bottom: 1.5rem;
+  }
+
+  .faculty-card {
+    padding: 1.5rem;
+  }
+
+  .faculty-name {
+    font-size: 1.3rem;
+  }
+
+  .faculty-title {
+    font-size: 0.95rem;
+  }
+
+  .faculty-info p {
+    font-size: 0.9rem;
+  }
+
+  .faculty-links {
+    gap: 0.75rem;
+  }
+
+  .faculty-link {
+    padding: 0.6rem 1rem;
+    font-size: 0.85rem;
+  }
+
+  .portfolio-link {
+    padding: 0.6rem 1rem;
+    font-size: 0.85rem;
+  }
+
+  #assistant-professors {
+    gap: 1.25rem;
+  }
+}
+
+/* Small Mobile Devices */
+@media (max-width: 480px) {
+  .container {
+    padding: 0 15px;
+  }
+
+  .faculty-section {
+    padding: 2.5rem 0;
+  }
+
+  .faculty-section h2 {
+    font-size: 1.5rem;
+    margin-bottom: 1.25rem;
+  }
+
+  .faculty-card {
+    padding: 1.25rem;
+  }
+
+  .faculty-img {
+    height: auto;
+    max-height: 250px;
+  }
+
+  .faculty-name {
+    font-size: 1.2rem;
+  }
+
+  .faculty-title {
+    font-size: 0.9rem;
+  }
+
+  .faculty-info {
+    padding: 1.25rem;
+  }
+
+  .faculty-info p {
+    font-size: 0.85rem;
+    line-height: 1.5;
+  }
+
+  .faculty-links {
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+
+  .faculty-link,
+  .portfolio-link {
+    width: 100%;
+    justify-content: center;
+    padding: 0.7rem 1rem;
+    font-size: 0.85rem;
+  }
+
+  #assistant-professors {
+    gap: 1rem;
+  }
+}
+
+/* Extra Small Devices */
+@media (max-width: 360px) {
+  .faculty-section h2 {
+    font-size: 1.3rem;
+  }
+
+  .faculty-card {
+    padding: 1rem;
+  }
+
+  .faculty-name {
+    font-size: 1.1rem;
+  }
+
+  .faculty-title {
+    font-size: 0.85rem;
+  }
+
+  .faculty-info {
+    padding: 1rem;
+  }
+
+  .faculty-info p {
+    font-size: 0.8rem;
+  }
+
+  .faculty-link,
+  .portfolio-link {
+    padding: 0.6rem 0.8rem;
+    font-size: 0.8rem;
+  }
+}

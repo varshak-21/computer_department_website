@@ -290,6 +290,719 @@
             .achievement-profile-info p {
                 font-size: 0.85rem;
             }
+
+            /* Marquee responsiveness */
+            .marquee-container {
+                padding: 30px 0;
+            }
+
+            .marquee-content .recruiter {
+                width: 100px;
+                height: 100px;
+            }
+
+            .recruiter-logo {
+                width: 70px;
+                height: 70px;
+            }
+
+            .top-recruiters h3 {
+                font-size: 1.5rem;
+            }
+        }
+
+        /* Extra small devices */
+        @media (max-width: 360px) {
+            .student-achievements .section-header h2 {
+                font-size: 1.4rem;
+            }
+
+            .achievement-card {
+                padding: 15px;
+            }
+
+            .achievement-profile {
+                flex-direction: column;
+                align-items: center;
+                text-align: center;
+            }
+
+            .achievement-profile img {
+                width: 90px;
+                height: 90px;
+                min-width: 90px;
+                min-height: 90px;
+                margin-bottom: 10px;
+            }
+
+            .marquee-content .recruiter {
+                width: 90px;
+                height: 90px;
+            }
+
+            .recruiter-logo {
+                width: 60px;
+                height: 60px;
+            }
+
+            .top-recruiters h3 {
+                font-size: 1.3rem;
+            }
+        }
+
+        /* Landscape mode */
+        @media (max-height: 500px) and (orientation: landscape) {
+            .student-achievements {
+                padding: 40px 0;
+            }
+
+            .marquee-container {
+                padding: 20px 0;
+            }
+        }
+
+        /* ===== PLACEMENT STATISTICS PDF SECTION ===== */
+        .placement-pdfs {
+            margin-top: 4rem;
+            text-align: center;
+        }
+
+        .placement-pdfs h3 {
+            font-size: 2rem;
+            font-weight: 700;
+            margin-bottom: 2.5rem;
+            color: var(--black);
+        }
+
+        .pdf-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 2rem;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        .pdf-card {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 1.5rem;
+            background: var(--white);
+            padding: 1.8rem 1.5rem;
+            border-radius: 12px;
+            border: 2px solid var(--black);
+            transition: all 0.3s ease;
+            box-shadow: 3px 3px 0px var(--black);
+            min-height: 120px;
+            height: 100%;
+        }
+
+        .pdf-card .gradient-border-btn {
+            text-decoration: none;
+        }
+
+        .pdf-left {
+            display: flex;
+            align-items: center;
+            gap: 1.5rem;
+            flex: 1;
+        }
+
+        .pdf-icon {
+            font-size: 2.5rem;
+            color: var(--black);
+            flex-shrink: 0;
+            display: flex;
+            align-items: center;
+        }
+
+        .pdf-info {
+            text-align: left;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+
+        .pdf-info h4 {
+            font-size: 1.1rem;
+            font-weight: 600;
+            color: var(--black);
+            margin-bottom: 0.3rem;
+        }
+
+        .pdf-info p {
+            font-size: 0.9rem;
+            color: var(--grey);
+            margin: 0;
+        }
+
+        /* ===== ATERNITY UI-STYLE GRADIENT BORDER BUTTON ===== */
+        /* Outer wrapper with animated gradient border */
+        .gradient-border-btn {
+            position: relative;
+            padding: 3px; /* Thicker border for better visibility */
+            border-radius: 25px;
+            background: linear-gradient(90deg, 
+                #000 0%, 
+                #444 25%, 
+                #000 50%, 
+                #444 75%, 
+                #000 100%
+            );
+            background-size: 400% 100%;
+            flex-shrink: 0;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        /* Animate gradient on hover */
+        .pdf-card:hover .gradient-border-btn {
+            animation: gradientShift 2s linear infinite;
+        }
+
+        /* Continuous smooth animation */
+        @keyframes gradientShift {
+            0% { background-position: 0% 50%; }
+            100% { background-position: 100% 50%; }
+        }
+
+        /* Inner button with white background */
+        .pdf-download-btn {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 8px;
+            background: var(--white);
+            color: var(--black);
+            padding: 0.65rem 1.3rem;
+            border-radius: 22px; /* Slightly less than wrapper to show border */
+            font-size: 0.95rem;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            position: relative;
+            z-index: 1;
+            white-space: nowrap;
+        }
+
+        .pdf-download-btn i {
+            font-size: 1em;
+            transition: transform 0.3s ease;
+        }
+
+        /* Hover effect - icon animation */
+        .pdf-card:hover .pdf-download-btn i {
+            transform: translateY(-2px);
+        }
+
+        /* ===== PLACED STUDENTS SLIDING BANNER ===== */
+        .placed-students-section {
+            margin-top: 4rem;
+            padding-top: 3rem;
+            border-top: 2px solid #e0e0e0;
+        }
+
+        .placed-students-section h3 {
+            font-size: 2rem;
+            font-weight: 700;
+            margin-bottom: 2.5rem;
+            color: var(--black);
+            text-align: center;
+        }
+
+        .placed-students-slider {
+            overflow: hidden;
+            position: relative;
+            width: 100%;
+            padding: 20px 0;
+        }
+
+        .slider-track {
+            display: flex;
+            gap: 2rem;
+            animation: slide 30s linear infinite;
+            width: fit-content;
+        }
+
+        .slider-track:hover {
+            animation-play-state: paused;
+        }
+
+        @keyframes slide {
+            0% {
+                transform: translateX(0);
+            }
+            100% {
+                transform: translateX(-50%);
+            }
+        }
+
+        .student-slide {
+            background: var(--white);
+            border: 2px solid var(--black);
+            border-radius: 12px;
+            padding: 1.5rem;
+            min-width: 280px;
+            max-width: 280px;
+            text-align: center;
+            box-shadow: 3px 3px 0px var(--black);
+            transition: all 0.3s ease;
+            flex-shrink: 0;
+        }
+
+        .student-slide:hover {
+            transform: translateY(-5px);
+            box-shadow: 5px 5px 0px var(--black);
+        }
+
+        .student-photo {
+            width: 120px;
+            height: 120px;
+            margin: 0 auto 1rem;
+            border-radius: 50%;
+            overflow: hidden;
+            border: 3px solid var(--black);
+        }
+
+        .student-photo img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .student-info h4 {
+            font-size: 1.2rem;
+            font-weight: 700;
+            color: var(--black);
+            margin-bottom: 0.5rem;
+        }
+
+        .company-name {
+            font-size: 1rem;
+            font-weight: 600;
+            color: var(--dark-grey);
+            margin-bottom: 0.3rem;
+        }
+
+        .package {
+            font-size: 1.1rem;
+            font-weight: 700;
+            color: var(--black);
+            background: var(--light-grey);
+            padding: 0.3rem 0.8rem;
+            border-radius: 6px;
+            display: inline-block;
+            margin-top: 0.5rem;
+        }
+
+        /* Responsive Design for Placement Enhancements */
+        @media (max-width: 768px) {
+            .placement-pdfs h3,
+            .placed-students-section h3 {
+                font-size: 1.5rem;
+                margin-bottom: 1.5rem;
+            }
+
+            .pdf-grid {
+                grid-template-columns: 1fr;
+                gap: 1rem;
+            }
+
+            .pdf-card {
+                padding: 1.25rem;
+                gap: 1rem;
+            }
+
+            .pdf-icon {
+                font-size: 2rem;
+            }
+
+            .pdf-info h4 {
+                font-size: 1rem;
+            }
+
+            .student-slide {
+                min-width: 250px;
+                max-width: 250px;
+                padding: 1.25rem;
+            }
+
+            .student-photo {
+                width: 100px;
+                height: 100px;
+            }
+
+            .student-info h4 {
+                font-size: 1.1rem;
+            }
+
+            .company-name {
+                font-size: 0.9rem;
+            }
+
+            .package {
+                font-size: 1rem;
+            }
+
+            .slider-track {
+                gap: 1.5rem;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .placement-pdfs h3,
+            .placed-students-section h3 {
+                font-size: 1.3rem;
+            }
+
+            .pdf-card {
+                flex-direction: column;
+                text-align: center;
+                padding: 1rem;
+            }
+
+            .pdf-info {
+                text-align: center;
+            }
+
+            .pdf-icon {
+                font-size: 1.8rem;
+            }
+
+            .download-icon {
+                font-size: 1.3rem;
+            }
+
+            .student-slide {
+                min-width: 220px;
+                max-width: 220px;
+                padding: 1rem;
+            }
+
+            .student-photo {
+                width: 90px;
+                height: 90px;
+            }
+
+            .student-info h4 {
+                font-size: 1rem;
+            }
+
+            .slider-track {
+                gap: 1rem;
+            }
+        }
+
+        /* ==================== ATERNITY-STYLE PLACEMENT CAROUSEL ==================== */
+        .placement-carousel-section {
+            padding: 3rem 0;
+            background: var(--white);
+            overflow: hidden;
+        }
+
+        /* Congratulations Banner */
+        .congrats-banner {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 1rem;
+            margin-bottom: 1rem;
+            animation: fadeInDown 0.8s ease-out;
+        }
+
+        @keyframes fadeInDown {
+            from {
+                opacity: 0;
+                transform: translateY(-20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .congrats-text {
+            font-size: 2.5rem;
+            font-weight: 800;
+            background: linear-gradient(135deg, #000 0%, #434343 50%, #000 100%);
+            background-size: 200% 200%;
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            animation: gradientShine 3s ease infinite;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+        }
+
+        @keyframes gradientShine {
+            0%, 100% {
+                background-position: 0% 50%;
+            }
+            50% {
+                background-position: 100% 50%;
+            }
+        }
+
+        .congrats-icon {
+            font-size: 2rem;
+            animation: bounce 1.5s ease-in-out infinite;
+        }
+
+        .congrats-icon:nth-child(3) {
+            animation-delay: 0.2s;
+        }
+
+        @keyframes bounce {
+            0%, 100% {
+                transform: translateY(0);
+            }
+            50% {
+                transform: translateY(-10px);
+            }
+        }
+
+        .placement-carousel-section h3 {
+            text-align: center;
+            font-size: 2rem;
+            margin-bottom: 2.5rem;
+            color: var(--black);
+            font-weight: 700;
+        }
+
+        .carousel-container {
+            position: relative;
+            width: 100%;
+            max-width: 1400px;
+            margin: 0 auto;
+            overflow: hidden;
+            padding: 0 20px;
+        }
+
+        .carousel-track {
+            display: flex;
+            gap: 20px;
+            animation: infiniteScroll 60s linear infinite;
+            width: fit-content;
+        }
+
+        .carousel-track:hover {
+            animation-play-state: paused;
+        }
+
+        @keyframes infiniteScroll {
+            0% {
+                transform: translateX(0);
+            }
+            100% {
+                transform: translateX(-50%);
+            }
+        }
+
+        .carousel-slide {
+            flex: 0 0 350px; /* Fixed width for consistent scrolling */
+            min-width: 350px;
+        }
+
+        .slide-image {
+            position: relative;
+            width: 100%;
+            height: 400px;
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            border-radius: 8px;
+            overflow: hidden;
+            transition: transform 0.3s ease;
+        }
+
+        .carousel-slide:hover .slide-image {
+            transform: scale(1.02);
+        }
+
+        .slide-overlay {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            background: linear-gradient(to top, rgba(0, 0, 0, 0.7) 0%, rgba(0, 0, 0, 0.3) 35%, transparent 100%);
+            padding: 2rem 1.5rem;
+            transition: background 0.3s ease;
+        }
+
+        .carousel-slide:hover .slide-overlay {
+            background: linear-gradient(to top, rgba(0, 0, 0, 0.75) 0%, rgba(0, 0, 0, 0.35) 40%, transparent 100%);
+        }
+
+        .slide-content h4 {
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: var(--white);
+            margin-bottom: 0.5rem;
+        }
+
+        .slide-content .company {
+            font-size: 1.1rem;
+            color: var(--light-grey);
+            margin-bottom: 0.3rem;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .slide-content .package {
+            font-size: 1.3rem;
+            font-weight: 700;
+            color: var(--black);
+            background: var(--white);
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            padding: 0.6rem 1.2rem;
+            border-radius: 25px;
+            margin-top: 0.5rem;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+        }
+
+        .slide-content i {
+            font-size: 0.9em;
+        }
+
+        /* Carousel Navigation Dots */
+        .carousel-dots {
+            display: flex;
+            justify-content: center;
+            gap: 12px;
+            margin-top: 2rem;
+        }
+
+        .dot {
+            width: 12px;
+            height: 12px;
+            border-radius: 50%;
+            background: var(--dark-grey);
+            cursor: pointer;
+            transition: all 0.3s ease;
+            border: 2px solid transparent;
+        }
+
+        .dot:hover {
+            background: var(--black);
+            transform: scale(1.2);
+        }
+
+        .dot.active {
+            background: var(--black);
+            width: 30px;
+            border-radius: 6px;
+            border-color: var(--black);
+        }
+
+        /* Responsive Carousel - Tablet */
+        @media (max-width: 1024px) {
+            .carousel-slide {
+                flex: 0 0 300px;
+                min-width: 300px;
+            }
+
+            .slide-image {
+                height: 350px;
+            }
+
+            .slide-content h4 {
+                font-size: 1.3rem;
+            }
+
+            .slide-content .company {
+                font-size: 1rem;
+            }
+
+            .slide-content .package {
+                font-size: 1.2rem;
+                padding: 0.5rem 1rem;
+            }
+        }
+
+        /* Responsive Carousel - Mobile */
+        @media (max-width: 768px) {
+            .carousel-slide {
+                flex: 0 0 280px;
+                min-width: 280px;
+            }
+
+            .carousel-container {
+                padding: 0 15px;
+            }
+
+            .slide-image {
+                height: 320px;
+            }
+
+            .slide-overlay {
+                padding: 1.5rem 1rem;
+            }
+
+            .slide-content h4 {
+                font-size: 1.2rem;
+            }
+
+            .slide-content .company {
+                font-size: 0.95rem;
+            }
+
+            .slide-content .package {
+                font-size: 1.1rem;
+                padding: 0.5rem 1rem;
+            }
+
+            .placement-carousel-section h3 {
+                font-size: 1.5rem;
+                margin-bottom: 1.5rem;
+            }
+
+            .congrats-text {
+                font-size: 1.8rem;
+            }
+
+            .congrats-icon {
+                font-size: 1.5rem;
+            }
+
+            .carousel-dots {
+                margin-top: 1.5rem;
+                gap: 8px;
+            }
+
+            .dot {
+                width: 10px;
+                height: 10px;
+            }
+
+            .dot.active {
+                width: 24px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .slide-image {
+                height: 280px;
+            }
+
+            .slide-content h4 {
+                font-size: 1.1rem;
+            }
+
+            .carousel-track {
+                gap: 15px;
+            }
+
+            .congrats-text {
+                font-size: 1.5rem;
+                letter-spacing: 1px;
+            }
+
+            .congrats-icon {
+                font-size: 1.3rem;
+            }
         }
     </style>
 
@@ -332,7 +1045,7 @@
                 <h2>Student Resources</h2>
                 <div class="resources-grid" style="max-width: 800px; margin: 0 auto;">
                     <div class="resource-card" style="text-align: center;">
-                        <div class="resource-icon">📚</div>
+                        <div class="resource-icon"><i class="fa-solid fa-book"></i></div>
                         <h3>Access Question Papers by Year</h3>
                         <p>Download previous year examination papers for exam preparation</p>
                         <ul class="resource-links" style="display: flex; justify-content: center; gap: 30px; flex-wrap: wrap;">
@@ -545,42 +1258,6 @@ Suyash Kadam </p>
                                 <p>My Idea Hackathon 2025</p>
                                 <p>Achievement: Top 10 and Special Prize Winner </p>
                                     <p>Date: 18th March 2025</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Career Success -->
-            <div class="achievement-category-section">
-                <h3>Career Success</h3>
-                <div class="achievement-cards-grid">
-                    <div class="achievement-card">
-                        <div class="achievement-profile">
-                            <img src="images/achievement/Saniya-Rawat.png" alt="Saniya Rawat">
-                            <div class="achievement-profile-info">
-                                <h4>Saniya Rawat</h4>
-                                <p>Software Engineer at SAP, ₹16 LPA package</p>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="achievement-card">
-                        <div class="achievement-profile">
-                            <img src="images/achievement/Shruti-Shelar.png" alt="Shruti Shelar">
-                            <div class="achievement-profile-info">
-                                <h4>Shruti Shelar</h4>
-                                <p>Software Engineer at SAP, ₹16 LPA package</p>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="achievement-card">
-                        <div class="achievement-profile">
-                            <img src="images/achievement/Shaun-Menezes.png" alt="Shaun Menezes">
-                            <div class="achievement-profile-info">
-                                <h4>Shaun Menezes</h4>
-                                <p>software Engineer at Homefirst, ₹8 LPA package</p>
                             </div>
                         </div>
                     </div>
@@ -834,6 +1511,499 @@ Suyash Kadam </p>
                         </div>
                     </div>
                 </div>
+
+                <!-- Placement Statistics PDF Section -->
+                <div class="placement-pdfs">
+                    <h3>Student Placement Statistics (Year-wise)</h3>
+                    <div class="pdf-grid">
+                        <!-- Add new PDF links here for future years -->
+                        <div class="pdf-card">
+                            <div class="pdf-left">
+                                <div class="pdf-icon">
+                                    <i class="fa-solid fa-file-pdf"></i>
+                                </div>
+                                <div class="pdf-info">
+                                    <h4>Placement Statistics 2024–25</h4>
+                                    <p>View annual placement report</p>
+                                </div>
+                            </div>
+                            <a href="documents/placements/placement-stats-2024-25.pdf" class="gradient-border-btn" download>
+                                <div class="pdf-download-btn">
+                                    <i class="fa-solid fa-download"></i>
+                                    <span>Download</span>
+                                </div>
+                            </a>
+                        </div>
+                        
+                        <div class="pdf-card">
+                            <div class="pdf-left">
+                                <div class="pdf-icon">
+                                    <i class="fa-solid fa-file-pdf"></i>
+                                </div>
+                                <div class="pdf-info">
+                                    <h4>Placement Statistics 2023–24</h4>
+                                    <p>View annual placement report</p>
+                                </div>
+                            </div>
+                            <a href="documents/placements/placement-stats-2023-24.pdf" class="gradient-border-btn" download>
+                                <div class="pdf-download-btn">
+                                    <i class="fa-solid fa-download"></i>
+                                    <span>Download</span>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Aternity-Style Placement Carousel -->
+                <div class="placement-carousel-section">
+                    <div class="congrats-banner">
+                        <span class="congrats-icon">🎉</span>
+                        <h2 class="congrats-text">Congratulations!!</h2>
+                        <span class="congrats-icon">🎉</span>
+                    </div>
+                    <h3>Our Placed Students</h3>
+                    <div class="carousel-container">
+                        <div class="carousel-track">
+                            <!-- Student Slide 1 -->
+                            <div class="carousel-slide">
+                                <div class="slide-image" style="background-image: url('images/banner/Saniya-Rawat.png');">
+                                    <div class="slide-overlay">
+                                        <div class="slide-content">
+                                            <h4>Saniya Rawat</h4>
+                                            <p class="company"><i class="fas fa-building"></i>SAP</p>
+                                            <p class="package"><i class="fas fa-rupee-sign"></i>16 LPA</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Student Slide 2 -->
+                            <div class="carousel-slide">
+                                <div class="slide-image" style="background-image: url('images/banner/Shruti-Shelar.png');">
+                                    <div class="slide-overlay">
+                                        <div class="slide-content">
+                                            <h4>Shruti Shelar</h4>
+                                            <p class="company"><i class="fas fa-building"></i>SAP</p>
+                                            <p class="package"><i class="fas fa-rupee-sign"></i> 16 LPA</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Student Slide 3 -->
+                            <div class="carousel-slide">
+                                <div class="slide-image" style="background-image: url('images/banner/Sahil-Singh.png');">
+                                    <div class="slide-overlay">
+                                        <div class="slide-content">
+                                            <h4>Sahil Sing</h4>
+                                            <p class="company"><i class="fas fa-building"></i>Seclore</p>
+                                            <p class="package"><i class="fas fa-rupee-sign"></i> 13 LPA</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Student Slide 4 -->
+                            <div class="carousel-slide">
+                                <div class="slide-image" style="background-image: url('images/banner/Aveesah-Siddiqui.png');">
+                                    <div class="slide-overlay">
+                                        <div class="slide-content">
+                                            <h4>Aveesah Siddiqui</h4>
+                                            <p class="company"><i class="fas fa-building"></i>Vistaar</p>
+                                            <p class="package"><i class="fas fa-rupee-sign"></i> 4.25 LPA</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Student Slide 5 -->
+                            <div class="carousel-slide">
+                                <div class="slide-image" style="background-image: url('images/banner/Srushti-Kale.png');">
+                                    <div class="slide-overlay">
+                                        <div class="slide-content">
+                                            <h4>Srushti Kale</h4>
+                                            <p class="company"><i class="fas fa-building"></i>Capgemini</p>
+                                            <p class="package"><i class="fas fa-rupee-sign"></i>4.25 LPA</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Student Slide 6 -->
+                            <div class="carousel-slide">
+                                <div class="slide-image" style="background-image: url('images/banner/Rushikesh.png');">
+                                    <div class="slide-overlay">
+                                        <div class="slide-content">
+                                            <h4>Rushikesh</h4>
+                                            <p class="company"><i class="fas fa-building"></i>Capgemini</p>
+                                            <p class="package"><i class="fas fa-rupee-sign"></i> 4.25 LPA</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Student Slide 7 -->
+                            <div class="carousel-slide">
+                                <div class="slide-image" style="background-image: url('images/student-testimonials/student1.jpg');">
+                                    <div class="slide-overlay">
+                                        <div class="slide-content">
+                                            <h4>Priya Sharma</h4>
+                                            <p class="company"><i class="fas fa-building"></i> Capgemini</p>
+                                            <p class="package"><i class="fas fa-rupee-sign"></i>4.25 LPA</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Student Slide 8 -->
+                            <div class="carousel-slide">
+                                <div class="slide-image" style="background-image: url('images/banner/Joshua-Menezes.png');">
+                                    <div class="slide-overlay">
+                                        <div class="slide-content">
+                                            <h4>Joshua Menezes</h4>
+                                            <p class="company"><i class="fas fa-building"></i> Capgemini</p>
+                                            <p class="package"><i class="fas fa-rupee-sign"></i> 4.25 LPA</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Student Slide 9 -->
+                            <div class="carousel-slide">
+                                <div class="slide-image" style="background-image: url('images/banner/Shweta-Nadar.png');">
+                                    <div class="slide-overlay">
+                                        <div class="slide-content">
+                                            <h4>Shweta Nadar</h4>
+                                            <p class="company"><i class="fas fa-building"></i> Capgemini</p>
+                                            <p class="package"><i class="fas fa-rupee-sign"></i> 4.25 LPA</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Student Slide 10 -->
+                            <div class="carousel-slide">
+                                <div class="slide-image" style="background-image: url('images/banner/Sameer-Shaikh.png');">
+                                    <div class="slide-overlay">
+                                        <div class="slide-content">
+                                            <h4>Sameer Shaikh</h4>
+                                            <p class="company"><i class="fas fa-building"></i> Capgemini</p>
+                                            <p class="package"><i class="fas fa-rupee-sign"></i> 4.25 LPA</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Student Slide 11 -->
+                            <div class="carousel-slide">
+                                <div class="slide-image" style="background-image: url('images/banner/Gaurav-Mishra.png');">
+                                    <div class="slide-overlay">
+                                        <div class="slide-content">
+                                            <h4>Gaurav Mishra</h4>
+                                            <p class="company"><i class="fas fa-building"></i> Capgemini</p>
+                                            <p class="package"><i class="fas fa-rupee-sign"></i> 4.25 LPA</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Student Slide 12 -->
+                            <div class="carousel-slide">
+                                <div class="slide-image" style="background-image: url('images/banner/Ananya.png');">
+                                    <div class="slide-overlay">
+                                        <div class="slide-content">
+                                            <h4>Ananya</h4>
+                                            <p class="company"><i class="fas fa-building"></i> Capgemini</p>
+                                            <p class="package"><i class="fas fa-rupee-sign"></i> 4.25 LPA</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Student Slide 13 -->
+                            <div class="carousel-slide">
+                                <div class="slide-image" style="background-image: url('images/banner/Abdussami-Patel.png');">
+                                    <div class="slide-overlay">
+                                        <div class="slide-content">
+                                            <h4>Abdussami Patel</h4>
+                                            <p class="company"><i class="fas fa-building"></i> Capgemini</p>
+                                            <p class="package"><i class="fas fa-rupee-sign"></i> 4.25 LPA</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Student Slide 14 -->
+                            <div class="carousel-slide">
+                                <div class="slide-image" style="background-image: url('images/banner/Jess-John.png');">
+                                    <div class="slide-overlay">
+                                        <div class="slide-content">
+                                            <h4>Jess John</h4>
+                                            <p class="company"><i class="fas fa-building"></i> Capgemini</p>
+                                            <p class="package"><i class="fas fa-rupee-sign"></i> 4.25 LPA</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Student Slide 15 -->
+                            <div class="carousel-slide">
+                                <div class="slide-image" style="background-image: url('images/banner/Shubham-Keluskar.png');">
+                                    <div class="slide-overlay">
+                                        <div class="slide-content">
+                                            <h4>Shubham Keluskar</h4>
+                                            <p class="company"><i class="fas fa-building"></i> Spider</p>
+                                            <p class="package"><i class="fas fa-rupee-sign"></i> 3 LPA</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Student Slide 16 -->
+                            <div class="carousel-slide">
+                                <div class="slide-image" style="background-image: url('images/banner/Bhaskar-Singh.png');">
+                                    <div class="slide-overlay">
+                                        <div class="slide-content">
+                                            <h4>Bhaskar Singh</h4>
+                                            <p class="company"><i class="fas fa-building"></i> Spider</p>
+                                            <p class="package"><i class="fas fa-rupee-sign"></i> 3 LPA</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Duplicate slides for seamless infinite loop -->
+                            <!-- Student Slide 1 (Duplicate) -->
+                            <div class="carousel-slide">
+                                <div class="slide-image" style="background-image: url('images/banner/Saniya-Rawat.png');">
+                                    <div class="slide-overlay">
+                                        <div class="slide-content">
+                                            <h4>Saniya Rawat</h4>
+                                            <p class="company"><i class="fas fa-building"></i>SAP</p>
+                                            <p class="package"><i class="fas fa-rupee-sign"></i>16 LPA</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Student Slide 2 (Duplicate) -->
+                            <div class="carousel-slide">
+                                <div class="slide-image" style="background-image: url('images/banner/Shruti-Shelar.png');">
+                                    <div class="slide-overlay">
+                                        <div class="slide-content">
+                                            <h4>Shruti Shelar</h4>
+                                            <p class="company"><i class="fas fa-building"></i>SAP</p>
+                                            <p class="package"><i class="fas fa-rupee-sign"></i> 16 LPA</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Student Slide 3 (Duplicate) -->
+                            <div class="carousel-slide">
+                                <div class="slide-image" style="background-image: url('images/banner/Sahil-Singh.png');">
+                                    <div class="slide-overlay">
+                                        <div class="slide-content">
+                                            <h4>Sahil Sing</h4>
+                                            <p class="company"><i class="fas fa-building"></i>Seclore</p>
+                                            <p class="package"><i class="fas fa-rupee-sign"></i> 13 LPA</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Student Slide 4 (Duplicate) -->
+                            <div class="carousel-slide">
+                                <div class="slide-image" style="background-image: url('images/banner/Aveesah-Siddiqui.png');">
+                                    <div class="slide-overlay">
+                                        <div class="slide-content">
+                                            <h4>Aveesah Siddiqui</h4>
+                                            <p class="company"><i class="fas fa-building"></i>Vistaar</p>
+                                            <p class="package"><i class="fas fa-rupee-sign"></i> 4.25 LPA</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Student Slide 5 (Duplicate) -->
+                            <div class="carousel-slide">
+                                <div class="slide-image" style="background-image: url('images/banner/Srushti-Kale.png');">
+                                    <div class="slide-overlay">
+                                        <div class="slide-content">
+                                            <h4>Srushti Kale</h4>
+                                            <p class="company"><i class="fas fa-building"></i>Capgemini</p>
+                                            <p class="package"><i class="fas fa-rupee-sign"></i>4.25 LPA</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Student Slide 6 (Duplicate) -->
+                            <div class="carousel-slide">
+                                <div class="slide-image" style="background-image: url('images/banner/Rushikesh.png');">
+                                    <div class="slide-overlay">
+                                        <div class="slide-content">
+                                            <h4>Rushikesh</h4>
+                                            <p class="company"><i class="fas fa-building"></i>Capgemini</p>
+                                            <p class="package"><i class="fas fa-rupee-sign"></i> 4.25 LPA</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Student Slide 7 (Duplicate) -->
+                            <div class="carousel-slide">
+                                <div class="slide-image" style="background-image: url('images/student-testimonials/student1.jpg');">
+                                    <div class="slide-overlay">
+                                        <div class="slide-content">
+                                            <h4>Priya Sharma</h4>
+                                            <p class="company"><i class="fas fa-building"></i> Capgemini</p>
+                                            <p class="package"><i class="fas fa-rupee-sign"></i>4.25 LPA</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Student Slide 8 (Duplicate) -->
+                            <div class="carousel-slide">
+                                <div class="slide-image" style="background-image: url('images/banner/Joshua-Menezes.png');">
+                                    <div class="slide-overlay">
+                                        <div class="slide-content">
+                                            <h4>Joshua Menezes</h4>
+                                            <p class="company"><i class="fas fa-building"></i> Capgemini</p>
+                                            <p class="package"><i class="fas fa-rupee-sign"></i> 4.25 LPA</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Student Slide 9 (Duplicate) -->
+                            <div class="carousel-slide">
+                                <div class="slide-image" style="background-image: url('images/banner/Shweta-Nadar.png');">
+                                    <div class="slide-overlay">
+                                        <div class="slide-content">
+                                            <h4>Shweta Nadar</h4>
+                                            <p class="company"><i class="fas fa-building"></i> Capgemini</p>
+                                            <p class="package"><i class="fas fa-rupee-sign"></i> 4.25 LPA</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Student Slide 10 (Duplicate) -->
+                            <div class="carousel-slide">
+                                <div class="slide-image" style="background-image: url('images/banner/Sameer-Shaikh.png');">
+                                    <div class="slide-overlay">
+                                        <div class="slide-content">
+                                            <h4>Sameer Shaikh</h4>
+                                            <p class="company"><i class="fas fa-building"></i> Capgemini</p>
+                                            <p class="package"><i class="fas fa-rupee-sign"></i> 4.25 LPA</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Student Slide 11 (Duplicate) -->
+                            <div class="carousel-slide">
+                                <div class="slide-image" style="background-image: url('images/banner/Gaurav-Mishra.png');">
+                                    <div class="slide-overlay">
+                                        <div class="slide-content">
+                                            <h4>Gaurav Mishra</h4>
+                                            <p class="company"><i class="fas fa-building"></i> Capgemini</p>
+                                            <p class="package"><i class="fas fa-rupee-sign"></i> 4.25 LPA</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Student Slide 12 (Duplicate) -->
+                            <div class="carousel-slide">
+                                <div class="slide-image" style="background-image: url('images/banner/Ananya.png');">
+                                    <div class="slide-overlay">
+                                        <div class="slide-content">
+                                            <h4>Ananya</h4>
+                                            <p class="company"><i class="fas fa-building"></i> Capgemini</p>
+                                            <p class="package"><i class="fas fa-rupee-sign"></i> 4.25 LPA</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Student Slide 13 (Duplicate) -->
+                            <div class="carousel-slide">
+                                <div class="slide-image" style="background-image: url('images/banner/Abdussami-Patel.png');">
+                                    <div class="slide-overlay">
+                                        <div class="slide-content">
+                                            <h4>Abdussami Patel</h4>
+                                            <p class="company"><i class="fas fa-building"></i> Capgemini</p>
+                                            <p class="package"><i class="fas fa-rupee-sign"></i> 4.25 LPA</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Student Slide 14 (Duplicate) -->
+                            <div class="carousel-slide">
+                                <div class="slide-image" style="background-image: url('images/banner/Jess-John.png');">
+                                    <div class="slide-overlay">
+                                        <div class="slide-content">
+                                            <h4>Jess John</h4>
+                                            <p class="company"><i class="fas fa-building"></i> Capgemini</p>
+                                            <p class="package"><i class="fas fa-rupee-sign"></i> 4.25 LPA</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Student Slide 15 (Duplicate) -->
+                            <div class="carousel-slide">
+                                <div class="slide-image" style="background-image: url('images/banner/Shubham-Keluskar.png');">
+                                    <div class="slide-overlay">
+                                        <div class="slide-content">
+                                            <h4>Shubham Keluskar</h4>
+                                            <p class="company"><i class="fas fa-building"></i> Spider</p>
+                                            <p class="package"><i class="fas fa-rupee-sign"></i> 3 LPA</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Student Slide 16 (Duplicate) -->
+                            <div class="carousel-slide">
+                                <div class="slide-image" style="background-image: url('images/banner/Bhaskar-Singh.png');">
+                                    <div class="slide-overlay">
+                                        <div class="slide-content">
+                                            <h4>Bhaskar Singh</h4>
+                                            <p class="company"><i class="fas fa-building"></i> Spider</p>
+                                            <p class="package"><i class="fas fa-rupee-sign"></i> 3 LPA</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Carousel Navigation Dots -->
+                    <div class="carousel-dots">
+                        <span class="dot active" data-index="0"></span>
+                        <span class="dot" data-index="1"></span>
+                        <span class="dot" data-index="2"></span>
+                        <span class="dot" data-index="3"></span>
+                        <span class="dot" data-index="4"></span>
+                        <span class="dot" data-index="5"></span>
+                        <span class="dot" data-index="6"></span>
+                        <span class="dot" data-index="7"></span>
+                        <span class="dot" data-index="8"></span>
+                        <span class="dot" data-index="9"></span>
+                        <span class="dot" data-index="10"></span>
+                        <span class="dot" data-index="11"></span>
+                        <span class="dot" data-index="12"></span>
+                        <span class="dot" data-index="13"></span>
+                        <span class="dot" data-index="14"></span>
+                        <span class="dot" data-index="15"></span>
+                    </div>
+                </div>
             </div>
         </section>
     <!-- Scroll to Top Button -->
@@ -846,5 +2016,82 @@ Suyash Kadam </p>
     <div id="footer-placeholder"></div>
     <script src="js/script.js"></script>
     <script src="js/components.js"></script>
+
+    <!-- Infinite Scroll Carousel with Interactive Dots -->
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const carouselTrack = document.querySelector('.carousel-track');
+            const dots = document.querySelectorAll('.dot');
+            
+            if (!carouselTrack || !dots.length) return;
+
+            let currentDot = 0;
+            const totalDots = dots.length;
+            let animationDuration = 60000; // 60 seconds for full cycle
+            let startTime = Date.now();
+            let isPaused = false;
+            let pausedProgress = 0;
+
+            // Update active dot based on scroll progress
+            function updateDots() {
+                if (isPaused) return;
+                
+                const elapsed = Date.now() - startTime;
+                const progress = (elapsed % animationDuration) / animationDuration;
+                const dotIndex = Math.floor(progress * totalDots) % totalDots;
+                
+                if (dotIndex !== currentDot) {
+                    dots[currentDot].classList.remove('active');
+                    currentDot = dotIndex;
+                    dots[currentDot].classList.add('active');
+                }
+                
+                requestAnimationFrame(updateDots);
+            }
+
+            // Click on dot to jump to that section
+            dots.forEach((dot, index) => {
+                dot.addEventListener('click', () => {
+                    // Calculate the position for this dot
+                    const targetProgress = index / totalDots;
+                    
+                    // Pause animation
+                    carouselTrack.style.animationPlayState = 'paused';
+                    isPaused = true;
+                    
+                    // Set transform to target position
+                    const targetTransform = -(targetProgress * 50); // -50% is the full cycle
+                    carouselTrack.style.transform = `translateX(${targetTransform}%)`;
+                    
+                    // Update active dot
+                    dots[currentDot].classList.remove('active');
+                    currentDot = index;
+                    dots[currentDot].classList.add('active');
+                    
+                    // Resume animation after a short delay
+                    setTimeout(() => {
+                        carouselTrack.style.animation = 'none';
+                        carouselTrack.offsetHeight; // Force reflow
+                        carouselTrack.style.animation = 'infiniteScroll 60s linear infinite';
+                        carouselTrack.style.animationDelay = `-${targetProgress * 60}s`;
+                        startTime = Date.now() - (targetProgress * animationDuration);
+                        isPaused = false;
+                    }, 500);
+                });
+            });
+
+            // Pause on hover
+            carouselTrack.addEventListener('mouseenter', () => {
+                carouselTrack.style.animationPlayState = 'paused';
+            });
+
+            carouselTrack.addEventListener('mouseleave', () => {
+                carouselTrack.style.animationPlayState = 'running';
+            });
+
+            // Start dot updates
+            updateDots();
+        });
+    </script>
 </body>
 </html>
