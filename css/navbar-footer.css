@@ -48,13 +48,24 @@
     line-height: 1;
     color: var(--white);
 }
+
 /* Optional: Make it slightly smaller on mobile phones */
-@media (max-width: 768px) {
+@media (max-width: 768px) , (max-width: 1114px){
     .nav-logo {
         height: 35px;
     }
     .nav-title {
-        font-size: 1.2rem;
+        font-size: 1rem;
+    }
+}
+
+@media (max-width: 1042px){
+    .nav-logo {
+        height: 35px;
+    }
+    .nav-title {
+        font-size: 1rem;
+        padding: 2px;
     }
 }
 
@@ -155,7 +166,7 @@
 }
 
 /* --- MOBILE RESPONSIVE STYLES --- */
-@media (max-width: 900px) {
+@media (max-width: 954px) {
     /* Show the hamburger button */
     .mobile-menu-btn {
         display: flex; /* Make it visible */
