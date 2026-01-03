@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/homepage.css">
+    <link rel="stylesheet" href="css/navbar-footer.css">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 
@@ -15,39 +16,7 @@
 </head>
 <body>
     <!-- Navigation -->
-    <nav class="navbar" id="navbar">
-        <div class="nav-container">
-            <div class="nav-brand">
-                <img src="images/college-logo.png" alt="CSE Logo" class="nav-logo">
-                <span class="nav-title">Comps DBIT</span>
-            </div>
-            
-            <!-- Mobile menu button -->
-            <button class="mobile-menu-btn" id="mobile-menu-btn">
-                <span class="hamburger-line"></span>
-                <span class="hamburger-line"></span>
-                <span class="hamburger-line"></span>
-            </button>
-            
-            <ul class="nav-menu" id="nav-menu">
-                <li><a href="index.html" class="nav-link active">Home</a></li>
-                <li><a href="about.html" class="nav-link">About</a></li>
-                <li class="dropdown">
-                    <a href="academics.html" class="nav-link">Academics</a>
-                    <ul class="dropdown-menu">
-                        <li><a href="academics.html#se">Second Year (SE)</a></li>
-                        <li><a href="academics.html#te">Third Year (TE)</a></li>
-                        <li><a href="academics.html#be">Final Year (BE)</a></li>
-                    </ul>
-                </li>
-                <li><a href="faculty.html" class="nav-link">Faculty</a></li>
-                <li><a href="students.html" class="nav-link">Students</a></li>
-                <li><a href="research.html" class="nav-link">Research</a></li>
-                <li><a href="events.html" class="nav-link">Events</a></li>
-                <li><a href="contact.html" class="nav-link">Contact</a></li>
-            </ul>
-        </div>
-    </nav>
+    <div id="navbar-placeholder"></div>
 
     <!-- Hero Section with Video Background -->
     <section class="hero-section">
@@ -309,142 +278,7 @@
             </div>
         </section>
 
-        <!-- Recent Activities -->
-        <section class="recent-activities-section">
-            <div class="container">
-                <div class="section-header">
-                    <h2 class="section-title">Recent Events & Activities</h2>
-                    <p class="section-subtitle">Highlights from our vibrant department community</p>
-                </div>
-                
-                <div class="activities-grid">
-                    <div class="activity-card">
-                        <div class="activity-image-placeholder">
-                            <div class="placeholder-icon">📸</div>
-                            <span>Event Photo</span>
-                        </div>
-                        <div class="activity-content">
-                            <div class="activity-date">November 28, 2025</div>
-                            <h3>National Level Coding Competition</h3>
-                            <p>Our students secured top positions in the inter-college programming contest, showcasing exceptional problem-solving skills and algorithmic thinking.</p>
-                            <div class="activity-meta">
-                                <span class="activity-category">Competition</span>
-                            </div>
-                        </div>
-                    </div>
-                    
-                    <div class="activity-card">
-                        <div class="activity-image-placeholder">
-                            <div class="placeholder-icon">🤖</div>
-                            <span>Project Demo</span>
-                        </div>
-                        <div class="activity-content">
-                            <div class="activity-date">November 25, 2025</div>
-                            <h3>AI & Robotics Workshop</h3>
-                            <p>Successful completion of a 3-day workshop on Artificial Intelligence and Robotics with hands-on projects and industry expert sessions.</p>
-                            <div class="activity-meta">
-                                <span class="activity-category">Workshop</span>
-                            </div>
-                        </div>
-                    </div>
-                    
-                    <div class="activity-card">
-                        <div class="activity-image-placeholder">
-                            <div class="placeholder-icon">🏆</div>
-                            <span>Award Ceremony</span>
-                        </div>
-                        <div class="activity-content">
-                            <div class="activity-date">November 20, 2025</div>
-                            <h3>Student Research Excellence Award</h3>
-                            <p>Recognition ceremony for outstanding research contributions by our final year students in machine learning and cybersecurity domains.</p>
-                            <div class="activity-meta">
-                                <span class="activity-category">Achievement</span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- Achievements -->
-        <section class="achievements-section">
-            <div class="container">
-                <div class="section-header">
-                    <h2 class="section-title">Faculty & Student Achievements</h2>
-                    <p class="section-subtitle">Celebrating excellence in education, research, and innovation</p>
-                </div>
-                
-                <div class="achievements-container">
-                    <div class="achievement-column">
-                        <div class="achievement-header">
-                            <div class="achievement-icon">👨‍🏫</div>
-                            <h3>Faculty Achievements</h3>
-                        </div>
-                        <div class="achievement-items">
-                            <div class="achievement-item">
-                                <div class="achievement-badge">🏅</div>
-                                <div class="achievement-details">
-                                    <h4>Best Research Paper Award</h4>
-                                    <p>Dr. Priya Sharma - IEEE Conference on AI Applications</p>
-                                    <span class="achievement-date">November 2025</span>
-                                </div>
-                            </div>
-                            <div class="achievement-item">
-                                <div class="achievement-badge">📚</div>
-                                <div class="achievement-details">
-                                    <h4>Distinguished Teaching Excellence</h4>
-                                    <p>Prof. Rajesh Kumar - University Teaching Award</p>
-                                    <span class="achievement-date">October 2025</span>
-                                </div>
-                            </div>
-                            <div class="achievement-item">
-                                <div class="achievement-badge">💡</div>
-                                <div class="achievement-details">
-                                    <h4>Patent Grant</h4>
-                                    <p>Dr. Anita Mehta - IoT Security Framework</p>
-                                    <span class="achievement-date">September 2025</span>
-                                </div>
-                            </div>
-                        </div>
-                        <a href="faculty.html#achievements" class="view-all-btn">View All Faculty Achievements</a>
-                    </div>
-                    
-                    <div class="achievement-column">
-                        <div class="achievement-header">
-                            <div class="achievement-icon">🎓</div>
-                            <h3>Student Achievements</h3>
-                        </div>
-                        <div class="achievement-items">
-                            <div class="achievement-item">
-                                <div class="achievement-badge">🥇</div>
-                                <div class="achievement-details">
-                                    <h4>National Coding Championship</h4>
-                                    <p>Arjun Patel (TE-A) - First Place Winner</p>
-                                    <span class="achievement-date">December 2025</span>
-                                </div>
-                            </div>
-                            <div class="achievement-item">
-                                <div class="achievement-badge">🚀</div>
-                                <div class="achievement-details">
-                                    <h4>Startup Success</h4>
-                                    <p>Meera Singh (BE-B) - EdTech Platform Launch</p>
-                                    <span class="achievement-date">November 2025</span>
-                                </div>
-                            </div>
-                            <div class="achievement-item">
-                                <div class="achievement-badge">📊</div>
-                                <div class="achievement-details">
-                                    <h4>Research Publication</h4>
-                                    <p>Kiran Joshi (BE-A) - ML Conference Paper</p>
-                                    <span class="achievement-date">October 2025</span>
-                                </div>
-                            </div>
-                        </div>
-                        <a href="students.html#achievements" class="view-all-btn">View All Student Achievements</a>
-                    </div>
-                </div>
-            </div>
-        </section>
+        
     <!-- Scroll to Top Button -->
 <button id="scrollTopBtn" title="Go to top">
     <i class="fas fa-arrow-up"></i>
@@ -452,98 +286,9 @@
     </main>
 
     <!-- Footer -->
-    <footer class="footer" id="contact">
-    <div class="container">
-        <div class="footer-content">
-
-            <!-- Institute Info -->
-            <div class="footer-section">
-                <h3>Don Bosco Institute of Technology</h3>
-                <p class="footer-description">
-                    Don Bosco Institute of Technology offers high-quality education to students in the field of engineering. With our help, you can master any sphere you prefer, from computer engineering to mechanical engineering.
-                    <br><br>Premier Automobiles Road <br>
-                    Kurla (West), Mumbai – 400070
-                </p>
-                   
-            </div>
-
-            <!-- Contact Information -->
-            <div class="footer-section">
-                <h3>Contact Information</h3>
-                <div class="contact-item">
-                    <span class="contact-icon">📞</span>
-                    <span>+91 22 2504 2000</span>
-                </div>
-                <div class="contact-item">
-                    <span class="contact-icon">✉️</span>
-                    <span>info@dbit.in</span>
-                </div>
-                <div class="contact-item">
-                    <span class="contact-icon">🌐</span>
-                    <span>www.dbit.in</span>
-                </div>
-            </div>
-
-
-            <!-- Quick Links -->
-            <div class="footer-section">
-                <h3>Quick Links</h3>
-                <ul class="footer-links">
-                    <li><a href="about.html">About DBIT</a></li>
-                    <li><a href="academics.html">Academic Programs</a></li>
-                    <li><a href="admissions.html">Admissions</a></li>
-                    <li><a href="faculty.html">Faculty</a></li>
-                    <li><a href="research.html">Research</a></li>
-                    <li><a href="students.html">Student Life</a></li>
-                </ul>
-            </div>
-
-            <!-- Other Resources -->
-            <div class="footer-section">
-                <h3>Resources</h3>
-                <ul class="footer-links">
-                    <li><a href="https://comps.dbit.in/" target="_blank">Old Website</a></li>
-                    <li><a href="https://maps.google.com/?q=Don+Bosco+Institute+of+Technology+Kurla" target="_blank">
-                        Campus Location
-                    </a></li>
-                    <li><a href="http://naac.gov.in/index.php/en/">NAAC</a></li>
-                    <li><a href="https://www.aicte.gov.in/">AICTE</a></li>
-                </ul>
-            </div>
-
-             <!-- Social Media -->
-<div class="footer-section">
-    <h3>Follow Us</h3>
-    <div class="social-links">
-        <a href="https://www.instagram.com/dbitcompdept/" class="social-link" aria-label="Instagram">
-            <i class="fab fa-instagram"></i> 
-        </a>
-       
-        <a href="https://www.youtube.com/@DBITCOMP" class="social-link" aria-label="YouTube">
-            <i class="fab fa-youtube"></i> 
-        </a>
-    </div>
-</div>
-
-
-        </div>
-
-        <!-- Footer Bottom -->
-        <div class="footer-bottom">
-            <div class="footer-bottom-content">
-                <p>
-                    &copy; 2025 Don Bosco Institute of Technology, Kurla, Mumbai. All Rights Reserved.
-                </p>
-                <div class="footer-bottom-links">
-                    <a href="#">Privacy Policy</a>
-                    <a href="#">Terms & Conditions</a>
-                    <a href="#">Accessibility</a>
-                </div>
-            </div>
-        </div>
-    </div>
-</footer>
+    <div id="footer-placeholder"></div>
 
     <script src="js/script.js"></script>
+    <script src="js/components.js"></script>
 </body>
 </html>
