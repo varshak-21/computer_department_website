@@ -5,430 +5,341 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="icon" type="image/jpeg" href="images/favicon-img.jpg">
     <title>Contact Us - Computer Engineering Department</title>
+    
     <link rel="stylesheet" href="css/style.css">
-    <link rel="stylesheet" href="css/about.css">
     <link rel="stylesheet" href="css/navbar-footer.css">
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="css/contact.css">
+    
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+    <script type="text/javascript">
+        (function() {
+            // REPLACE WITH YOUR ACTUAL PUBLIC KEY
+            emailjs.init("YOUR_PUBLIC_KEY_HERE"); 
+        })();
+    </script>
 </head>
 <body>
-    <!-- Navigation -->
     <div id="navbar-placeholder"></div>
 
-    <!-- Page Hero -->
-    <section class="page-hero">
-        <div class="container">
-            <div class="page-hero-content">
-                <h1>Contact Us</h1>
-                <p>Get in touch with us for any inquiries, admissions, or collaboration opportunities</p>
-                <div class="hero-stats">
-                    <div class="stat-item">
-                        <span class="stat-number">24/7</span>
-                        <span class="stat-label">Always Available</span>
-                    </div>
-                    <div class="stat-item">
-                        <span class="stat-number">&lt;24h</span>
-                        <span class="stat-label">Quick Response</span>
-                    </div>
-                    <div class="stat-item">
-                        <span class="stat-number">100%</span>
-                        <span class="stat-label">Easy to Find</span>
-                    </div>
-                </div>
+    <section class="noir-hero">
+        <div class="noise-overlay"></div> <div class="hero-content">
+            <div class="status-pill reveal fade-down">
+                <span class="status-dot"></span> Live Support Available
             </div>
+            <h1 class="hero-title">
+                <span class="word-mask">Get in</span> 
+                <span class="word-mask">Touch</span>
+            </h1>
+            <p class="hero-subtitle reveal fade-up delay-1">
+                Admissions <span class="sep">/</span> Research <span class="sep">/</span> Academics
+            </p>
+        </div>
+        
+        <div class="scroll-trigger">
+            <div class="mouse-line"></div>
         </div>
     </section>
 
-    <!-- Quick Contact Section -->
-    <section class="quick-contact-section">
+    <section class="directory-section">
         <div class="container">
-            <div class="contact-cards-grid">
-                <div class="contact-info-card">
-                    <div class="contact-icon">
-                        <i class="fas fa-map-marker-alt"></i>
-                    </div>
-                    <div class="contact-content">
-                        <h3>Visit Us</h3>
-                        <p>Computer Engineering Department<br>
-                        Don Bosco Institute of Technology<br>
-                        Kurla West, Mumbai - 400070<br>
-                        Maharashtra, India</p>
-                    </div>
-                </div>
-
-                <div class="contact-info-card">
-                    <div class="contact-icon">
-                        <i class="fas fa-phone"></i>
-                    </div>
-                    <div class="contact-content">
-                        <h3>Call Us</h3>
-                        <p><strong>Main Office:</strong> +91-22-25070101<br>
-                        <strong>HOD Office:</strong> +91-22-25070102<br>
-                        <strong>Academic Office:</strong> +91-22-25070103</p>
-                    </div>
-                </div>
-
-                <div class="contact-info-card">
-                    <div class="contact-icon">
-                        <i class="fas fa-envelope"></i>
-                    </div>
-                    <div class="contact-content">
-                        <h3>Email Us</h3>
-                        <p><strong>General:</strong> cse@dbit.in<br>
-                        <strong>Admissions:</strong> admissions@dbit.in<br>
-                        <strong>Research:</strong> research.cse@dbit.in</p>
-                    </div>
-                </div>
-
-                <div class="contact-info-card">
-                    <div class="contact-icon">
-                        <i class="fas fa-clock"></i>
-                    </div>
-                    <div class="contact-content">
-                        <h3>Office Hours</h3>
-                        <p><strong>Mon - Fri:</strong> 9:00 AM - 5:00 PM<br>
-                        <strong>Saturday:</strong> 9:00 AM - 1:00 PM<br>
-                        <strong>Sunday:</strong> Closed</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Contact Form Section -->
-    <section class="contact-form-section">
-        <div class="container">
-            <div class="section-header">
-                <h2>Send Us a Message</h2>
-                <p>Have questions? We'd love to hear from you. Send us a message and we'll respond as soon as possible.</p>
-            </div>
-            
-            <div class="contact-form-container">
-                <div class="contact-form-grid">
-                    <div class="form-info">
-                        <h3>Get in Touch</h3>
-                        <p>Whether you're a prospective student, researcher, or industry partner, we're here to help. Choose the best way to reach us:</p>
-                        
-                        <div class="contact-methods">
-                            <div class="contact-method">
-                                <i class="fas fa-graduation-cap"></i>
-                                <div>
-                                    <strong>Admissions</strong>
-                                    <p>Questions about programs and applications</p>
-                                </div>
-                            </div>
-                            <div class="contact-method">
-                                <i class="fas fa-briefcase"></i>
-                                <div>
-                                    <strong>Industry Partnerships</strong>
-                                    <p>Collaboration and placement opportunities</p>
-                                </div>
-                            </div>
-                            <div class="contact-method">
-                                <i class="fas fa-microscope"></i>
-                                <div>
-                                    <strong>Research Inquiries</strong>
-                                    <p>Research collaborations and projects</p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    
-                    <div class="contact-form-wrapper">
-                        <form class="modern-contact-form" id="contactForm">
-                            <div class="form-group">
-                                <label for="name">Full Name</label>
-                                <input type="text" id="name" name="name" required>
-                            </div>
-                            
-                            <div class="form-group">
-                                <label for="email">Email Address</label>
-                                <input type="email" id="email" name="email" required>
-                            </div>
-                            
-                            <div class="form-group">
-                                <label for="phone">Phone Number</label>
-                                <input type="tel" id="phone" name="phone">
-                            </div>
-                            
-                            <div class="form-group">
-                                <label for="subject">Subject</label>
-                                <select id="subject" name="subject" required>
-                                    <option value="">Select a subject</option>
-                                    <option value="admissions">Admissions Inquiry</option>
-                                    <option value="research">Research Collaboration</option>
-                                    <option value="industry">Industry Partnership</option>
-                                    <option value="academic">Academic Information</option>
-                                    <option value="general">General Inquiry</option>
-                                </select>
-                            </div>
-                            
-                            <div class="form-group">
-                                <label for="message">Message</label>
-                                <textarea id="message" name="message" rows="5" placeholder="Tell us more about your inquiry..." required></textarea>
-                            </div>
-                            
-                            <button type="submit" class="submit-btn">
-                                <i class="fas fa-paper-plane"></i>
-                                Send Message
-                            </button>
-                        </form>
-                    </div>
-                </div>
-            </div>
-        </div>
-    <!-- Scroll to Top Button -->
-<button id="scrollTopBtn" title="Go to top">
-    <i class="fas fa-arrow-up"></i>
-</button>
-    </section>
-
-    <!-- Key Personnel Section -->
-    <section class="faculty-section">
-        <div class="container">
-            <div class="section-header">
-                <h2>Key Personnel</h2>
-                <p>Meet the key faculty and staff members who lead our department</p>
-            </div>
-            
-            <div class="faculty-grid">
-                <div class="faculty-card">
-                    <div class="faculty-image">
-                        <img src="images/hod-pic.png" alt="Head of Department" class="faculty-img">
-                    </div>
-                    <div class="faculty-info">
-                        <h3>Dr. Dipti Jadhav</h3>
-                        <span class="faculty-designation">Head of Department</span>
-                        <div class="faculty-contact">
-                            <div class="contact-item">
-                                <i class="fas fa-envelope"></i>
-                                <span>dipti@dbit.in</span>
-                            </div>
-                            <div class="contact-item">
-                                <i class="fas fa-phone"></i>
-                                <span>+91 9223370153</span>
-                            </div>
-                            <div class="contact-item">
-                                <i class="fas fa-door-open"></i>
-                                <span>Second Floor</span>
-                            </div>
-                        </div>
-                        <div class="office-hours">
-                            <strong>Office Hours:</strong> Mon-Fri 10:00 AM - 4:00 PM
-                        </div>
-                    </div>
-                </div>
-
-                <div class="faculty-card">
-                    <div class="faculty-image">
-                        <img src="images/faculty/coordinator-placeholder.jpg" alt="Academic Coordinator" class="faculty-img">
-                    </div>
-                    <div class="faculty-info">
-                        <h3>Prof. Priya Sharma</h3>
-                        <span class="faculty-designation">Academic Coordinator</span>
-                        <div class="faculty-contact">
-                            <div class="contact-item">
-                                <i class="fas fa-envelope"></i>
-                                <span>academic.cse@dbit.in</span>
-                            </div>
-                            <div class="contact-item">
-                                <i class="fas fa-phone"></i>
-                                <span>+91-22-25070103</span>
-                            </div>
-                            <div class="contact-item">
-                                <i class="fas fa-door-open"></i>
-                                <span>Room 205, CS Block</span>
-                            </div>
-                        </div>
-                        <div class="office-hours">
-                            <strong>Office Hours:</strong> Mon-Fri 9:00 AM - 5:00 PM
-                        </div>
-                    </div>
-                </div>
-
-                <div class="faculty-card">
-                    <div class="faculty-image">
-                        <img src="images/faculty/himani-pic.png" alt="Placement Coordinator" class="faculty-img">
-                    </div>
-                    <div class="faculty-info">
-                        <h3>Prof. Himani Joshi</h3>
-                        <span class="faculty-designation">Placement Coordinator</span>
-                        <div class="faculty-contact">
-                            <div class="contact-item">
-                                <i class="fas fa-envelope"></i>
-                                <span>himani@dbit.in</span>
-                            </div>
-                            <div class="contact-item">
-                                <i class="fas fa-phone"></i>
-                                <span>+91 9805552423</span>
-                            </div>
-                            <div class="contact-item">
-                                <i class="fas fa-door-open"></i>
-                                <span>Second Floor</span>
-                            </div>
-                        </div>
-                        <div class="office-hours">
-                            <strong>Office Hours:</strong> Mon-Fri 9:00 AM - 4:00 PM
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Location and Map Section -->
-    <section class="location-section">
-        <div class="container">
-            <div class="section-header">
-                <h2>Visit Our Campus</h2>
-                <p>Find us easily with detailed location information and directions</p>
-            </div>
-            
-            <div class="location-grid">
-                <div class="location-info">
-                    <div class="location-card">
-                        <h3>Campus Address</h3>
-                        <div class="address-info">
-                            <i class="fas fa-map-marker-alt"></i>
-                            <div>
-                                <p><strong>Don Bosco Institute of Technology</strong></p>
-                                <p>Premier Automobiles Road, Near Everard Nagar,</p>
-                                <p>Kurla West, Mumbai - 400070</p>
-                                <p>Maharashtra, India</p>
-                            </div>
-                        </div>
-                    </div>
-                    
-                    <div class="location-card">
-                        <h3>How to Reach</h3>
-                        <div class="directions">
-                            <div class="direction-item">
-                                <i class="fas fa-train"></i>
-                                <div>
-                                    <strong>By Train:</strong>
-                                    <p>Kurla Railway Station - 2 km</p>
-                                    <p>LBS Road Station - 1.5 km</p>
-                                </div>
-                            </div>
-                            <div class="direction-item">
-                                <i class="fas fa-bus"></i>
-                                <div>
-                                    <strong>By Bus:</strong>
-                                    <p>Multiple BEST buses available</p>
-                                    <p>Route: 302, 303, 306, 384</p>
-                                </div>
-                            </div>
-                            <div class="direction-item">
-                                <i class="fas fa-car"></i>
-                                <div>
-                                    <strong>By Car:</strong>
-                                    <p>Parking available on campus</p>
-                                    <p>Via LBS Road or Kurla Road</p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+            <div class="directory-grid reveal stagger-up">
                 
+                <div class="dir-card">
+                    <div class="card-icon-box"><i class="fas fa-phone-alt"></i></div>
+                    <div class="card-details">
+                        <h3>Phone Numbers</h3>
+                        <p class="card-sub">Mon-Fri, 9am - 5pm</p>
+                        <div class="contact-list">
+                            <div class="c-row">
+                                <span>Main Office:</span>
+                                <strong>+91-22-25070101</strong>
+                            </div>
+                            <div class="c-row">
+                                <span>HOD Cabin:</span>
+                                <strong>+91-22-25070102</strong>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="dir-card">
+                    <div class="card-icon-box"><i class="fas fa-envelope"></i></div>
+                    <div class="card-details">
+                        <h3>Email Support</h3>
+                        <p class="card-sub">Response within 24 hours</p>
+                        <div class="contact-list">
+                            <div class="c-row">
+                                <span>General:</span>
+                                <a href="mailto:cse@dbit.in">cse@dbit.in</a>
+                            </div>
+                            <div class="c-row">
+                                <span>Admissions:</span>
+                                <a href="mailto:admissions@dbit.in">admissions@dbit.in</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="dir-card">
+                    <div class="card-icon-box"><i class="fas fa-map-pin"></i></div>
+                    <div class="card-details">
+                        <h3>Campus Visit</h3>
+                        <p class="card-sub">Kurla West, Mumbai</p>
+                        <div class="contact-list">
+                            <div class="c-row">
+                                <span>Mon-Fri:</span>
+                                <strong>9:00 AM - 5:00 PM</strong>
+                            </div>
+                            <div class="c-row">
+                                <span>Sat:</span>
+                                <strong>9:00 AM - 1:00 PM</strong>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <section class="main-interface" id="enquiry">
+        <div class="container">
+            <div class="split-wrapper reveal zoom-in">
+                
+                <div class="form-container">
+                    <div class="form-head">
+                        <h2>Send a Message</h2>
+                        <p>Direct line to the Department Admin</p>
+                    </div>
+
+                    <form id="contact-form">
+                        <div class="form-row">
+                            <div class="input-wrap">
+                                <input type="text" name="user_name" required placeholder=" ">
+                                <label>Full Name</label>
+                            </div>
+                            <div class="input-wrap">
+                                <input type="email" name="user_email" required placeholder=" ">
+                                <label>Email Address</label>
+                            </div>
+                        </div>
+
+                        <div class="input-wrap">
+                            <select name="contact_subject" required>
+                                <option value="" disabled selected>Select Topic</option>
+                                <option value="Admission">Admission Inquiry</option>
+                                <option value="Research">Research Collaboration</option>
+                                <option value="Placement">Placement / Hiring</option>
+                                <option value="Documents">Transcripts / Documents</option>
+                                <option value="Other">Other</option>
+                            </select>
+                            <label class="select-label">Subject</label>
+                        </div>
+
+                        <div class="input-wrap">
+                            <textarea name="message" required placeholder=" "></textarea>
+                            <label>How can we help?</label>
+                        </div>
+
+                        <button type="submit" class="magnetic-btn">
+                            <span class="btn-text">Send Message</span>
+                            <span class="btn-icon"><i class="fas fa-paper-plane"></i></span>
+                        </button>
+                        <div id="form-status"></div>
+                    </form>
+                </div>
+
                 <div class="map-container">
-                    <div class="map-placeholder">
-                        <i class="fas fa-map"></i>
-                        <h4>Interactive Map</h4>
-                        <p>Google Maps integration coming soon</p>
-                        <a href="https://goo.gl/maps/example" target="_blank" class="btn btn-primary">
-                            <i class="fas fa-external-link-alt"></i>
-                            Open in Google Maps
-                        </a>
+                    <div class="map-floating-info">
+                        <div class="info-head">
+                            <i class="fas fa-location-arrow"></i>
+                            <span>Navigate</span>
+                        </div>
+                        <h4>Don Bosco Institute of Technology</h4>
+                        <p>Premier Automobiles Road, Kurla West, Mumbai - 400070</p>
+                        <a href="https://goo.gl/maps/example" target="_blank" class="map-link">Open in Maps <i class="fas fa-external-link-alt"></i></a>
                     </div>
+                    <iframe 
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3770.7936855196395!2d72.8885693149008!3d19.072791987089456!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3be7c87c0a649325%3A0x64426555138a4521!2sDon%20Bosco%20Institute%20Of%20Technology!5e0!3m2!1sen!2sin!4v1641234567890!5m2!1sen!2sin" 
+                        width="100%" 
+                        height="100%" 
+                        style="border:0;" 
+                        allowfullscreen="" 
+                        loading="lazy"
+                        class="grayscale-map">
+                    </iframe>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- FAQ Section -->
-    <section class="faq-section">
+    <section class="transport-strip reveal fade-up">
         <div class="container">
-            <div class="section-header">
-                <h2>Frequently Asked Questions</h2>
-                <p>Find answers to commonly asked questions about our department</p>
-            </div>
-            
-            <div class="faq-grid">
-                <div class="faq-item">
-                    <div class="faq-question">
-                        <h4>How can I apply for admission to the Computer Engineering program?</h4>
-                        <i class="fas fa-chevron-down"></i>
-                    </div>
-                    <div class="faq-answer">
-                        <p>Admission applications are processed through the central admissions office. Visit our admissions page or contact admissions@dbit.in for detailed information about eligibility criteria, application deadlines, and required documents.</p>
+            <div class="t-grid">
+                <div class="t-item">
+                    <i class="fas fa-train"></i>
+                    <div>
+                        <strong>Nearest Station</strong>
+                        <p>Vidyavihar (W) - 2km</p>
                     </div>
                 </div>
-                
-                <div class="faq-item">
-                    <div class="faq-question">
-                        <h4>What are the faculty office hours for student consultations?</h4>
-                        <i class="fas fa-chevron-down"></i>
-                    </div>
-                    <div class="faq-answer">
-                        <p>Faculty members maintain regular office hours typically from 9:00 AM to 5:00 PM on weekdays. Specific office hours for each faculty member are posted on their office doors and can be found on our faculty page.</p>
+                <div class="t-line"></div>
+                <div class="t-item">
+                    <i class="fas fa-bus"></i>
+                    <div>
+                        <strong>Bus Routes</strong>
+                        <p>302, 303, 384, 408</p>
                     </div>
                 </div>
-                
-                <div class="faq-item">
-                    <div class="faq-question">
-                        <h4>How can industry partners collaborate with our department?</h4>
-                        <i class="fas fa-chevron-down"></i>
-                    </div>
-                    <div class="faq-answer">
-                        <p>We welcome industry collaborations for research projects, internships, guest lectures, and placement opportunities. Contact our industry liaison team at industry@dbit.in to explore partnership possibilities.</p>
-                    </div>
-                </div>
-                
-                <div class="faq-item">
-                    <div class="faq-question">
-                        <h4>Can I visit the department labs and facilities?</h4>
-                        <i class="fas fa-chevron-down"></i>
-                    </div>
-                    <div class="faq-answer">
-                        <p>Lab visits can be arranged through advance booking. Please contact the department office at least 48 hours in advance to schedule a tour of our facilities including computer labs, research centers, and project spaces.</p>
+                <div class="t-line"></div>
+                <div class="t-item">
+                    <i class="fas fa-plane"></i>
+                    <div>
+                        <strong>Airport</strong>
+                        <p>CSMIA - 20 Mins</p>
                     </div>
                 </div>
             </div>
         </div>
     </section>
 
-        <!-- Footer -->
+    <section class="faq-section" id="faq">
+        <div class="container">
+            <div class="sec-header">
+                <h2>Frequently Asked Questions</h2>
+                <div class="header-line"></div>
+            </div>
+
+            <div class="faq-grid-2col reveal stagger-up">
+                
+                <div class="faq-col">
+                    <div class="faq-item">
+                        <div class="faq-q">
+                            <span>What is the Admission Cutoff?</span>
+                            <i class="fas fa-plus"></i>
+                        </div>
+                        <div class="faq-a"><p>Cutoffs vary by year based on MHT-CET/JEE scores. Typically, the closing percentile is around 92-96%. Please check the official DTE website for CAP round details.</p></div>
+                    </div>
+                    <div class="faq-item">
+                        <div class="faq-q">
+                            <span>How do I get a Railway Concession?</span>
+                            <i class="fas fa-plus"></i>
+                        </div>
+                        <div class="faq-a"><p>Concession forms are issued at the College Office (Ground Floor) between 10:00 AM - 1:00 PM. You must carry your valid College ID card.</p></div>
+                    </div>
+                    <div class="faq-item">
+                        <div class="faq-q">
+                            <span>Does the college provide Hostel facilities?</span>
+                            <i class="fas fa-plus"></i>
+                        </div>
+                        <div class="faq-a"><p>DBIT does not have an on-campus hostel. However, the administrative office provides a verified list of nearby PGs and private hostels in Vidyavihar/Kurla.</p></div>
+                    </div>
+                    <div class="faq-item">
+                        <div class="faq-q">
+                            <span>What documents are needed for admission?</span>
+                            <i class="fas fa-plus"></i>
+                        </div>
+                        <div class="faq-a"><p>You generally need your SSC/HSC marksheets, Leaving Certificate, MHT-CET/JEE Scorecard, Domicile Certificate, and Aadhar Card. (Originals + 3 sets of copies).</p></div>
+                    </div>
+                </div>
+
+                <div class="faq-col">
+                    <div class="faq-item">
+                        <div class="faq-q">
+                            <span>Can I visit the labs before admission?</span>
+                            <i class="fas fa-plus"></i>
+                        </div>
+                        <div class="faq-a"><p>Yes, we organize "Open Days" for prospective students. You can also request a guided tour by emailing cse@dbit.in in advance.</p></div>
+                    </div>
+                    <div class="faq-item">
+                        <div class="faq-q">
+                            <span>How is the Placement support?</span>
+                            <i class="fas fa-plus"></i>
+                        </div>
+                        <div class="faq-a"><p>We have a dedicated Training & Placement Cell. Major recruiters include Jio, TCS, L&T, and AWS. The average package is around 5-6 LPA, with highest going up to 16 LPA.</p></div>
+                    </div>
+                    <div class="faq-item">
+                        <div class="faq-q">
+                            <span>Is there Wi-Fi on campus?</span>
+                            <i class="fas fa-plus"></i>
+                        </div>
+                        <div class="faq-a"><p>Yes, the entire campus, including the library and canteen, is Wi-Fi enabled. Students are provided with individual login credentials.</p></div>
+                    </div>
+                    <div class="faq-item">
+                        <div class="faq-q">
+                            <span>What is the Grievance Redressal process?</span>
+                            <i class="fas fa-plus"></i>
+                        </div>
+                        <div class="faq-a"><p>Students can submit grievances via the online portal or drop a letter in the suggestion box outside the Principal's office. The committee meets monthly to resolve issues.</p></div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
     <div id="footer-placeholder"></div>
 
-    
-    <script>
-        // Simple FAQ accordion functionality
-        document.addEventListener('DOMContentLoaded', function() {
-            const faqItems = document.querySelectorAll('.faq-item');
-            
-            faqItems.forEach(item => {
-                const question = item.querySelector('.faq-question');
-                const answer = item.querySelector('.faq-answer');
-                
-                question.addEventListener('click', () => {
-                    const isActive = item.classList.contains('active');
-                    
-                    // Close all FAQ items
-                    faqItems.forEach(faq => {
-                        faq.classList.remove('active');
-                        faq.querySelector('.faq-answer').style.display = 'none';
-                    });
-                    
-                    // Open clicked item if it wasn't active
-                    if (!isActive) {
-                        item.classList.add('active');
-                        answer.style.display = 'block';
-                    }
-                });
-            });
-        });
-    </script>
     <script src="js/script.js"></script>
     <script src="js/components.js"></script>
+    
+    <script>
+        // 1. FAQ Accordion Logic
+        document.querySelectorAll('.faq-q').forEach(question => {
+            question.addEventListener('click', () => {
+                const item = question.parentElement;
+                const icon = question.querySelector('i');
+                
+                // Toggle active state
+                item.classList.toggle('active');
+                
+                // Icon rotation
+                if(item.classList.contains('active')) {
+                    icon.classList.remove('fa-plus');
+                    icon.classList.add('fa-minus');
+                } else {
+                    icon.classList.remove('fa-minus');
+                    icon.classList.add('fa-plus');
+                }
+            });
+        });
+
+        // 2. Scroll Animations (Intersection Observer)
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if(entry.isIntersecting) {
+                    entry.target.classList.add('active');
+                }
+            });
+        }, { threshold: 0.1 });
+
+        document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+
+        // 3. EmailJS Form Logic
+        document.getElementById('contact-form').addEventListener('submit', function(e) {
+            e.preventDefault();
+            const btn = this.querySelector('button');
+            const originalText = btn.innerHTML;
+            
+            btn.innerHTML = 'Sending...';
+            btn.style.opacity = '0.8';
+
+            emailjs.sendForm('YOUR_SERVICE_ID', 'YOUR_TEMPLATE_ID', this)
+                .then(() => {
+                    btn.innerHTML = '<i class="fas fa-check"></i> Sent!';
+                    btn.style.background = '#27ae60';
+                    btn.style.color = '#fff';
+                    document.getElementById('form-status').innerHTML = '<span style="color:green; margin-top:10px; display:block;">Message sent successfully.</span>';
+                    this.reset();
+                }, (error) => {
+                    btn.innerHTML = 'Failed';
+                    btn.style.background = '#e74c3c';
+                    console.log(error);
+                });
+        });
+    </script>
 </body>
 </html>
