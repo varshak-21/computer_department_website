@@ -13,9 +13,10 @@
 }
 
 .nav-container {
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 0 20px;
+    max-width: 100%;       /* Changed from 1200px to 100% to hit the edges */
+    width: 100%;           /* Ensure it spans the full width */
+    margin: 0;             /* Remove auto centering */
+    padding: 0 40px;       /* Added 40px padding to the sides */
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -28,6 +29,7 @@
     gap: 12px;           /* Clean space between image and text */
     color: var(--white);
     text-decoration: none;
+    padding-left: 10px;
 }
 
 .nav-logo {
@@ -151,6 +153,58 @@
     border-radius: 2px;
     transition: var(--transition);
 }
+
+/* --- MOBILE RESPONSIVE STYLES --- */
+@media (max-width: 900px) {
+    /* Show the hamburger button */
+    .mobile-menu-btn {
+        display: flex; /* Make it visible */
+        z-index: 1001;
+    }
+
+    /* Transform the menu into a mobile drawer */
+    .nav-menu {
+        position: fixed;
+        top: 0;
+        right: -100%; /* Hide it off-screen to the right */
+        width: 70%;    /* Take up most of the screen */
+        height: 100vh;
+        background: rgba(0, 0, 0, 0.98);
+        flex-direction: column; /* Stack links vertically */
+        justify-content: center;
+        gap: 2rem;
+        transition: 0.4s ease-in-out;
+        box-shadow: -5px 0 15px rgba(0,0,0,0.5);
+    }
+
+    /* When the 'active' class is added via JS, slide it in */
+    .nav-menu.active {
+        right: 0;
+    }
+
+    /* Adjust the Brand Title so it doesn't overlap */
+    .nav-title {
+        font-size: 1rem;
+        max-width: 200px; /* Allow text to wrap if it's too long */
+    }
+
+    /* Ensure dropdowns work on mobile */
+    .dropdown-menu {
+        position: static;
+        opacity: 1;
+        visibility: visible;
+        transform: none;
+        background: transparent;
+        text-align: center;
+        box-shadow: none;
+        display: none; /* Hide until parent is clicked, or keep simple */
+    }
+    
+    .dropdown:hover .dropdown-menu {
+        display: block;
+    }
+}
+
 
 /* Footer Brand */
 /* =========================================
@@ -467,24 +521,6 @@
         margin-left: 0;
         margin-right: 10px;
     }
-}
-
-#scrollTopBtn {
-    position: fixed;
-    bottom: 25px;
-    right: 25px;
-    width: 45px;
-    height: 45px;
-    background-color: #003366;
-    color: #ffffff;
-    border: none;
-    border-radius: 50%;
-    cursor: pointer;
-    font-size: 18px;
-    display: none; /* hidden initially */
-    align-items: center;
-    justify-content: center;
-    z-index: 9999;
 }
 /* Force Header/Hero sections to be Full Width */
 .page-header, 

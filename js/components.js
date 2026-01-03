@@ -5,7 +5,7 @@ const navbarHTML = `
         <div class="nav-container">
             <div class="nav-brand">
                 <img src="images/college-logo.png" alt="CSE Logo" class="nav-logo">
-                <span class="nav-title">Comps DBIT</span>
+                <span class="nav-title">Department of Computer Engineering</span>
             </div>
             
             <button class="mobile-menu-btn" id="mobile-menu-btn">
@@ -144,9 +144,18 @@ document.addEventListener("DOMContentLoaded", () => {
     // 3. Mobile Menu Toggle Logic
     const menuBtn = document.getElementById('mobile-menu-btn');
     const navMenu = document.getElementById('nav-menu');
+
     if (menuBtn && navMenu) {
-        menuBtn.addEventListener('click', () => {
+        menuBtn.addEventListener('click', (e) => {
+            e.stopPropagation(); // Prevents click from bubbling
             navMenu.classList.toggle('active');
         });
     }
+
+    // Close menu if user clicks anywhere else on the screen
+    document.addEventListener('click', (e) => {
+        if (navMenu.classList.contains('active') && !navMenu.contains(e.target) && e.target !== menuBtn) {
+            navMenu.classList.remove('active');
+        }
+    });
 });
