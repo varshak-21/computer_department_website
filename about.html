@@ -9,24 +9,46 @@
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/about.css">
     <link rel="stylesheet" href="css/navbar-footer.css">
-
+    
     <!-- Font Awesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
-
+    
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 </head>
 
 <body>
-
-<!-- Navigation -->
-<div id="navbar-placeholder"></div>
-
-<!-- Page Hero -->
+    
+    <!-- Navigation -->
+    <div id="navbar-placeholder"></div>
+    
+    <!-- Page Hero -->
 <section class="page-hero">
     <div class="container">
         <div class="page-hero-content">
             <h1>About Our Department</h1>
             <p>Pioneering excellence in computer science education and research since our establishment</p>
+            
+                        <div class="overview-stats">
+                            <h3>Department at a Glance</h3>
+                            <div class="stats-container">
+                                <div class="stat-box">
+                                    <span class="stat-value">1998</span>
+                                    <span class="stat-desc">Established</span>
+                                </div>
+                                <div class="stat-box">
+                                    <span class="stat-value">240</span>
+                                    <span class="stat-desc">Annual Intake</span>
+                                </div>
+                                <div class="stat-box">
+                                    <span class="stat-value">15</span>
+                                    <span class="stat-desc">Research Labs</span>
+                                </div>
+                                <div class="stat-box">
+                                    <span class="stat-value">95%</span>
+                                    <span class="stat-desc">Placement Rate</span>
+                                </div>
+                            </div>
+                        </div>
         </div>
     </div>
 </section>
@@ -47,7 +69,7 @@
 <section class="vision-mission-single">
     <div class="container">
         <h2 class="vm-title">Don Bosco Institute of Technology<br>Vision & Mission</h2>
-
+        
         <div class="vm-card">
             <div class="vm-toggle">
                 <button class="vm-btn active" onclick="showVision()">Vision</button>
@@ -83,28 +105,6 @@
                         <p>
                             Develop an academic system towards effective teaching learning process...
                         </p>
-                    </div>
-                </div>
-            </div>
-
-            <div class="overview-stats">
-                <h3>Department at a Glance</h3>
-                <div class="stats-container">
-                    <div class="stat-box">
-                        <span class="stat-value">1998</span>
-                        <span class="stat-desc">Established</span>
-                    </div>
-                    <div class="stat-box">
-                        <span class="stat-value">240</span>
-                        <span class="stat-desc">Annual Intake</span>
-                    </div>
-                    <div class="stat-box">
-                        <span class="stat-value">15</span>
-                        <span class="stat-desc">Research Labs</span>
-                    </div>
-                    <div class="stat-box">
-                        <span class="stat-value">95%</span>
-                        <span class="stat-desc">Placement Rate</span>
                     </div>
                 </div>
             </div>
@@ -171,6 +171,108 @@
     </div>
 </section>
 
+<section class="infrastructure">
+    <div class="container">
+
+        <div class="section-header">
+            <h2>Infrastructure</h2>
+            <p>State-of-the-art facilities supporting learning, research, and innovation</p>
+        </div>
+
+        <div class="infra-slider-wrapper">
+
+            <!-- Left Arrow -->
+            <button class="infra-arrow left" onclick="slideInfra(-1)">
+                <i class="fas fa-chevron-left"></i>
+            </button>
+
+            <!-- Slider -->
+            <div class="infra-slider">
+                <div class="infra-track">
+
+                    <!-- Card 1 -->
+                    <div class="infra-card">
+                        <img src="event_images\complab.jpg" alt="COMP Centre 1">
+                        <h3>COMP Centre-1</h3>
+                        <p>
+                            A climate-controlled lab featuring approximately 20 high-performance PCs
+                            dedicated to programming and software development.
+                        </p>
+                    </div>
+
+                    <!-- Card 2 -->
+                    <div class="infra-card">
+                        <img src="event_images\Bosco Hall.jpg" alt="Bosco Hall">
+                        <h3>Bosco Hall</h3>
+                        <p>
+                            A versatile, air-conditioned space equipped with modern projection systems,
+                            ideal for lectures and department meetings.
+                        </p>
+                    </div>
+
+                    <!-- Card 3 -->
+                    <div class="infra-card">
+                        <img src="event_images\complab2.jpg" alt="COMP Centre 2">
+                        <h3>COMP Centre-2</h3>
+                        <p>
+                            Our secondary computing facility designed for hands-on technical training
+                            and advanced coursework.
+                        </p>
+                    </div>
+
+                    <!-- Card 4 -->
+                    <div class="infra-card">
+                        <img src="event_images\seminar_hall.jpg" alt="Seminar Hall">
+                        <h3>Seminar Hall</h3>
+                        <p>
+                            A premier space designed for guest lectures, workshops,
+                            and academic presentations.
+                        </p>
+                    </div>
+
+                    <!-- Card 5 -->
+                     <div class="infra-card">
+                        <img src="event_images\classroom.jpeg" alt="Seminar Hall">
+                        <h3>Classroom</h3>
+                        <p>
+                            A premier space designed for guest lectures, workshops,
+                            and academic presentations.
+                        </p>
+                    </div>
+
+                    <!-- Card 6 -->
+                    <div class="infra-card">
+                        <img src="event_images\seminar_hall.jpg" alt="Seminar Hall">
+                        <h3>Seminar Hall</h3>
+                        <p>
+                            A premier space designed for guest lectures, workshops,
+                            and academic presentations.
+                        </p>
+                    </div>
+
+                    <!-- Card 7 -->
+                    <div class="infra-card">
+                        <img src="event_images\seminar_hall.jpg" alt="Seminar Hall">
+                        <h3>Seminar Hall</h3>
+                        <p>
+                            A premier space designed for guest lectures, workshops,
+                            and academic presentations.
+                        </p>
+                    </div>
+
+                </div>
+            </div>
+
+            <!-- Right Arrow -->
+            <button class="infra-arrow right" onclick="slideInfra(1)">
+                <i class="fas fa-chevron-right"></i>
+            </button>
+
+        </div>
+    </div>
+</section>
+
+
 <!-- Scroll to Top -->
 <button id="scrollTopBtn" title="Go to top">
     <i class="fas fa-arrow-up"></i>
@@ -203,6 +305,26 @@ function showMission() {
     visionText.classList.remove("active");
 }
 </script>
+
+<script>
+let infraIndex = 0;
+
+function slideInfra(direction) {
+    const track = document.querySelector(".infra-track");
+    const cards = document.querySelectorAll(".infra-card");
+    const cardWidth = cards[0].offsetWidth + 32; // card + gap
+
+    infraIndex += direction;
+
+    const maxIndex = cards.length - Math.floor(track.parentElement.offsetWidth / cardWidth);
+
+    if (infraIndex < 0) infraIndex = 0;
+    if (infraIndex > maxIndex) infraIndex = maxIndex;
+
+    track.style.transform = `translateX(-${infraIndex * cardWidth}px)`;
+}
+</script>
+
 
 </body>
 </html>
