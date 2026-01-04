@@ -238,9 +238,6 @@ if (assistantContainer) {
   assistantProfessors.forEach(faculty => assistantContainer.insertAdjacentHTML("beforeend", createFacultyCard(faculty)));
 }
 
-
-/* ---------- ACHIEVEMENTS & RESEARCH AREAS ---------- */
-
 /* ---------- ACHIEVEMENTS & RESEARCH AREAS ---------- */
 
 function achievementCard(data) {

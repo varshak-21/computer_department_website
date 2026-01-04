@@ -32,10 +32,14 @@
 
 .faculty-img {
   width: 100%;
-  height: 150px auto;
-  object-fit: cover;
+  height: auto;
+  object-fit: contain;               /* Show full image without cropping - maintains aspect ratio */
+  object-position: center;
   padding: 30px;
   border-radius: 0px;
+  display: block;
+  background: var(--light-grey);     /* Light gray background to match card */
+  box-sizing: border-box;            /* Include padding in height calculation */
 }
 
 .faculty-body {
@@ -71,7 +75,8 @@
 
 .faculty-achievements,
 .research-areas {
-  padding: 1rem 0;
+  padding: 1rem 0 2rem;
+  background-color: var(--white);
 }
 
 .achievements-grid,
@@ -83,24 +88,43 @@
 
 /* Shared Card */
 .info-card {
-  background: var(--white);
-  border-radius: var(--radius);
-  box-shadow: var(--shadow);
+  background: var(--light-grey);
+  border-radius: 12px;
+  box-shadow: 3px 10px  rgba(0,0,0,0.1);
   padding: 1.5rem;
-  transition: var(--transition);
+  transition:
+    transform 0.3s ease,
+    background-color 0.3s ease,
+    color 0.25s ease,
+    border-color 0.3s ease;
+  border: 2px solid transparent;
 }
 
 .info-card:hover {
   transform: translateY(-5px);
+  background: var(--black);
+  color: var(--white);
+  border-color: var(--black);
 }
 
 .info-card h3 {
   margin-bottom: 0.75rem;
+  color: var(--black);
+  transition: color 0.3s ease;
+}
+
+.info-card:hover h3 {
+  color: var(--white);
 }
 
 .info-card p {
-  color: var(--grey);
+  color: var(--dark-grey);
   margin-bottom: 0.75rem;
+  transition: color 0.3s ease;
+}
+
+.info-card:hover p {
+  color: var(--light-grey);
 }
 
 .info-card ul {
@@ -111,6 +135,13 @@
 .info-card li {
   margin-bottom: 0.4rem;
   color: var(--dark-grey);
+  transition: color 0.3s ease, font-weight 0.3s ease;
+  font-weight: 500;                  /* Make faculty names bolder */
+}
+
+.info-card:hover li {
+  color: var(--light-grey);
+  font-weight: 700;                  /* Even bolder on hover for better visibility */
 }
 .portfolio-link {
     display: inline-flex;
@@ -127,6 +158,12 @@
     transition: var(--transition);
 }
 
+/* Ensure Assistant Professors button width matches other cards */
+#assistant-professors .portfolio-link {
+    width: 130px;
+    justify-content: center;
+}
+
 .portfolio-link:hover {
     background: var(--dark-grey);
     transform: translateY(-2px);
@@ -136,13 +173,21 @@
     font-size: 0.9rem;
 }
 
+/* Responsive image sizing for all faculty cards */
+.faculty-card .faculty-img {
+  transition: padding 0.3s ease;
+}
+
 @media (min-width: 768px) {
   .faculty-card {
     grid-template-columns: 300px 1fr;
   }
 
   .faculty-card .faculty-img {
-    height: 100%;
+    height: 280px;                    /* Fixed height container - same as Assistant Professors */
+    padding: 30px;
+    object-fit: contain;               /* Show full image without cropping */
+    object-position: center;
   }
   .sub-container {
     /* grid-template-columns: 1fr; */
@@ -156,13 +201,68 @@
   }
 
   .faculty-card .faculty-img {
-    height: auto;                 /* let image size naturally */
+    height: 240px;                /* Fixed height - same as Assistant Professors tablets */
+    padding: 25px;                /* Slightly reduced padding */
+    object-fit: contain;           /* Show full image without cropping */
+    object-position: center;
+  }
+}
+
+/* Responsive image sizing for smaller devices */
+@media (max-width: 767px) {
+  .faculty-card .faculty-img {
+    height: 200px;                 /* Fixed height - same as Assistant Professors mobile */
+    padding: 20px;                 /* Reduced padding on mobile */
+    object-fit: contain;            /* Show full image without cropping */
+    object-position: center;
+  }
+}
+
+@media (max-width: 480px) {
+  .faculty-card .faculty-img {
+    height: 180px;                 /* Fixed height - same as Assistant Professors small mobile */
+    padding: 15px;                 /* Further reduced padding on small mobile */
+    object-fit: contain;            /* Show full image without cropping */
+    object-position: center;
   }
 }
 
 /* Assistant Professors horizontal scroll on desktop */
 .assistant-professors-wrapper {
   position: relative;
+}
+
+/* Ensure Assistant Professors cards have consistent image heights */
+#assistant-professors .faculty-card {
+  display: flex;
+  flex-direction: column;
+  background: var(--light-grey);      /* Light gray background for entire card */
+  transition: transform 0.3s ease, box-shadow 0.3s ease;  /* Smooth hover transition */
+}
+
+/* Image container area - using the card's structure to create consistent height */
+#assistant-professors .faculty-img {
+  width: 100%;
+  height: 280px;                     /* Fixed height container */
+  object-fit: contain;               /* Show full image without cropping - maintains aspect ratio */
+  object-position: center;
+  padding: 20px;
+  background: var(--light-grey);     /* Light gray background to match card */
+  flex-shrink: 0;                    /* Prevent image from shrinking */
+  box-sizing: border-box;            /* Include padding in height calculation */
+}
+
+#assistant-professors .faculty-body {
+  flex: 1;                           /* Take remaining space */
+  display: flex;
+  flex-direction: column;
+  background: var(--light-grey);     /* Light gray background to match card */
+}
+
+/* Hover effect for Assistant Professors cards */
+#assistant-professors .faculty-card:hover {
+  transform: translateY(-8px);       /* Raise the card on hover */
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.15);  /* Enhanced shadow on hover */
 }
 
 /* desktop & large tablets */
@@ -193,16 +293,31 @@
     min-width: 280px;               /* ensure at least 3 cards visible */
     max-width: 320px;
     scroll-snap-align: start;
-    grid-template-columns: 1fr;     /* image on top, text below */
   }
 
   #assistant-professors .faculty-img {
-    height: auto;
+    height: 280px;                  /* Fixed container height on desktop */
+    padding: 25px;
+  }
+}
+
+/* Tablets */
+@media (min-width: 768px) and (max-width: 1023px) {
+  #assistant-professors {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.5rem;
+    overflow-x: visible;
+  }
+
+  #assistant-professors .faculty-img {
+    height: 240px;                  /* Smaller container on tablets */
+    padding: 20px;
   }
 }
 
 /* mobile & small tablets: fall back to normal grid */
-@media (max-width: 1023px) {
+@media (max-width: 767px) {
   #assistant-professors {
     display: grid;
     grid-template-columns: 1fr;
@@ -210,11 +325,175 @@
     overflow-x: visible;
   }
 
-  #assistant-professors .faculty-card {
-    grid-template-columns: 1fr;   /* same stacked layout as mobile prof cards */
+  #assistant-professors .faculty-img {
+    height: 200px;                  /* Smaller container on mobile */
+    padding: 15px;
+  }
+}
+
+/* Extra small devices */
+@media (max-width: 480px) {
+  #assistant-professors .faculty-img {
+    height: 180px;                  /* Even smaller container on very small devices */
+    padding: 12px;
+  }
+}
+
+/* ========== COMPREHENSIVE MOBILE RESPONSIVENESS ========== */
+
+/* Tablet Devices */
+@media (max-width: 1024px) {
+  .container {
+    padding: 0 30px;
   }
 
-  #assistant-professors .faculty-img {
+  .faculty-section h2 {
+    font-size: 2rem;
+  }
+
+  .sub-container {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* Mobile Devices */
+@media (max-width: 768px) {
+  .container {
+    padding: 0 20px;
+  }
+
+  .faculty-section {
+    padding: 3rem 0;
+  }
+
+  .faculty-section h2 {
+    font-size: 1.75rem;
+    margin-bottom: 1.5rem;
+  }
+
+  .faculty-card {
+    padding: 1.5rem;
+  }
+
+  .faculty-name {
+    font-size: 1.3rem;
+  }
+
+  .faculty-title {
+    font-size: 0.95rem;
+  }
+
+  .faculty-info p {
+    font-size: 0.9rem;
+  }
+
+  .faculty-links {
+    gap: 0.75rem;
+  }
+
+  .faculty-link {
+    padding: 0.6rem 1rem;
+    font-size: 0.85rem;
+  }
+
+  .portfolio-link {
+    padding: 0.6rem 1rem;
+    font-size: 0.85rem;
+  }
+
+  #assistant-professors {
+    gap: 1.25rem;
+  }
+}
+
+/* Small Mobile Devices */
+@media (max-width: 480px) {
+  .container {
+    padding: 0 15px;
+  }
+
+  .faculty-section {
+    padding: 2.5rem 0;
+  }
+
+  .faculty-section h2 {
+    font-size: 1.5rem;
+    margin-bottom: 1.25rem;
+  }
+
+  .faculty-card {
+    padding: 1.25rem;
+  }
+
+  .faculty-img {
     height: auto;
+    max-height: 250px;
+  }
+
+  .faculty-name {
+    font-size: 1.2rem;
+  }
+
+  .faculty-title {
+    font-size: 0.9rem;
+  }
+
+  .faculty-info {
+    padding: 1.25rem;
+  }
+
+  .faculty-info p {
+    font-size: 0.85rem;
+    line-height: 1.5;
+  }
+
+  .faculty-links {
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+
+  .faculty-link,
+  .portfolio-link {
+    width: 100%;
+    justify-content: center;
+    padding: 0.7rem 1rem;
+    font-size: 0.85rem;
+  }
+
+  #assistant-professors {
+    gap: 1rem;
+  }
+}
+
+/* Extra Small Devices */
+@media (max-width: 360px) {
+  .faculty-section h2 {
+    font-size: 1.3rem;
+  }
+
+  .faculty-card {
+    padding: 1rem;
+  }
+
+  .faculty-name {
+    font-size: 1.1rem;
+  }
+
+  .faculty-title {
+    font-size: 0.85rem;
+  }
+
+  .faculty-info {
+    padding: 1rem;
+  }
+
+  .faculty-info p {
+    font-size: 0.8rem;
+  }
+
+  .faculty-link,
+  .portfolio-link {
+    padding: 0.6rem 0.8rem;
+    font-size: 0.8rem;
   }
 }

@@ -736,7 +736,7 @@
             
             <div class="specializations-grid">
                 <div class="spec-card">
-                    <div class="spec-icon">🤖</div>
+                    <div class="spec-icon"><i class="fa-solid fa-brain"></i></div>
                     <h3>Artificial Intelligence & Machine Learning</h3>
                     <p>Dive deep into AI algorithms, neural networks, deep learning, and intelligent systems</p>
                     <div class="spec-subjects">
@@ -980,7 +980,7 @@
                         <div class="resource-content">
                             <h4>Placement Support</h4>
                             <p>Career guidance and preparation resources</p>
-                            <a href="#" class="quick-link">Get Support →</a>
+                            <a href="https://placement.dbit.in/" class="quick-link" target="_blank">Get Support →</a>
                         </div>
                     </div>
                 </div>
@@ -997,5 +997,35 @@
     <div id="footer-placeholder"></div>
     <script src="js/script.js"></script>
     <script src="js/components.js"></script>
+    <script>
+        // Calendar Toggle Functionality
+        document.addEventListener('DOMContentLoaded', function() {
+            const toggleButtons = document.querySelectorAll('.calendar-toggle-buttons .toggle-btn');
+            const calendarContents = document.querySelectorAll('.calendar-content');
+            
+            toggleButtons.forEach(button => {
+                button.addEventListener('click', function() {
+                    const targetCalendar = this.getAttribute('data-calendar');
+                    
+                    // Remove active class from all buttons
+                    toggleButtons.forEach(btn => btn.classList.remove('active'));
+                    
+                    // Add active class to clicked button
+                    this.classList.add('active');
+                    
+                    // Hide all calendar contents
+                    calendarContents.forEach(content => {
+                        content.classList.remove('active');
+                    });
+                    
+                    // Show the target calendar content
+                    const targetContent = document.getElementById(targetCalendar + '-calendar');
+                    if (targetContent) {
+                        targetContent.classList.add('active');
+                    }
+                });
+            });
+        });
+    </script>
 </body>
 </html>
